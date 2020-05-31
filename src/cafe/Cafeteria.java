@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Cafeteria extends javax.swing.JFrame {
 
-    ArrayList<Cuenta> cuentasDelCafe;
+    private ArrayList<Cuenta> cuentasDelCafe;
     
     public Cafeteria() {
         cuentasDelCafe = new ArrayList<>();
