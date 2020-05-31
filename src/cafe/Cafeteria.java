@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Cafeteria extends javax.swing.JFrame {
 
     private ArrayList<Cuenta> cuentasDelCafe;
+    private String tipo;
     
     public Cafeteria() {
         cuentasDelCafe = new ArrayList<>();
