@@ -24,6 +24,9 @@ public class Cafeteria extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(648, 448));
+        setMinimumSize(new java.awt.Dimension(648, 448));
+        setPreferredSize(new java.awt.Dimension(648, 448));
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Lucida Handwriting", 1, 48)); // NOI18N
