@@ -66,6 +66,11 @@ public class Cafeteria extends javax.swing.JFrame {
 
         btnMesa1.setContentAreaFilled(false);
         btnMesa1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa1.png"))); // NOI18N
+        btnMesa1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMesa1ActionPerformed(evt);
+            }
+        });
         PanelMenu.add(btnMesa1);
         btnMesa1.setBounds(-10, 250, 170, 170);
 
@@ -98,6 +103,10 @@ public class Cafeteria extends javax.swing.JFrame {
     private void btnMesa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMesa3ActionPerformed
+
+    private void btnMesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMesa1ActionPerformed
 
     /**
      * @param args the command line arguments
