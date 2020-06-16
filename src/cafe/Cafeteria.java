@@ -9,10 +9,12 @@ public class Cafeteria extends javax.swing.JFrame {
 
     private ArrayList<Cuenta> cuentasDelCafe;
     private String tipo;
+    private Menu panelDeMenu;
     
     public Cafeteria() {
         cuentasDelCafe = new ArrayList<>();
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -28,7 +30,6 @@ public class Cafeteria extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(648, 448));
-        setMinimumSize(new java.awt.Dimension(648, 448));
         setPreferredSize(new java.awt.Dimension(648, 448));
 
         PanelMenu.setLayout(null);
@@ -105,7 +106,12 @@ public class Cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMesa3ActionPerformed
 
     private void btnMesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa1ActionPerformed
-        // TODO add your handling code here:
+       panelDeMenu = new Menu();
+       this.setBounds(0, 0, 446, 650);
+       panelDeMenu.setBounds(this.getBounds());
+       PanelMenu.removeAll();
+       PanelMenu.add(panelDeMenu);
+       PanelMenu.updateUI();
     }//GEN-LAST:event_btnMesa1ActionPerformed
 
     /**

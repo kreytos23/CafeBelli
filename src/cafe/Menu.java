@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cafe;
+import java.awt.Font;
 
 /**
  *
@@ -46,10 +47,14 @@ public class Menu extends javax.swing.JPanel {
 
         setLayout(null);
 
+        bebidas.setFont(new Font("DK Lemon Yellow Sun.otf",Font.PLAIN,14)
+        );
+        bebidas.setForeground(new java.awt.Color(255, 255, 255));
         bebidas.setText("CAFÉS");
         add(bebidas);
         bebidas.setBounds(240, 70, 60, 20);
 
+        Latte.setForeground(new java.awt.Color(255, 255, 255));
         Latte.setText("Latte");
         add(Latte);
         Latte.setBounds(140, 130, 70, 16);
