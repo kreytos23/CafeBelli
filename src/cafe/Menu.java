@@ -17,6 +17,7 @@ public class Menu extends javax.swing.JPanel {
      */
     public Menu() {
         initComponents();
+        cambiarMetodo();
     }
 
     /**
@@ -121,4 +122,17 @@ public class Menu extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JLabel vanilla;
     // End of variables declaration//GEN-END:variables
+
+    private void cambiarMetodo() {
+        ClaseYellow cf = new ClaseYellow("DK Lemon Yellow Sun.otf");
+        bebidas.setFont(cf.MyFont(1, 12));
+        Latte.setFont(cf.MyFont(1, 12));
+        Frapuccino.setFont(cf.MyFont(1, 12));
+        vanilla.setFont(cf.MyFont(1, 12));
+        Espresso.setFont(cf.MyFont(1, 12));
+        Mocha.setFont(cf.MyFont(1, 12));
+        Machiatto.setFont(cf.MyFont(1, 12));
+        Machiatto1.setFont(cf.MyFont(1, 12));
+        
+    }
 }
