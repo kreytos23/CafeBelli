@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 /**
  * @author Cesar Martin 
+ * Para añadir los cafes de una cuenta se usa un array auxiliar aparte
+ * del  final para que se use para escribir los cafes nuevos en el pdf
+ * y una vez que se escribe se resetea todo ese array auxiliar 
  */
 public class Cafeteria extends javax.swing.JFrame {
 

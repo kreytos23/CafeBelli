@@ -59,26 +59,32 @@ public class Menu extends javax.swing.JPanel {
         add(Latte);
         Latte.setBounds(140, 130, 70, 16);
 
+        Machiatto.setForeground(new java.awt.Color(255, 255, 255));
         Machiatto.setText("Caramel Machiatto");
         add(Machiatto);
         Machiatto.setBounds(140, 280, 110, 16);
 
+        Frapuccino.setForeground(new java.awt.Color(255, 255, 255));
         Frapuccino.setText("Frapuccino");
         add(Frapuccino);
         Frapuccino.setBounds(140, 100, 70, 16);
 
+        vanilla.setForeground(new java.awt.Color(255, 255, 255));
         vanilla.setText("Vanilla");
         add(vanilla);
         vanilla.setBounds(140, 160, 70, 16);
 
+        Espresso.setForeground(new java.awt.Color(255, 255, 255));
         Espresso.setText("Espresso");
         add(Espresso);
         Espresso.setBounds(140, 190, 70, 16);
 
+        Mocha.setForeground(new java.awt.Color(255, 255, 255));
         Mocha.setText("Mocha");
         add(Mocha);
         Mocha.setBounds(140, 220, 70, 16);
 
+        Machiatto1.setForeground(new java.awt.Color(255, 255, 255));
         Machiatto1.setText("Machiatto");
         add(Machiatto1);
         Machiatto1.setBounds(140, 250, 70, 16);

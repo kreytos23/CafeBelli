@@ -49,6 +49,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Machiatto">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Caramel Machiatto"/>
       </Properties>
       <Constraints>
@@ -59,6 +62,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Frapuccino">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Frapuccino"/>
       </Properties>
       <Constraints>
@@ -69,6 +75,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="vanilla">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Vanilla"/>
       </Properties>
       <Constraints>
@@ -79,6 +88,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Espresso">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Espresso"/>
       </Properties>
       <Constraints>
@@ -89,6 +101,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Mocha">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Mocha"/>
       </Properties>
       <Constraints>
@@ -99,6 +114,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Machiatto1">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Machiatto"/>
       </Properties>
       <Constraints>
