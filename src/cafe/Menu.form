@@ -20,6 +20,12 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="bebidas">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new Font(&quot;DK Lemon Yellow Sun.otf&quot;,Font.PLAIN,14)&#xd;&#xa;" type="code"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CAF&#xc9;S"/>
       </Properties>
       <Constraints>
@@ -30,6 +36,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Latte">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Latte"/>
       </Properties>
       <Constraints>
