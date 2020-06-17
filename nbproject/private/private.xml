@@ -3,7 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/super/OneDrive/Documentos/bella/src/cafe/Cafeteria.java</file>
+=======
+            <file>file:/D:/Programaciion/Cafe/src/cafe/Tamaño.java</file>
+            <file>file:/D:/Programaciion/Cafe/src/cafe/Cuenta.java</file>
+            <file>file:/D:/Programaciion/Cafe/src/cafe/Menu.java</file>
+            <file>file:/D:/Programaciion/Cafe/src/cafe/Cafeteria.java</file>
+            <file>file:/D:/Programaciion/Cafe/src/cafe/TipoDeLeche.java</file>
+            <file>file:/D:/Programaciion/Cafe/src/cafe/Producto.java</file>
+            <file>file:/D:/Programaciion/Cafe/src/cafe/ClaseYellow.java</file>
+>>>>>>> a9449106226376e229c6f7b50d7251835db80d41
         </group>
     </open-files>
 </project-private>
