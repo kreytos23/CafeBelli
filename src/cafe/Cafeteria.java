@@ -4,15 +4,20 @@ import java.util.ArrayList;
 
 /**
  * @author Cesar Martin 
+ * Para añadir los cafes de una cuenta se usa un array auxiliar aparte
+ * del  final para que se use para escribir los cafes nuevos en el pdf
+ * y una vez que se escribe se resetea todo ese array auxiliar 
  */
 public class Cafeteria extends javax.swing.JFrame {
 
     private ArrayList<Cuenta> cuentasDelCafe;
     private String tipo;
+    private Menu panelDeMenu;
     
     public Cafeteria() {
         cuentasDelCafe = new ArrayList<>();
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -28,7 +33,6 @@ public class Cafeteria extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(648, 448));
-        setMinimumSize(new java.awt.Dimension(648, 448));
         setPreferredSize(new java.awt.Dimension(648, 448));
 
         PanelMenu.setLayout(null);
@@ -66,6 +70,11 @@ public class Cafeteria extends javax.swing.JFrame {
 
         btnMesa1.setContentAreaFilled(false);
         btnMesa1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa1.png"))); // NOI18N
+        btnMesa1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMesa1ActionPerformed(evt);
+            }
+        });
         PanelMenu.add(btnMesa1);
         btnMesa1.setBounds(-10, 250, 170, 170);
 
@@ -98,6 +107,15 @@ public class Cafeteria extends javax.swing.JFrame {
     private void btnMesa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMesa3ActionPerformed
+
+    private void btnMesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa1ActionPerformed
+       panelDeMenu = new Menu();
+       this.setBounds(0, 0, 446, 650);
+       panelDeMenu.setBounds(this.getBounds());
+       PanelMenu.removeAll();
+       PanelMenu.add(panelDeMenu);
+       PanelMenu.updateUI();
+    }//GEN-LAST:event_btnMesa1ActionPerformed
 
     /**
      * @param args the command line arguments
