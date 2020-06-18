@@ -45,13 +45,13 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        precioCaramel = new javax.swing.JLabel();
+        precioFrapuccino = new javax.swing.JLabel();
+        precioLatte = new javax.swing.JLabel();
+        precioEspresso = new javax.swing.JLabel();
+        precioVanilla = new javax.swing.JLabel();
+        precioMocha = new javax.swing.JLabel();
+        precioMachiatto = new javax.swing.JLabel();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox8 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
@@ -62,7 +62,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(0, 0, 0));
         setForeground(new java.awt.Color(0, 0, 0));
-        setOpaque(false);
         setLayout(null);
 
         bebidas.setFont(new Font("DK Lemon Yellow Sun.otf",Font.PLAIN,14)
@@ -122,33 +121,40 @@ public class MenuDeCafes extends javax.swing.JPanel {
         add(jSeparator7);
         jSeparator7.setBounds(20, 177, 270, 10);
 
-        jLabel1.setText("$35");
-        add(jLabel1);
-        jLabel1.setBounds(210, 300, 21, 16);
+        precioCaramel.setForeground(new java.awt.Color(255, 255, 255));
+        precioCaramel.setText("$35");
+        add(precioCaramel);
+        precioCaramel.setBounds(210, 290, 30, 30);
 
-        jLabel2.setText("$20");
-        add(jLabel2);
-        jLabel2.setBounds(210, 70, 21, 16);
+        precioFrapuccino.setForeground(new java.awt.Color(255, 255, 255));
+        precioFrapuccino.setText("$20");
+        add(precioFrapuccino);
+        precioFrapuccino.setBounds(210, 70, 30, 30);
 
-        jLabel3.setText("$25");
-        add(jLabel3);
-        jLabel3.setBounds(210, 120, 21, 16);
+        precioLatte.setForeground(new java.awt.Color(255, 255, 255));
+        precioLatte.setText("$25");
+        add(precioLatte);
+        precioLatte.setBounds(211, 106, 30, 30);
 
-        jLabel4.setText("$20");
-        add(jLabel4);
-        jLabel4.setBounds(210, 180, 21, 16);
+        precioEspresso.setForeground(new java.awt.Color(255, 255, 255));
+        precioEspresso.setText("$20");
+        add(precioEspresso);
+        precioEspresso.setBounds(210, 180, 30, 30);
 
-        jLabel5.setText("$20");
-        add(jLabel5);
-        jLabel5.setBounds(210, 150, 21, 16);
+        precioVanilla.setForeground(new java.awt.Color(255, 255, 255));
+        precioVanilla.setText("$20");
+        add(precioVanilla);
+        precioVanilla.setBounds(210, 145, 30, 30);
 
-        jLabel6.setText("$30");
-        add(jLabel6);
-        jLabel6.setBounds(210, 220, 21, 16);
+        precioMocha.setForeground(new java.awt.Color(255, 255, 255));
+        precioMocha.setText("$30");
+        add(precioMocha);
+        precioMocha.setBounds(210, 220, 30, 30);
 
-        jLabel7.setText("$30");
-        add(jLabel7);
-        jLabel7.setBounds(210, 260, 21, 16);
+        precioMachiatto.setForeground(new java.awt.Color(255, 255, 255));
+        precioMachiatto.setText("$30");
+        add(precioMachiatto);
+        precioMachiatto.setBounds(210, 255, 30, 30);
 
         buttonGroup1.add(jCheckBox2);
         jCheckBox2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -301,13 +307,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -315,12 +314,20 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JLabel precioCaramel;
+    private javax.swing.JLabel precioEspresso;
+    private javax.swing.JLabel precioFrapuccino;
+    private javax.swing.JLabel precioLatte;
+    private javax.swing.JLabel precioMachiatto;
+    private javax.swing.JLabel precioMocha;
+    private javax.swing.JLabel precioVanilla;
     private javax.swing.JLabel vanilla;
     // End of variables declaration//GEN-END:variables
 
 private void cambiarMetodo() {
         ClaseYellow cf = new ClaseYellow("Cream Cake.ttf");
         ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
+        ClaseYellow yt  = new ClaseYellow("DK Lemon Yellow Sun.otf");
         
         bebidas.setFont(st.MyFont(1, 30));
         Latte.setFont(cf.MyFont(0, 30));
@@ -330,6 +337,14 @@ private void cambiarMetodo() {
         Mocha.setFont(cf.MyFont(0, 30));
         Machiatto.setFont(cf.MyFont(0, 30));
         Machiatto1.setFont(cf.MyFont(0, 30));
+        
+        precioFrapuccino.setFont(yt.MyFont(1, 20));
+        precioLatte.setFont(yt.MyFont(1, 20));
+        precioCaramel.setFont(yt.MyFont(1, 20));
+        precioEspresso.setFont(yt.MyFont(1, 20));
+        precioMachiatto.setFont(yt.MyFont(1, 20));
+        precioMocha.setFont(yt.MyFont(1, 20));
+        precioVanilla.setFont(yt.MyFont(1, 20));
         
     }
 
