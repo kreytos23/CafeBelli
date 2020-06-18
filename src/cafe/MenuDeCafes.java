@@ -47,6 +47,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(0, 0, 0));
         setForeground(new java.awt.Color(0, 0, 0));
+        setOpaque(false);
         setLayout(null);
 
         bebidas.setFont(new Font("DK Lemon Yellow Sun.otf",Font.PLAIN,14)
