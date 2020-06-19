@@ -15,5 +15,10 @@ public class Cuenta {
     
     SimpleDateFormat format = new SimpleDateFormat("dd/mm/aaaa");
     
+    Cuenta(int mesa){
+      this.mesa = mesa;
+    }
+            
+    
     
 }
