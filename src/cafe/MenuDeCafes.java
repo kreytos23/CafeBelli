@@ -57,7 +57,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
         btnSiguiente = new javax.swing.JToggleButton();
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setForeground(new java.awt.Color(0, 0, 0));
         setOpaque(false);
         setLayout(null);
 
@@ -265,6 +264,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         imagen2.setBounds(170, 360, 90, 80);
 
         btnAtras.setText("-");
+        btnAtras.setEnabled(false);
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAtrasActionPerformed(evt);
@@ -314,32 +314,41 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
 
         int aux = num;
-        try {
-            imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
-            imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
-            imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
-            num++;
+         try{
+             //activa el boton para retroceder
+             btnAtras.setEnabled(true);         
+             
+             imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
+             imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
+             imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
+             if(num==4){
+                 //se desactiva el boton siguiente para evitar errores xd
+                btnSiguiente.setEnabled(false);
+             //   System.out.println("se deshabilito el boton +");
+             }
+             num++;
             
-        } catch (Exception e) {
-            System.out.println("F");   
-        }
-        
-       
-       
+             } catch (Exception e) {
+              // System.out.println(e);   
+             }
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         
         int aux = num;
-        try {
-            imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(--aux)+".PNG")));
-            imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(--aux)+".PNG")));
-            imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(--aux)+".PNG")));
-            num++;
-            
-        } catch (Exception e) {
-            
-        }
+         try{
+             btnSiguiente.setEnabled(true);            
+             imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux+1)+".PNG")));
+             imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
+             imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux-1)+".PNG")));
+             if(num==1){
+                btnAtras.setEnabled(false);               
+                System.out.println("se deshabilito el boton -");
+             }     
+             num--;
+                   
+            }
+         catch (Exception e) {}
     }//GEN-LAST:event_btnAtrasActionPerformed
 
 
