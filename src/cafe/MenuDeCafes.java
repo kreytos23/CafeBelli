@@ -321,7 +321,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
             num++;
             
         } catch (Exception e) {
-            
+            System.out.println("F");   
         }
         
        
