@@ -47,6 +47,11 @@ public class PanelTamaño extends javax.swing.JPanel {
         comboTipoDeLeche.setModel(tipoDeLeche);
 
         comboTamanio.setModel(tamanios);
+        comboTamanio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboTamanioActionPerformed(evt);
+            }
+        });
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -89,6 +94,10 @@ public class PanelTamaño extends javax.swing.JPanel {
                 .addContainerGap(293, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void comboTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTamanioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboTamanioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
