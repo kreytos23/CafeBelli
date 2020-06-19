@@ -10,14 +10,12 @@ import java.util.ArrayList;
  */
 public class Cafeteria extends javax.swing.JFrame {
 
-    private ArrayList<Cuenta> cuentasDelCafe;
-    private String tipo;
     private Menu panelDeMenu;
+    private ArrayList<Cuenta> cuentasDeLaCafeteria;
     
     public Cafeteria() {
-        cuentasDelCafe = new ArrayList<>();
+        cuentasDeLaCafeteria = new ArrayList<>();
         initComponents();
-        
     }
 
     @SuppressWarnings("unchecked")
@@ -97,24 +95,19 @@ public class Cafeteria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMesa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa2ActionPerformed
-        // TODO add your handling code here:
+        asignacionDeMesa(2);
     }//GEN-LAST:event_btnMesa2ActionPerformed
 
     private void btnMesa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa4ActionPerformed
-        // TODO add your handling code here:
+        asignacionDeMesa(4);
     }//GEN-LAST:event_btnMesa4ActionPerformed
 
     private void btnMesa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa3ActionPerformed
-        // TODO add your handling code here:
+        asignacionDeMesa(3);
     }//GEN-LAST:event_btnMesa3ActionPerformed
 
     private void btnMesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa1ActionPerformed
-       panelDeMenu = new Menu();
-       this.setBounds(0, 0, 446, 650);
-       panelDeMenu.setBounds(this.getBounds());
-       PanelMenu.removeAll();
-       PanelMenu.add(panelDeMenu);
-       PanelMenu.updateUI();
+        asignacionDeMesa(1);
     }//GEN-LAST:event_btnMesa1ActionPerformed
 
     /**
@@ -145,11 +138,20 @@ public class Cafeteria extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Cafeteria().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Cafeteria().setVisible(true);
         });
+    }
+    
+    void asignacionDeMesa(int mesa){
+       Cuenta cuentaDeMesa = new Cuenta(mesa);
+       cuentasDeLaCafeteria.add(cuentaDeMesa);
+       panelDeMenu = new Menu();
+       this.setBounds(0, 0, 446, 650);
+       panelDeMenu.setBounds(this.getBounds());
+       PanelMenu.removeAll();
+       PanelMenu.add(panelDeMenu);
+       PanelMenu.updateUI();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
