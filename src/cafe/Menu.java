@@ -35,7 +35,7 @@ public class Menu extends javax.swing.JPanel {
         base.setPreferredSize(new java.awt.Dimension(200, 200));
         base.setLayout(null);
         add(base);
-        base.setBounds(120, 90, 300, 410);
+        base.setBounds(120, 90, 428, 460);
 
         btnJarabes.setText("Jarabes");
         btnJarabes.addActionListener(new java.awt.event.ActionListener() {
@@ -44,7 +44,7 @@ public class Menu extends javax.swing.JPanel {
             }
         });
         add(btnJarabes);
-        btnJarabes.setBounds(240, 550, 80, 40);
+        btnJarabes.setBounds(270, 580, 80, 40);
 
         btnTamanioLeche.setText("Tamaño");
         btnTamanioLeche.addActionListener(new java.awt.event.ActionListener() {
@@ -53,11 +53,11 @@ public class Menu extends javax.swing.JPanel {
             }
         });
         add(btnTamanioLeche);
-        btnTamanioLeche.setBounds(140, 550, 80, 40);
+        btnTamanioLeche.setBounds(140, 580, 80, 40);
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menu.jpg"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menuW.jpg"))); // NOI18N
         add(Fondo);
-        Fondo.setBounds(0, 0, 430, 610);
+        Fondo.setBounds(0, 0, 590, 670);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnJarabesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJarabesActionPerformed
