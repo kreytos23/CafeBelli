@@ -39,44 +39,63 @@ public class Menu extends javax.swing.JPanel {
         add(base);
         base.setBounds(120, 90, 428, 460);
 
-        btnJarabes.setText("Jarabes");
+        btnJarabes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/jarabe.png"))); // NOI18N
+        btnJarabes.setBorderPainted(false);
+        btnJarabes.setContentAreaFilled(false);
+        btnJarabes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnJarabes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnJarabes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnJarabesActionPerformed(evt);
             }
         });
         add(btnJarabes);
-        btnJarabes.setBounds(270, 680, 80, 40);
+        btnJarabes.setBounds(320, 680, 50, 45);
 
-        btnTamanioLeche.setText("Tamaño");
+        btnTamanioLeche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/tam.png"))); // NOI18N
+        btnTamanioLeche.setBorderPainted(false);
+        btnTamanioLeche.setContentAreaFilled(false);
+        btnTamanioLeche.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTamanioLeche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTamanioLecheActionPerformed(evt);
             }
         });
         add(btnTamanioLeche);
-        btnTamanioLeche.setBounds(180, 680, 80, 40);
+        btnTamanioLeche.setBounds(380, 680, 50, 45);
 
-        btnCafes.setText("Cafes");
+        btnCafes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/cafe.png"))); // NOI18N
+        btnCafes.setBorderPainted(false);
+        btnCafes.setContentAreaFilled(false);
+        btnCafes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCafes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCafes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCafesActionPerformed(evt);
             }
         });
         add(btnCafes);
-        btnCafes.setBounds(360, 680, 80, 40);
+        btnCafes.setBounds(260, 680, 50, 45);
 
-        btnTerminar.setText("Terminar");
+        btnTerminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/terminar.png"))); // NOI18N
+        btnTerminar.setBorderPainted(false);
+        btnTerminar.setContentAreaFilled(false);
+        btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTerminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         add(btnTerminar);
-        btnTerminar.setBounds(450, 680, 90, 40);
+        btnTerminar.setBounds(440, 680, 50, 45);
 
+        mover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/menu.png"))); // NOI18N
+        mover.setBorderPainted(false);
+        mover.setContentAreaFilled(false);
+        mover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         mover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 moverActionPerformed(evt);
             }
         });
         add(mover);
-        mover.setBounds(90, 620, 70, 30);
+        mover.setBounds(520, 610, 50, 45);
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menuW.jpg"))); // NOI18N
         add(Fondo);
