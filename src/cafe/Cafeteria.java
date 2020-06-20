@@ -12,8 +12,12 @@ public class Cafeteria extends javax.swing.JFrame {
 
     private Menu panelDeMenu;
     private ArrayList<Cuenta> cuentasDeLaCafeteria;
+    private Audio audio;
     
     public Cafeteria() {
+        
+        audio = new Audio();
+        audio.sonido("Jazz");
         cuentasDeLaCafeteria = new ArrayList<>();
         initComponents();
     }
@@ -93,7 +97,7 @@ public class Cafeteria extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void btnMesa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa2ActionPerformed
         asignacionDeMesa(2);
     }//GEN-LAST:event_btnMesa2ActionPerformed
