@@ -5,6 +5,8 @@
  */
 package cafe;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author serpi
@@ -16,6 +18,7 @@ public class MenuJarabe extends javax.swing.JPanel {
      */
     public MenuJarabe() {
         initComponents();
+        cambiarLetra();
     }
 
     /**
@@ -27,6 +30,7 @@ public class MenuJarabe extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupJarabes = new javax.swing.ButtonGroup();
         amareto = new javax.swing.JLabel();
         irlandesa = new javax.swing.JLabel();
         menta = new javax.swing.JLabel();
@@ -41,146 +45,227 @@ public class MenuJarabe extends javax.swing.JPanel {
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        numDeShots = new javax.swing.JLabel();
+        jarabes = new javax.swing.JLabel();
+        shots = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jarabe = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(0, 0, 0));
+        setLayout(null);
 
         amareto.setForeground(new java.awt.Color(255, 255, 255));
-        amareto.setText("Amareto");
+        amareto.setText("Esencia de almendra");
+        add(amareto);
+        amareto.setBounds(20, 60, 240, 30);
 
         irlandesa.setForeground(new java.awt.Color(255, 255, 255));
-        irlandesa.setText("Crema Irlandesa");
+        irlandesa.setText("Esencia de banana");
+        add(irlandesa);
+        irlandesa.setBounds(20, 90, 220, 30);
 
         menta.setForeground(new java.awt.Color(255, 255, 255));
-        menta.setText("Menta ");
+        menta.setText("Esencia de cereza");
+        add(menta);
+        menta.setBounds(20, 130, 180, 30);
 
         caramelo.setForeground(new java.awt.Color(255, 255, 255));
-        caramelo.setText("Caramelo");
+        caramelo.setText("Esencia de chocolate");
+        add(caramelo);
+        caramelo.setBounds(18, 165, 230, 30);
 
         cajeta.setForeground(new java.awt.Color(255, 255, 255));
-        cajeta.setText("Cajeta");
+        cajeta.setText("Esencia de fresa");
+        add(cajeta);
+        cajeta.setBounds(20, 200, 170, 30);
 
         miel.setForeground(new java.awt.Color(255, 255, 255));
-        miel.setText("Miel ");
+        miel.setText("Esencia de mora azul");
+        add(miel);
+        miel.setBounds(18, 241, 230, 30);
 
         maple.setForeground(new java.awt.Color(255, 255, 255));
-        maple.setText("Maple");
+        maple.setText("Esencia de kiwi");
+        add(maple);
+        maple.setBounds(18, 269, 180, 40);
+        add(jSeparator1);
+        jSeparator1.setBounds(20, 85, 200, 10);
+        add(jSeparator2);
+        jSeparator2.setBounds(20, 121, 200, 10);
+        add(jSeparator3);
+        jSeparator3.setBounds(18, 157, 200, 10);
+        add(jSeparator4);
+        jSeparator4.setBounds(18, 193, 200, 10);
+        add(jSeparator5);
+        jSeparator5.setBounds(18, 229, 200, 10);
+        add(jSeparator6);
+        jSeparator6.setBounds(18, 265, 200, 10);
+        add(jSeparator7);
+        jSeparator7.setBounds(18, 301, 200, 10);
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Numero de Shots De Espresso");
-        jLabel1.setFocusable(false);
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        numDeShots.setForeground(new java.awt.Color(255, 255, 255));
+        numDeShots.setText("Numero de Shots De Espresso");
+        numDeShots.setFocusable(false);
+        numDeShots.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        add(numDeShots);
+        numDeShots.setBounds(54, 331, 310, 37);
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Jarabes");
-        jLabel2.setFocusable(false);
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jarabes.setForeground(new java.awt.Color(255, 255, 255));
+        jarabes.setText("Jarabes");
+        jarabes.setFocusable(false);
+        jarabes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        add(jarabes);
+        jarabes.setBounds(116, 0, 114, 43);
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Shots:");
+        shots.setForeground(new java.awt.Color(255, 255, 255));
+        shots.setText("Shots:");
+        add(shots);
+        shots.setBounds(90, 390, 50, 30);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroupJarabes.add(jCheckBox1);
+        jCheckBox1.setContentAreaFilled(false);
+        jCheckBox1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jCheckBox1ActionPerformed(evt);
             }
         });
+        add(jCheckBox1);
+        jCheckBox1.setBounds(200, 49, 40, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(maple)
-                            .addComponent(miel)
-                            .addComponent(cajeta)
-                            .addComponent(caramelo)
-                            .addComponent(menta)
-                            .addComponent(irlandesa)
-                            .addComponent(amareto)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                .addGap(8, 8, 8)
-                .addComponent(amareto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(irlandesa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(menta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(caramelo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cajeta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(miel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(maple)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56))
-        );
+        buttonGroupJarabes.add(jCheckBox2);
+        jCheckBox2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+        add(jCheckBox2);
+        jCheckBox2.setBounds(200, 265, 40, 40);
+
+        buttonGroupJarabes.add(jCheckBox3);
+        jCheckBox3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
+        add(jCheckBox3);
+        jCheckBox3.setBounds(200, 85, 40, 40);
+
+        buttonGroupJarabes.add(jCheckBox4);
+        jCheckBox4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
+        add(jCheckBox4);
+        jCheckBox4.setBounds(200, 120, 40, 40);
+
+        buttonGroupJarabes.add(jCheckBox5);
+        jCheckBox5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
+        add(jCheckBox5);
+        jCheckBox5.setBounds(200, 156, 40, 40);
+
+        buttonGroupJarabes.add(jCheckBox6);
+        jCheckBox6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
+        add(jCheckBox6);
+        jCheckBox6.setBounds(200, 193, 40, 40);
+
+        buttonGroupJarabes.add(jCheckBox7);
+        jCheckBox7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
+        jCheckBox7.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
+        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox7ActionPerformed(evt);
+            }
+        });
+        add(jCheckBox7);
+        jCheckBox7.setBounds(200, 228, 40, 40);
+        add(jarabe);
+        jarabe.setBounds(250, 80, 160, 220);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
+        add(jComboBox1);
+        jComboBox1.setBounds(140, 390, 40, 26);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/amaretto.png")));
+   
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/almendra.png")));        
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/almendra.png")));
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jCheckBox4ActionPerformed
+
+    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox5ActionPerformed
+
+    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox6ActionPerformed
+
+    private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox7ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel amareto;
+    private javax.swing.ButtonGroup buttonGroupJarabes;
     private javax.swing.JLabel cajeta;
     private javax.swing.JLabel caramelo;
     private javax.swing.JLabel irlandesa;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -188,9 +273,31 @@ public class MenuJarabe extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jarabe;
+    private javax.swing.JLabel jarabes;
     private javax.swing.JLabel maple;
     private javax.swing.JLabel menta;
     private javax.swing.JLabel miel;
+    private javax.swing.JLabel numDeShots;
+    private javax.swing.JLabel shots;
     // End of variables declaration//GEN-END:variables
+
+    private void cambiarLetra() {
+        
+        ClaseYellow cf = new ClaseYellow("Cream Cake.ttf");
+        ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
+        
+        jarabes.setFont(st.MyFont(0, 30));
+        amareto.setFont(cf.MyFont(0, 30));
+        irlandesa.setFont(cf.MyFont(0, 30));
+        menta.setFont(cf.MyFont(0, 30));
+        caramelo.setFont(cf.MyFont(0, 30));
+        cajeta.setFont(cf.MyFont(0, 30));
+        miel.setFont(cf.MyFont(0, 30));
+        maple.setFont(cf.MyFont(0, 30));
+        
+        numDeShots.setFont(st.MyFont(0, 30));
+        shots.setFont(cf.MyFont(0, 30));
+        
+    }
 }

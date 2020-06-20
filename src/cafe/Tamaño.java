@@ -20,4 +20,8 @@ public enum Tamaño {
     public double getPrecioPorTamanio(){
         return precioPorTamanio;
     }
+
+    public double getCostoBase() {
+        return costoBase;
+    }
 }
