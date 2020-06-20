@@ -20,6 +20,7 @@ public class Cafeteria extends javax.swing.JFrame {
         audio.sonido("Jazz");
         cuentasDeLaCafeteria = new ArrayList<>();
         initComponents();
+        letrerosBotones();
     }
 
     @SuppressWarnings("unchecked")
@@ -31,6 +32,10 @@ public class Cafeteria extends javax.swing.JFrame {
         btnMesa2 = new javax.swing.JButton();
         btnMesa4 = new javax.swing.JButton();
         btnMesa1 = new javax.swing.JButton();
+        LbMesa3 = new javax.swing.JLabel();
+        LbMesa1 = new javax.swing.JLabel();
+        LbMesa4 = new javax.swing.JLabel();
+        LbMesa2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,7 +46,16 @@ public class Cafeteria extends javax.swing.JFrame {
 
         btnMesa3.setToolTipText("");
         btnMesa3.setContentAreaFilled(false);
+        btnMesa3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMesa3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa4.png"))); // NOI18N
+        btnMesa3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnMesa3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnMesa3MouseExited(evt);
+            }
+        });
         btnMesa3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMesa3ActionPerformed(evt);
@@ -51,7 +65,16 @@ public class Cafeteria extends javax.swing.JFrame {
         btnMesa3.setBounds(488, 250, 163, 165);
 
         btnMesa2.setContentAreaFilled(false);
+        btnMesa2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMesa2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa2.png"))); // NOI18N
+        btnMesa2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnMesa2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnMesa2MouseExited(evt);
+            }
+        });
         btnMesa2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMesa2ActionPerformed(evt);
@@ -61,7 +84,16 @@ public class Cafeteria extends javax.swing.JFrame {
         btnMesa2.setBounds(147, 250, 190, 160);
 
         btnMesa4.setContentAreaFilled(false);
+        btnMesa4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMesa4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa3.png"))); // NOI18N
+        btnMesa4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnMesa4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnMesa4MouseExited(evt);
+            }
+        });
         btnMesa4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMesa4ActionPerformed(evt);
@@ -71,7 +103,16 @@ public class Cafeteria extends javax.swing.JFrame {
         btnMesa4.setBounds(330, 250, 165, 160);
 
         btnMesa1.setContentAreaFilled(false);
+        btnMesa1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMesa1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa1.png"))); // NOI18N
+        btnMesa1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnMesa1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnMesa1MouseExited(evt);
+            }
+        });
         btnMesa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMesa1ActionPerformed(evt);
@@ -79,6 +120,34 @@ public class Cafeteria extends javax.swing.JFrame {
         });
         PanelMenu.add(btnMesa1);
         btnMesa1.setBounds(-10, 250, 170, 170);
+
+        LbMesa3.setBackground(null);
+        LbMesa3.setForeground(new java.awt.Color(0, 204, 0));
+        LbMesa3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbMesa3.setText("Mesa 3");
+        PanelMenu.add(LbMesa3);
+        LbMesa3.setBounds(360, 180, 120, 60);
+
+        LbMesa1.setBackground(null);
+        LbMesa1.setForeground(new java.awt.Color(255, 255, 255));
+        LbMesa1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbMesa1.setText("Mesa 1");
+        PanelMenu.add(LbMesa1);
+        LbMesa1.setBounds(10, 180, 120, 60);
+
+        LbMesa4.setBackground(null);
+        LbMesa4.setForeground(new java.awt.Color(204, 0, 0));
+        LbMesa4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbMesa4.setText("Mesa 4");
+        PanelMenu.add(LbMesa4);
+        LbMesa4.setBounds(510, 180, 120, 60);
+
+        LbMesa2.setBackground(null);
+        LbMesa2.setForeground(new java.awt.Color(153, 0, 153));
+        LbMesa2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbMesa2.setText("Mesa 2");
+        PanelMenu.add(LbMesa2);
+        LbMesa2.setBounds(190, 180, 120, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen cafeteria reducida.jpg"))); // NOI18N
         PanelMenu.add(jLabel1);
@@ -113,6 +182,38 @@ public class Cafeteria extends javax.swing.JFrame {
     private void btnMesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa1ActionPerformed
         asignacionDeMesa(1);
     }//GEN-LAST:event_btnMesa1ActionPerformed
+
+    private void btnMesa1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa1MouseEntered
+        LbMesa1.setVisible(true);
+    }//GEN-LAST:event_btnMesa1MouseEntered
+
+    private void btnMesa1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa1MouseExited
+        LbMesa1.setVisible(false);
+    }//GEN-LAST:event_btnMesa1MouseExited
+
+    private void btnMesa2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa2MouseEntered
+        LbMesa2.setVisible(true);
+    }//GEN-LAST:event_btnMesa2MouseEntered
+
+    private void btnMesa2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa2MouseExited
+        LbMesa2.setVisible(false);
+    }//GEN-LAST:event_btnMesa2MouseExited
+
+    private void btnMesa4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa4MouseEntered
+        LbMesa3.setVisible(true);
+    }//GEN-LAST:event_btnMesa4MouseEntered
+
+    private void btnMesa4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa4MouseExited
+        LbMesa3.setVisible(false);
+    }//GEN-LAST:event_btnMesa4MouseExited
+
+    private void btnMesa3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa3MouseEntered
+        LbMesa4.setVisible(true);
+    }//GEN-LAST:event_btnMesa3MouseEntered
+
+    private void btnMesa3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa3MouseExited
+        LbMesa4.setVisible(false);
+    }//GEN-LAST:event_btnMesa3MouseExited
 
     /**
      * @param args the command line arguments
@@ -159,6 +260,10 @@ public class Cafeteria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LbMesa1;
+    private javax.swing.JLabel LbMesa2;
+    private javax.swing.JLabel LbMesa3;
+    private javax.swing.JLabel LbMesa4;
     private javax.swing.JPanel PanelMenu;
     private javax.swing.JButton btnMesa1;
     private javax.swing.JButton btnMesa2;
@@ -166,4 +271,18 @@ public class Cafeteria extends javax.swing.JFrame {
     private javax.swing.JButton btnMesa4;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+private void letrerosBotones() {
+
+        ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
+        LbMesa1.setVisible(false);
+        LbMesa1.setFont(st.MyFont(1, 30));
+        LbMesa2.setVisible(false);
+        LbMesa2.setFont(st.MyFont(1, 30));
+        LbMesa3.setVisible(false);
+        LbMesa3.setFont(st.MyFont(1, 30));
+        LbMesa4.setVisible(false);
+        LbMesa4.setFont(st.MyFont(1, 30));
+    }
+
 }
