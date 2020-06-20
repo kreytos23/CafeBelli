@@ -29,6 +29,7 @@ public class Menu extends javax.swing.JPanel {
         btnCafes = new javax.swing.JButton();
         btnTerminar = new javax.swing.JButton();
         mover = new javax.swing.JToggleButton();
+        prueba = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setLayout(null);
@@ -82,6 +83,16 @@ public class Menu extends javax.swing.JPanel {
         btnTerminar.setContentAreaFilled(false);
         btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTerminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnTerminar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                btnTerminarMouseDragged(evt);
+            }
+        });
+        btnTerminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTerminarActionPerformed(evt);
+            }
+        });
         add(btnTerminar);
         btnTerminar.setBounds(440, 680, 50, 45);
 
@@ -96,6 +107,10 @@ public class Menu extends javax.swing.JPanel {
         });
         add(mover);
         mover.setBounds(520, 610, 50, 45);
+
+        prueba.setText("jLabel1");
+        add(prueba);
+        prueba.setBounds(440, 560, 41, 16);
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menuW.jpg"))); // NOI18N
         add(Fondo);
@@ -144,6 +159,14 @@ public class Menu extends javax.swing.JPanel {
         base.updateUI();
     }//GEN-LAST:event_btnCafesActionPerformed
 
+    private void btnTerminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTerminarActionPerformed
+
+    private void btnTerminarMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseDragged
+        prueba.setText("Funciona esta mierda");
+    }//GEN-LAST:event_btnTerminarMouseDragged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
@@ -153,6 +176,7 @@ public class Menu extends javax.swing.JPanel {
     private javax.swing.JButton btnTamanioLeche;
     private javax.swing.JButton btnTerminar;
     private javax.swing.JToggleButton mover;
+    private javax.swing.JLabel prueba;
     // End of variables declaration//GEN-END:variables
 
     

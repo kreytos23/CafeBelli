@@ -83,7 +83,7 @@ public class PanelTamaño extends javax.swing.JPanel {
 
         tamañoDelCafeJL.setText("jLabel5");
         add(tamañoDelCafeJL);
-        tamañoDelCafeJL.setBounds(80, 320, 290, 140);
+        tamañoDelCafeJL.setBounds(80, 310, 290, 150);
     }// </editor-fold>//GEN-END:initComponents
 
     private void comboTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTamanioActionPerformed
