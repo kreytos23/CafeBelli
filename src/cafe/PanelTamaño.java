@@ -1,6 +1,7 @@
 package cafe;
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -10,12 +11,14 @@ public class PanelTamaño extends javax.swing.JPanel {
 
     private DefaultComboBoxModel tipoDeLeche;
     private DefaultComboBoxModel tamanios;
+    private TipoDeLeche tiposDeLeche;
     
     
     public PanelTamaño() {
         tipoDeLeche = new DefaultComboBoxModel(TipoDeLeche.values());
         tamanios = new DefaultComboBoxModel(Tamaño.values());
         initComponents();
+        cambiarLetra();
        
     }
 
@@ -24,27 +27,42 @@ public class PanelTamaño extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        tipoDeLecheTex = new javax.swing.JLabel();
+        tamañoDelCafeTex = new javax.swing.JLabel();
         comboTipoDeLeche = new javax.swing.JComboBox<>();
         comboTamanio = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
+        letreroTitulo = new javax.swing.JLabel();
+        tipoDeLecheJL = new javax.swing.JLabel();
+        tamañoDelCafeJL = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
+        setOpaque(false);
+        setLayout(null);
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Tipo De Leche:");
-        jLabel2.setFocusable(false);
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        tipoDeLecheTex.setForeground(new java.awt.Color(255, 255, 255));
+        tipoDeLecheTex.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tipoDeLecheTex.setText("Tipo De Leche:");
+        tipoDeLecheTex.setFocusable(false);
+        tipoDeLecheTex.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        add(tipoDeLecheTex);
+        tipoDeLecheTex.setBounds(50, 120, 130, 50);
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Tamaño Del Cafe:");
-        jLabel3.setFocusable(false);
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        tamañoDelCafeTex.setForeground(new java.awt.Color(255, 255, 255));
+        tamañoDelCafeTex.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tamañoDelCafeTex.setText("Tamaño Del Cafe:");
+        tamañoDelCafeTex.setFocusable(false);
+        tamañoDelCafeTex.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        add(tamañoDelCafeTex);
+        tamañoDelCafeTex.setBounds(40, 260, 160, 50);
 
         comboTipoDeLeche.setModel(tipoDeLeche);
+        comboTipoDeLeche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboTipoDeLecheActionPerformed(evt);
+            }
+        });
+        add(comboTipoDeLeche);
+        comboTipoDeLeche.setBounds(60, 170, 130, 26);
 
         comboTamanio.setModel(tamanios);
         comboTamanio.addActionListener(new java.awt.event.ActionListener() {
@@ -52,59 +70,49 @@ public class PanelTamaño extends javax.swing.JPanel {
                 comboTamanioActionPerformed(evt);
             }
         });
+        add(comboTamanio);
+        comboTamanio.setBounds(210, 270, 100, 26);
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Tamaño y Tipo De Leche");
+        letreroTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        letreroTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        letreroTitulo.setText("Tamaño y Tipo De Leche");
+        add(letreroTitulo);
+        letreroTitulo.setBounds(80, 0, 230, 50);
+        add(tipoDeLecheJL);
+        tipoDeLecheJL.setBounds(210, 90, 170, 160);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(comboTamanio, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(comboTipoDeLeche, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(76, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboTipoDeLeche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboTamanio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(293, Short.MAX_VALUE))
-        );
+        tamañoDelCafeJL.setText("jLabel5");
+        add(tamañoDelCafeJL);
+        tamañoDelCafeJL.setBounds(80, 320, 290, 140);
     }// </editor-fold>//GEN-END:initComponents
 
     private void comboTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTamanioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_comboTamanioActionPerformed
 
+    private void comboTipoDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTipoDeLecheActionPerformed
+        
+        tipoDeLecheJL.setIcon(new ImageIcon(getClass().getResource("/TiposLeches/"+comboTipoDeLeche.getSelectedItem().toString()+".png")));
+    }//GEN-LAST:event_comboTipoDeLecheActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> comboTamanio;
     private javax.swing.JComboBox<String> comboTipoDeLeche;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel letreroTitulo;
+    private javax.swing.JLabel tamañoDelCafeJL;
+    private javax.swing.JLabel tamañoDelCafeTex;
+    private javax.swing.JLabel tipoDeLecheJL;
+    private javax.swing.JLabel tipoDeLecheTex;
     // End of variables declaration//GEN-END:variables
+
+    private void cambiarLetra() {
+        
+        ClaseYellow cf = new ClaseYellow("Cream Cake.ttf");
+        ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
+        
+        letreroTitulo.setFont(st.MyFont(0, 30));
+        tipoDeLecheTex.setFont(cf.MyFont(0, 30));
+        tamañoDelCafeTex.setFont(cf.MyFont(0, 30));
+    }
 }
