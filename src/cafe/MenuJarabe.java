@@ -59,6 +59,7 @@ public class MenuJarabe extends javax.swing.JPanel {
         jComboBox1 = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(0, 0, 0));
+        setOpaque(false);
         setLayout(null);
 
         amareto.setForeground(new java.awt.Color(255, 255, 255));
@@ -222,33 +223,36 @@ public class MenuJarabe extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/amaretto.png")));
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeAlmandra.png")));
    
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/almendra.png")));        
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeKiwi.png")));
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
 
-        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/almendra.png")));
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeBanana.png")));
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
-        // TODO add your handling code here:
+
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeCereza.png")));
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
-        // TODO add your handling code here:
+
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeCereza.png")));
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
-        // TODO add your handling code here:
+
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeFresa.png")));
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
-        // TODO add your handling code here:
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeMora.png")));
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
 
