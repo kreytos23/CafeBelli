@@ -82,14 +82,14 @@ public class MenuJarabe extends javax.swing.JPanel {
         caramelo.setBounds(18, 165, 230, 30);
 
         cajeta.setForeground(new java.awt.Color(255, 255, 255));
-        cajeta.setText("Cajeta");
+        cajeta.setText("Esencia de fresa");
         add(cajeta);
-        cajeta.setBounds(20, 200, 60, 30);
+        cajeta.setBounds(20, 200, 170, 30);
 
         miel.setForeground(new java.awt.Color(255, 255, 255));
-        miel.setText("Miel ");
+        miel.setText("Esencia de mora azul");
         add(miel);
-        miel.setBounds(18, 241, 60, 30);
+        miel.setBounds(18, 241, 230, 30);
 
         maple.setForeground(new java.awt.Color(255, 255, 255));
         maple.setText("Maple");
