@@ -45,10 +45,9 @@ public class MenuJarabe extends javax.swing.JPanel {
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
+        numDeShots = new javax.swing.JLabel();
         jarabes = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        shots = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
@@ -57,6 +56,7 @@ public class MenuJarabe extends javax.swing.JPanel {
         jCheckBox6 = new javax.swing.JCheckBox();
         jCheckBox7 = new javax.swing.JCheckBox();
         jarabe = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(0, 0, 0));
         setLayout(null);
@@ -92,9 +92,9 @@ public class MenuJarabe extends javax.swing.JPanel {
         miel.setBounds(18, 241, 230, 30);
 
         maple.setForeground(new java.awt.Color(255, 255, 255));
-        maple.setText("Maple");
+        maple.setText("Esencia de kiwi");
         add(maple);
-        maple.setBounds(18, 279, 70, 30);
+        maple.setBounds(18, 269, 180, 40);
         add(jSeparator1);
         jSeparator1.setBounds(20, 85, 200, 10);
         add(jSeparator2);
@@ -110,12 +110,12 @@ public class MenuJarabe extends javax.swing.JPanel {
         add(jSeparator7);
         jSeparator7.setBounds(18, 301, 200, 10);
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Numero de Shots De Espresso");
-        jLabel1.setFocusable(false);
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        add(jLabel1);
-        jLabel1.setBounds(54, 331, 182, 37);
+        numDeShots.setForeground(new java.awt.Color(255, 255, 255));
+        numDeShots.setText("Numero de Shots De Espresso");
+        numDeShots.setFocusable(false);
+        numDeShots.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        add(numDeShots);
+        numDeShots.setBounds(54, 331, 310, 37);
 
         jarabes.setForeground(new java.awt.Color(255, 255, 255));
         jarabes.setText("Jarabes");
@@ -124,18 +124,10 @@ public class MenuJarabe extends javax.swing.JPanel {
         add(jarabes);
         jarabes.setBounds(116, 0, 114, 43);
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Shots:");
-        add(jLabel3);
-        jLabel3.setBounds(45, 378, 36, 16);
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        add(jTextField1);
-        jTextField1.setBounds(93, 374, 155, 24);
+        shots.setForeground(new java.awt.Color(255, 255, 255));
+        shots.setText("Shots:");
+        add(shots);
+        shots.setBounds(90, 390, 50, 30);
 
         buttonGroupJarabes.add(jCheckBox1);
         jCheckBox1.setContentAreaFilled(false);
@@ -223,11 +215,11 @@ public class MenuJarabe extends javax.swing.JPanel {
         jCheckBox7.setBounds(200, 228, 40, 40);
         add(jarabe);
         jarabe.setBounds(250, 80, 160, 220);
-    }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
+        add(jComboBox1);
+        jComboBox1.setBounds(140, 390, 40, 26);
+    }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/amaretto.png")));
@@ -273,8 +265,7 @@ public class MenuJarabe extends javax.swing.JPanel {
     private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -282,12 +273,13 @@ public class MenuJarabe extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel jarabe;
     private javax.swing.JLabel jarabes;
     private javax.swing.JLabel maple;
     private javax.swing.JLabel menta;
     private javax.swing.JLabel miel;
+    private javax.swing.JLabel numDeShots;
+    private javax.swing.JLabel shots;
     // End of variables declaration//GEN-END:variables
 
     private void cambiarLetra() {
@@ -303,6 +295,9 @@ public class MenuJarabe extends javax.swing.JPanel {
         cajeta.setFont(cf.MyFont(0, 30));
         miel.setFont(cf.MyFont(0, 30));
         maple.setFont(cf.MyFont(0, 30));
+        
+        numDeShots.setFont(st.MyFont(0, 30));
+        shots.setFont(cf.MyFont(0, 30));
         
     }
 }
