@@ -151,7 +151,7 @@ public class Cafeteria extends javax.swing.JFrame {
        Cuenta cuentaDeMesa = new Cuenta(mesa);
        cuentasDeLaCafeteria.add(cuentaDeMesa);
        panelDeMenu = new Menu();
-       this.setBounds(0, 0, 586, 674);
+       this.setBounds(0, 0, 588, 709);
        panelDeMenu.setBounds(this.getBounds());
        PanelMenu.removeAll();
        PanelMenu.add(panelDeMenu);
