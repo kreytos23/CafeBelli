@@ -243,7 +243,7 @@ public class MenuJarabe extends javax.swing.JPanel {
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
 
-        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeCereza.png")));
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeChocolate.png")));
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
