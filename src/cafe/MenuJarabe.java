@@ -5,6 +5,8 @@
  */
 package cafe;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author serpi
@@ -28,7 +30,7 @@ public class MenuJarabe extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroupJarabes = new javax.swing.ButtonGroup();
         amareto = new javax.swing.JLabel();
         irlandesa = new javax.swing.JLabel();
         menta = new javax.swing.JLabel();
@@ -54,30 +56,30 @@ public class MenuJarabe extends javax.swing.JPanel {
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
         jCheckBox7 = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
+        jarabe = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
         setLayout(null);
 
         amareto.setForeground(new java.awt.Color(255, 255, 255));
-        amareto.setText("Amareto");
+        amareto.setText("Esencia de almendra");
         add(amareto);
-        amareto.setBounds(20, 60, 90, 30);
+        amareto.setBounds(20, 60, 240, 30);
 
         irlandesa.setForeground(new java.awt.Color(255, 255, 255));
-        irlandesa.setText("Crema Irlandesa");
+        irlandesa.setText("Esencia de banana");
         add(irlandesa);
-        irlandesa.setBounds(20, 90, 120, 30);
+        irlandesa.setBounds(20, 90, 220, 30);
 
         menta.setForeground(new java.awt.Color(255, 255, 255));
-        menta.setText("Menta ");
+        menta.setText("Esencia de cereza");
         add(menta);
-        menta.setBounds(20, 130, 70, 30);
+        menta.setBounds(20, 130, 180, 30);
 
         caramelo.setForeground(new java.awt.Color(255, 255, 255));
-        caramelo.setText("Caramelo");
+        caramelo.setText("Esencia de chocolate");
         add(caramelo);
-        caramelo.setBounds(18, 165, 60, 30);
+        caramelo.setBounds(18, 165, 230, 30);
 
         cajeta.setForeground(new java.awt.Color(255, 255, 255));
         cajeta.setText("Cajeta");
@@ -135,7 +137,7 @@ public class MenuJarabe extends javax.swing.JPanel {
         add(jTextField1);
         jTextField1.setBounds(93, 374, 155, 24);
 
-        buttonGroup1.add(jCheckBox1);
+        buttonGroupJarabes.add(jCheckBox1);
         jCheckBox1.setContentAreaFilled(false);
         jCheckBox1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
@@ -146,9 +148,9 @@ public class MenuJarabe extends javax.swing.JPanel {
             }
         });
         add(jCheckBox1);
-        jCheckBox1.setBounds(180, 49, 40, 40);
+        jCheckBox1.setBounds(200, 49, 40, 40);
 
-        buttonGroup1.add(jCheckBox2);
+        buttonGroupJarabes.add(jCheckBox2);
         jCheckBox2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
@@ -158,9 +160,9 @@ public class MenuJarabe extends javax.swing.JPanel {
             }
         });
         add(jCheckBox2);
-        jCheckBox2.setBounds(180, 265, 40, 40);
+        jCheckBox2.setBounds(200, 265, 40, 40);
 
-        buttonGroup1.add(jCheckBox3);
+        buttonGroupJarabes.add(jCheckBox3);
         jCheckBox3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
@@ -170,9 +172,9 @@ public class MenuJarabe extends javax.swing.JPanel {
             }
         });
         add(jCheckBox3);
-        jCheckBox3.setBounds(180, 85, 40, 40);
+        jCheckBox3.setBounds(200, 85, 40, 40);
 
-        buttonGroup1.add(jCheckBox4);
+        buttonGroupJarabes.add(jCheckBox4);
         jCheckBox4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
@@ -182,9 +184,9 @@ public class MenuJarabe extends javax.swing.JPanel {
             }
         });
         add(jCheckBox4);
-        jCheckBox4.setBounds(180, 120, 40, 40);
+        jCheckBox4.setBounds(200, 120, 40, 40);
 
-        buttonGroup1.add(jCheckBox5);
+        buttonGroupJarabes.add(jCheckBox5);
         jCheckBox5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
@@ -194,9 +196,9 @@ public class MenuJarabe extends javax.swing.JPanel {
             }
         });
         add(jCheckBox5);
-        jCheckBox5.setBounds(180, 156, 40, 40);
+        jCheckBox5.setBounds(200, 156, 40, 40);
 
-        buttonGroup1.add(jCheckBox6);
+        buttonGroupJarabes.add(jCheckBox6);
         jCheckBox6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
@@ -206,9 +208,9 @@ public class MenuJarabe extends javax.swing.JPanel {
             }
         });
         add(jCheckBox6);
-        jCheckBox6.setBounds(180, 193, 40, 40);
+        jCheckBox6.setBounds(200, 193, 40, 40);
 
-        buttonGroup1.add(jCheckBox7);
+        buttonGroupJarabes.add(jCheckBox7);
         jCheckBox7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox7.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
@@ -218,9 +220,9 @@ public class MenuJarabe extends javax.swing.JPanel {
             }
         });
         add(jCheckBox7);
-        jCheckBox7.setBounds(180, 228, 40, 40);
-        add(jLabel2);
-        jLabel2.setBounds(250, 90, 160, 210);
+        jCheckBox7.setBounds(200, 228, 40, 40);
+        add(jarabe);
+        jarabe.setBounds(250, 80, 160, 220);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -228,15 +230,17 @@ public class MenuJarabe extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/amaretto.png")));
+   
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/almendra.png")));        
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
+
+        jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/almendra.png")));
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
@@ -258,7 +262,7 @@ public class MenuJarabe extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel amareto;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroupJarabes;
     private javax.swing.JLabel cajeta;
     private javax.swing.JLabel caramelo;
     private javax.swing.JLabel irlandesa;
@@ -270,7 +274,6 @@ public class MenuJarabe extends javax.swing.JPanel {
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
@@ -280,6 +283,7 @@ public class MenuJarabe extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jarabe;
     private javax.swing.JLabel jarabes;
     private javax.swing.JLabel maple;
     private javax.swing.JLabel menta;
