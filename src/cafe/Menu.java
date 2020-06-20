@@ -88,6 +88,14 @@ public class Menu extends javax.swing.JPanel {
                 btnTerminarMouseDragged(evt);
             }
         });
+        btnTerminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnTerminarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnTerminarMouseExited(evt);
+            }
+        });
         btnTerminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTerminarActionPerformed(evt);
@@ -108,9 +116,10 @@ public class Menu extends javax.swing.JPanel {
         add(mover);
         mover.setBounds(520, 610, 50, 45);
 
+        prueba.setForeground(new java.awt.Color(255, 255, 255));
         prueba.setText("jLabel1");
         add(prueba);
-        prueba.setBounds(440, 560, 41, 16);
+        prueba.setBounds(321, 560, 160, 16);
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menuW.jpg"))); // NOI18N
         add(Fondo);
@@ -164,8 +173,17 @@ public class Menu extends javax.swing.JPanel {
     }//GEN-LAST:event_btnTerminarActionPerformed
 
     private void btnTerminarMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseDragged
-        prueba.setText("Funciona esta mierda");
+        
     }//GEN-LAST:event_btnTerminarMouseDragged
+
+    private void btnTerminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseEntered
+        prueba.setVisible(true);
+        prueba.setText("Funciona esta mierda");
+    }//GEN-LAST:event_btnTerminarMouseEntered
+
+    private void btnTerminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseExited
+        prueba.setVisible(false);
+    }//GEN-LAST:event_btnTerminarMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
