@@ -1,7 +1,5 @@
 package cafe;
-import java.awt.Font;
 import AppPackage.AnimationClass;
-
 /**
  * @author serpi
  */
@@ -60,6 +58,11 @@ public class Menu extends javax.swing.JPanel {
         btnTamanioLeche.setBounds(180, 680, 80, 40);
 
         btnCafes.setText("Cafes");
+        btnCafes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCafesActionPerformed(evt);
+            }
+        });
         add(btnCafes);
         btnCafes.setBounds(360, 680, 80, 40);
 
@@ -94,7 +97,6 @@ public class Menu extends javax.swing.JPanel {
         base.removeAll();
         base.add(panelTamaño);
         base.updateUI();
-        mover.setSelected(false);
     }//GEN-LAST:event_btnTamanioLecheActionPerformed
 
     private void moverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverActionPerformed
@@ -114,6 +116,14 @@ public class Menu extends javax.swing.JPanel {
            jarabe.jButtonYDown(610, 680, 20, 5, btnJarabes);
        }
     }//GEN-LAST:event_moverActionPerformed
+
+    private void btnCafesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCafesActionPerformed
+        menuDeCafes = new MenuDeCafes();
+        menuDeCafes.setBounds(0,0,base.getWidth(),base.getHeight());
+        base.removeAll();
+        base.add(menuDeCafes);
+        base.updateUI();
+    }//GEN-LAST:event_btnCafesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
