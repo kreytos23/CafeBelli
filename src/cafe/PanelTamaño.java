@@ -19,6 +19,7 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamanios = new DefaultComboBoxModel(Tamaño.values());
         initComponents();
         cambiarLetra();
+         tipoDeLecheJL.setIcon(new ImageIcon(getClass().getResource("/TiposLeches/Entera.png")));
        
     }
 
