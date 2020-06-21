@@ -12,6 +12,8 @@ public class Cafe extends Producto{
     private boolean costoBase;
     private double costoTotal;
     private int numShots;
+    private TipoDeLeche leche;
+    private Tamaño vaso;
 
     public String getNombreJarabe() {
         return nombreJarabe;
