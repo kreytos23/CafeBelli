@@ -20,6 +20,7 @@ public class MenuJarabe extends javax.swing.JPanel {
         initComponents();
         cambiarLetra();
         comprobarJarabeInicial();
+        mantenerShots();
     }
 
     /**
@@ -350,5 +351,10 @@ public class MenuJarabe extends javax.swing.JPanel {
                 jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeKiwi.png")));
             }
         }
+    }
+
+    private void mantenerShots() {
+
+        
     }
 }
