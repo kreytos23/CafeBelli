@@ -9,9 +9,10 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private int num;
     public MenuDeCafes() {
         initComponents();
-        cafe1="Capuccino";
-        cafe2="Flat white";
-        cafe3="Espresso";
+        
+        cafe1="<html>Capuccino: preparada con café expreso y<p> leche montada con vapor para otorgarle cremosidad.<html>";
+        cafe2="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
+        cafe3="Espresso: un sabor y textura más concentrados.";
         lCafe1.setText(cafe1);
         lCafe2.setText(cafe2);
         lCafe3.setText(cafe3);
@@ -22,16 +23,20 @@ public class MenuDeCafes extends javax.swing.JPanel {
        imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+0+".PNG")));
        imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+1+".PNG")));
        imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+2+".PNG")));
-       num=0;
-       comprobarCafeInicial();
-       
-    }
+
+       num=1;
+
+      comprobarCafeInicial();
+       }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        lCafe2 = new javax.swing.JLabel();
+        lCafe3 = new javax.swing.JLabel();
+        lCafe1 = new javax.swing.JLabel();
         labelCafeDescrip = new javax.swing.JLabel();
         bebidas = new javax.swing.JLabel();
         Latte = new javax.swing.JLabel();
@@ -41,9 +46,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
         Espresso = new javax.swing.JLabel();
         Mocha = new javax.swing.JLabel();
         Machiatto1 = new javax.swing.JLabel();
-        lCafe2 = new javax.swing.JLabel();
-        lCafe3 = new javax.swing.JLabel();
-        lCafe1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -72,8 +74,31 @@ public class MenuDeCafes extends javax.swing.JPanel {
         btnSiguiente = new javax.swing.JToggleButton();
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setOpaque(false);
         setLayout(null);
+
+        lCafe2.setFont(new java.awt.Font("Lucida Handwriting", 0, 11)); // NOI18N
+        lCafe2.setForeground(new java.awt.Color(255, 255, 255));
+        lCafe2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lCafe2.setText("<html>jLabel2<html>");
+        lCafe2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(lCafe2);
+        lCafe2.setBounds(50, 440, 340, 60);
+
+        lCafe3.setFont(new java.awt.Font("Lucida Handwriting", 0, 11)); // NOI18N
+        lCafe3.setForeground(new java.awt.Color(255, 255, 255));
+        lCafe3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lCafe3.setText("jLabel3");
+        lCafe3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(lCafe3);
+        lCafe3.setBounds(50, 440, 340, 60);
+
+        lCafe1.setFont(new java.awt.Font("Lucida Handwriting", 0, 11)); // NOI18N
+        lCafe1.setForeground(new java.awt.Color(255, 255, 255));
+        lCafe1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lCafe1.setText("jLabel1");
+        lCafe1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(lCafe1);
+        lCafe1.setBounds(40, 440, 350, 60);
         add(labelCafeDescrip);
         labelCafeDescrip.setBounds(20, 90, 280, 210);
 
@@ -119,18 +144,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
         Machiatto1.setText("*Machiatto");
         add(Machiatto1);
         Machiatto1.setBounds(70, 260, 130, 30);
-
-        lCafe2.setText("jLabel2");
-        add(lCafe2);
-        lCafe2.setBounds(170, 430, 80, 30);
-
-        lCafe3.setText("jLabel3");
-        add(lCafe3);
-        lCafe3.setBounds(260, 430, 80, 30);
-
-        lCafe1.setText("jLabel1");
-        add(lCafe1);
-        lCafe1.setBounds(80, 430, 80, 30);
         add(jSeparator1);
         jSeparator1.setBounds(70, 213, 270, 10);
         add(jSeparator2);
@@ -411,37 +424,43 @@ public class MenuDeCafes extends javax.swing.JPanel {
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Flat White");
+         Cafeteria.getCuenta().getCafe().setCostoBase(35);
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Capuccino");
+        Cafeteria.getCuenta().getCafe().setCostoBase(20);
     }//GEN-LAST:event_jCheckBox8ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-
+        Cafeteria.getCuenta().getCafe().setCostoBase(25);     
         Cafeteria.getCuenta().getCafe().setNombreCafe("Latte");
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Espresso");
+        Cafeteria.getCuenta().getCafe().setCostoBase(20);
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Americano");
+        Cafeteria.getCuenta().getCafe().setCostoBase(20);
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Mocha");
+        Cafeteria.getCuenta().getCafe().setCostoBase(30);
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Macchiato");
+        Cafeteria.getCuenta().getCafe().setCostoBase(30);
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
 
         int aux = num;
-         try{
+         System.out.println(num);
              //activa el boton para retroceder
              btnAtras.setEnabled(true);         
              
@@ -449,87 +468,84 @@ public class MenuDeCafes extends javax.swing.JPanel {
              imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
              imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
              switch(num){
-                 case 0:
-                     
-                     lCafe1.setText("Capiccino");
-                     lCafe2.setText("Flat white");
-                     lCafe3.setText("Espresso");
-                     break;
+                /* case 0:
+                     System.out.println("caso 0 "+num);
+                     cafe1="Capuccino";
+                     cafe2="Flat white";
+                     cafe3="Espresso";
+                     break;*/
                  case 1:
-                     cafe1="Flat white";
-                     cafe2="Espresso";
-                     cafe3="Latte";
+                     System.out.println("caso 1 "+num);
+                     cafe1="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
+                     cafe2="Espresso: un sabor y textura más concentrados.";
+                     cafe3="Latte: mayor proporción de leche que de café.";
                      break;
                  case 2:
-                     cafe1="Espresso";
-                     cafe2="Latte";
-                     cafe3="Macciatto";
+                     System.out.println("caso 2 "+num);
+                     cafe1="Espresso: un sabor y textura más concentrados.";
+                     cafe2="Latte: mayor proporción de leche que de café.";
+                     cafe3="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
                      break;
                  case 3:
-                     cafe1="Latte";
-                     cafe2="Macciatto";
-                     cafe3="Mocha";
+                     System.out.println("caso 3 "+num);
+                     cafe1="Latte: mayor proporción de leche que de café.";
+                     cafe2="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
+                     cafe3="<html>Mocha: chocolate negro o con leche,se sirve con<p> crema de leche en su lugar.<html>";
                      break;
                  case 4:
+                     System.out.println("caso 4 "+num);
                       //se desactiva el boton siguiente para evitar errores xd
                      btnSiguiente.setEnabled(false);
-                     cafe1="Macciatto";
-                     cafe2="Mocha";
-                     cafe3="Americano";
+                     cafe1="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
+                     cafe2="<html>Mocha: chocolate negro o con leche,se sirve con<p> crema de leche en su lugar.<html>";
+                     cafe3="Americano: un espresso añadiendo agua caliente";
                      break;                     
              }            
-             num++;
-            
-             } catch (Exception e) {
-              // System.out.println(e);   
-             }
+             num++;      
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         
         int aux = num;
-         try{
+         System.out.println(num);
              btnSiguiente.setEnabled(true);      
-             imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux+1)+".PNG")));
-             imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
-             imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux-1)+".PNG")));
-             switch(num){
-                 case 0:
-                     
-                     lCafe1.setText("Capiccino");
-                     lCafe2.setText("Flat white");
-                     lCafe3.setText("Espresso");
-                     break;
-                 case 1:
+             imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
+             imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux-1)+".PNG")));
+             imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux-2)+".PNG")));
+           // System.out.println("aux= "+aux);
+             switch(num-1){
+                 
+                 case 1:           
+                      System.out.println("btn atras caso 0 "+num);
+                     cafe1="<html>Capuccino: preparada con café expreso y<p> leche montada con vapor para otorgarle cremosidad.<html>";
+                     cafe2="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
+                     cafe3="Espresso: un sabor y textura más concentrados.";
                      btnAtras.setEnabled(false);
-                     cafe1="Flat white";
-                     cafe2="Espresso";
-                     cafe3="Latte";
+                     
                      break;
-                 case 2:
-                     cafe1="Espresso";
-                     cafe2="Latte";
-                     cafe3="Macciatto";
+                 case 2:  
+                     System.out.println("caso 1 "+num);
+                     cafe1="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
+                     cafe2="Espresso: un sabor y textura más concentrados.";
+                     cafe3="Latte: mayor proporción de leche que de café.";                    
+                     
                      break;
                  case 3:
-                     cafe1="Latte";
-                     cafe2="Macciatto";
-                     cafe3="Mocha";
+                     System.out.println("caso 2 "+num);
+                     cafe1="Espresso: un sabor y textura más concentrados.";
+                     cafe2="Latte: mayor proporción de leche que de café.";
+                     cafe3="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
+                     
                      break;
                  case 4:
-                     cafe1="Macciatto";
-                     cafe2="Mocha";
-                     cafe3="Americano";
-                     break;                     
+                     System.out.println("caso 3 "+num);
+                     cafe1="Latte: mayor proporción de leche que de café.";
+                     cafe2="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
+                     cafe3="<html>Mocha: chocolate negro o con leche,se sirve con<p> crema de leche en su lugar.<html>";
+                     
+                     break;             
              } 
-             /*if(num==1){
-             
-                System.out.println("se deshabilito el boton -");
-             }*/     
-             num--;
-                   
-            }
-         catch (Exception e) {}
+             num--;            
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void jCheckBox8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseEntered
@@ -541,38 +557,30 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }//GEN-LAST:event_jCheckBox8MouseExited
 
     private void pasarPorPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel1
-        // TODO add your handling code here:
-      
          lCafe1.setText(cafe1);
         lCafe1.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel1
 
     private void dejarPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel1
-        // TODO add your handling code here:
         lCafe1.setVisible(false);
     }//GEN-LAST:event_dejarPanel1
 
     private void pasarPorPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel2
-        // TODO add your handling code here:
-     
         lCafe2.setText(cafe2);
         lCafe2.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel2
 
     private void dejarPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel2
-        // TODO add your handling code here:
         lCafe2.setVisible(false);
     }//GEN-LAST:event_dejarPanel2
 
     private void pasarPorPanel3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel3
-        // TODO add your handling code here:
-     
+
         lCafe3.setText(cafe3);
         lCafe3.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel3
 
     private void dejarPanel3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel3
-        // TODO add your handling code here:
         lCafe3.setVisible(false);
     }//GEN-LAST:event_dejarPanel3
 
@@ -624,7 +632,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         labelCafeDescrip.setIcon(null);
     }//GEN-LAST:event_jCheckBox2MouseExited
 
-
+//ClaseYellow st;
 private String cafe1;
 private String cafe2;
 private String cafe3;

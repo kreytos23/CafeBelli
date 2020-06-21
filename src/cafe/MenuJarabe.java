@@ -20,6 +20,7 @@ public class MenuJarabe extends javax.swing.JPanel {
         initComponents();
         cambiarLetra();
         comprobarJarabeInicial();
+        mantenerShots();
     }
 
     /**
@@ -226,6 +227,11 @@ public class MenuJarabe extends javax.swing.JPanel {
         jarabe.setBounds(250, 80, 160, 220);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         add(jComboBox1);
         jComboBox1.setBounds(140, 390, 40, 26);
     }// </editor-fold>//GEN-END:initComponents
@@ -265,6 +271,10 @@ public class MenuJarabe extends javax.swing.JPanel {
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeMora.png")));
         Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de mora azul");
     }//GEN-LAST:event_jCheckBox7ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        Cafeteria.getCuenta().getCafe().setNumShots(jComboBox1.getSelectedIndex()+1);
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -340,6 +350,13 @@ public class MenuJarabe extends javax.swing.JPanel {
                 jCheckBox2.setSelected(true);
                 jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeKiwi.png")));
             }
+        }
+    }
+
+    private void mantenerShots() {
+        
+        if(Cafeteria.getCuenta().getCafe().getNumShots() != 0){
+            jComboBox1.setSelectedIndex(Cafeteria.getCuenta().getCafe().getNumShots()-1);
         }
     }
 }
