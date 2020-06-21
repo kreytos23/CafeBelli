@@ -263,7 +263,10 @@ public class MenuDeCafes extends javax.swing.JPanel {
         add(imagen2);
         imagen2.setBounds(170, 360, 90, 80);
 
-        btnAtras.setText("-");
+        btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/izquierda.png"))); // NOI18N
+        btnAtras.setBorderPainted(false);
+        btnAtras.setContentAreaFilled(false);
+        btnAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAtras.setEnabled(false);
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,16 +274,20 @@ public class MenuDeCafes extends javax.swing.JPanel {
             }
         });
         add(btnAtras);
-        btnAtras.setBounds(10, 380, 70, 40);
+        btnAtras.setBounds(32, 372, 50, 50);
 
-        btnSiguiente.setText("+");
+        btnSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/Derecha.png"))); // NOI18N
+        btnSiguiente.setBorderPainted(false);
+        btnSiguiente.setContentAreaFilled(false);
+        btnSiguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSiguiente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSiguienteActionPerformed(evt);
             }
         });
         add(btnSiguiente);
-        btnSiguiente.setBounds(350, 382, 70, 40);
+        btnSiguiente.setBounds(350, 372, 50, 50);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
