@@ -9,11 +9,13 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private int num;
     public MenuDeCafes() {
         initComponents();
+        descripcionCafe.setVisible(false);
         cambiarMetodo();
        imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+0+".PNG")));
        imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+1+".PNG")));
        imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+2+".PNG")));
        num=0;
+       
     }
 
     @SuppressWarnings("unchecked")
@@ -21,11 +23,12 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        descripcionCafe = new javax.swing.JLabel();
         bebidas = new javax.swing.JLabel();
         Latte = new javax.swing.JLabel();
         Machiatto = new javax.swing.JLabel();
         Frapuccino = new javax.swing.JLabel();
-        vanilla = new javax.swing.JLabel();
+        americano = new javax.swing.JLabel();
         Espresso = new javax.swing.JLabel();
         Mocha = new javax.swing.JLabel();
         Machiatto1 = new javax.swing.JLabel();
@@ -40,7 +43,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         precioFrapuccino = new javax.swing.JLabel();
         precioLatte = new javax.swing.JLabel();
         precioEspresso = new javax.swing.JLabel();
-        precioVanilla = new javax.swing.JLabel();
+        precioAmericano = new javax.swing.JLabel();
         precioMocha = new javax.swing.JLabel();
         precioMachiatto = new javax.swing.JLabel();
         jCheckBox2 = new javax.swing.JCheckBox();
@@ -59,6 +62,10 @@ public class MenuDeCafes extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 0, 0));
         setOpaque(false);
         setLayout(null);
+
+        descripcionCafe.setText("jLabel1");
+        add(descripcionCafe);
+        descripcionCafe.setBounds(30, 120, 260, 192);
 
         bebidas.setFont(new Font("DK Lemon Yellow Sun.otf",Font.PLAIN,14)
         );
@@ -79,14 +86,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         Machiatto.setBounds(70, 295, 170, 30);
 
         Frapuccino.setForeground(new java.awt.Color(255, 255, 255));
-        Frapuccino.setText("*Frapuccino ");
+        Frapuccino.setText("Capuccino");
         add(Frapuccino);
         Frapuccino.setBounds(70, 70, 100, 30);
 
-        vanilla.setForeground(new java.awt.Color(255, 255, 255));
-        vanilla.setText("*Vanilla");
-        add(vanilla);
-        vanilla.setBounds(70, 152, 130, 30);
+        americano.setForeground(new java.awt.Color(255, 255, 255));
+        americano.setText("Americano");
+        add(americano);
+        americano.setBounds(70, 152, 130, 30);
 
         Espresso.setForeground(new java.awt.Color(255, 255, 255));
         Espresso.setText("*Espresso");
@@ -137,10 +144,10 @@ public class MenuDeCafes extends javax.swing.JPanel {
         add(precioEspresso);
         precioEspresso.setBounds(270, 180, 30, 30);
 
-        precioVanilla.setForeground(new java.awt.Color(255, 255, 255));
-        precioVanilla.setText("$20");
-        add(precioVanilla);
-        precioVanilla.setBounds(270, 145, 30, 30);
+        precioAmericano.setForeground(new java.awt.Color(255, 255, 255));
+        precioAmericano.setText("$20");
+        add(precioAmericano);
+        precioAmericano.setBounds(270, 145, 30, 30);
 
         precioMocha.setForeground(new java.awt.Color(255, 255, 255));
         precioMocha.setText("$30");
@@ -176,6 +183,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox8.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
         jCheckBox8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jCheckBox8.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jCheckBox8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox8MouseExited(evt);
+            }
+        });
         jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox8ActionPerformed(evt);
@@ -365,6 +380,15 @@ public class MenuDeCafes extends javax.swing.JPanel {
          catch (Exception e) {}
     }//GEN-LAST:event_btnAtrasActionPerformed
 
+    private void jCheckBox8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseEntered
+        descripcionCafe.setIcon(new ImageIcon(getClass().getResource("/Cafes/espressoDescripcion.png")));
+        descripcionCafe.setVisible(true);
+    }//GEN-LAST:event_jCheckBox8MouseEntered
+
+    private void jCheckBox8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseExited
+        descripcionCafe.setVisible(false);
+    }//GEN-LAST:event_jCheckBox8MouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Espresso;
@@ -373,10 +397,12 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private javax.swing.JLabel Machiatto;
     private javax.swing.JLabel Machiatto1;
     private javax.swing.JLabel Mocha;
+    private javax.swing.JLabel americano;
     private javax.swing.JLabel bebidas;
     private javax.swing.JToggleButton btnAtras;
     private javax.swing.JToggleButton btnSiguiente;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel descripcionCafe;
     private javax.swing.JLabel imagen1;
     private javax.swing.JLabel imagen2;
     private javax.swing.JLabel imagen3;
@@ -394,14 +420,13 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JLabel precioAmericano;
     private javax.swing.JLabel precioCaramel;
     private javax.swing.JLabel precioEspresso;
     private javax.swing.JLabel precioFrapuccino;
     private javax.swing.JLabel precioLatte;
     private javax.swing.JLabel precioMachiatto;
     private javax.swing.JLabel precioMocha;
-    private javax.swing.JLabel precioVanilla;
-    private javax.swing.JLabel vanilla;
     // End of variables declaration//GEN-END:variables
 
 private void cambiarMetodo() {
@@ -412,7 +437,7 @@ private void cambiarMetodo() {
         bebidas.setFont(st.MyFont(1, 30));
         Latte.setFont(cf.MyFont(0, 30));
         Frapuccino.setFont(cf.MyFont(0, 30));
-        vanilla.setFont(cf.MyFont(0, 30));
+        americano.setFont(cf.MyFont(0, 30));
         Espresso.setFont(cf.MyFont(0, 30));
         Mocha.setFont(cf.MyFont(0, 30));
         Machiatto.setFont(cf.MyFont(0, 30));
@@ -424,7 +449,7 @@ private void cambiarMetodo() {
         precioEspresso.setFont(yt.MyFont(1, 20));
         precioMachiatto.setFont(yt.MyFont(1, 20));
         precioMocha.setFont(yt.MyFont(1, 20));
-        precioVanilla.setFont(yt.MyFont(1, 20));
+        precioAmericano.setFont(yt.MyFont(1, 20));
         
     }
 
