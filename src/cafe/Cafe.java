@@ -15,6 +15,23 @@ public class Cafe extends Producto{
     private TipoDeLeche leche;
     private Tamaño vaso;
 
+    public TipoDeLeche getLeche() {
+        return leche;
+    }
+
+    public void setLeche(TipoDeLeche leche) {
+        this.leche = leche;
+    }
+
+    public Tamaño getVaso() {
+        return vaso;
+    }
+
+    public void setVaso(Tamaño vaso) {
+        this.vaso = vaso;
+    }
+
+    
     public String getNombreJarabe() {
         return nombreJarabe;
     }

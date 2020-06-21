@@ -98,8 +98,13 @@ public class PanelTamaño extends javax.swing.JPanel {
     }//GEN-LAST:event_comboTamanioActionPerformed
 
     private void comboTipoDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTipoDeLecheActionPerformed
-        
         tipoDeLecheJL.setIcon(new ImageIcon(getClass().getResource("/TiposLeches/"+comboTipoDeLeche.getSelectedItem().toString()+".png")));
+        for(TipoDeLeche z : tiposDeLeche.values()){
+            if(comboTipoDeLeche.getSelectedItem().equals(z)){
+                Cafeteria.getCuenta().getCafe().setLeche(z);
+                System.out.println(Cafeteria.getCuenta().getCafe().getLeche());
+            }
+        }
     }//GEN-LAST:event_comboTipoDeLecheActionPerformed
 
 

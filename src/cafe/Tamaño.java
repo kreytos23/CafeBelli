@@ -10,18 +10,11 @@ public enum Tamaño {
     //campos de instancia
     public final double precioPorTamanio;
     
-    private final double costoBase;
-    
     private Tamaño(double precioPorTamanio){
         this.precioPorTamanio = precioPorTamanio;
-        costoBase = 20;
     }
     
     public double getPrecioPorTamanio(){
         return precioPorTamanio;
-    }
-
-    public double getCostoBase() {
-        return costoBase;
     }
 }
