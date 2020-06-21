@@ -9,9 +9,10 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private int num;
     public MenuDeCafes() {
         initComponents();
-        cafe1="Capuccino";
-        cafe2="Flat white";
-        cafe3="Espresso";
+        
+        cafe1="<html>Capuccino: preparada con café expreso y<p> leche montada con vapor para otorgarle cremosidad.<html>";
+        cafe2="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
+        cafe3="Espresso: un sabor y textura más concentrados.";
         lCafe1.setText(cafe1);
         lCafe2.setText(cafe2);
         lCafe3.setText(cafe3);
@@ -25,7 +26,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
 //<<<<<<< HEAD
        num=1;
 //=======
-       num=0;
+     //  num=0;
        comprobarCafeInicial();
 //>>>>>>> 0ab5dd238d8482245fea9f2c3b00dd9b86fd0f56
        
@@ -36,6 +37,9 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        lCafe2 = new javax.swing.JLabel();
+        lCafe3 = new javax.swing.JLabel();
+        lCafe1 = new javax.swing.JLabel();
         labelCafeDescrip = new javax.swing.JLabel();
         bebidas = new javax.swing.JLabel();
         Latte = new javax.swing.JLabel();
@@ -45,9 +49,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
         Espresso = new javax.swing.JLabel();
         Mocha = new javax.swing.JLabel();
         Machiatto1 = new javax.swing.JLabel();
-        lCafe2 = new javax.swing.JLabel();
-        lCafe3 = new javax.swing.JLabel();
-        lCafe1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -78,6 +79,30 @@ public class MenuDeCafes extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 0, 0));
         setOpaque(false);
         setLayout(null);
+
+        lCafe2.setFont(new java.awt.Font("Lucida Handwriting", 0, 11)); // NOI18N
+        lCafe2.setForeground(new java.awt.Color(255, 255, 255));
+        lCafe2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lCafe2.setText("<html>jLabel2<html>");
+        lCafe2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(lCafe2);
+        lCafe2.setBounds(50, 440, 340, 60);
+
+        lCafe3.setFont(new java.awt.Font("Lucida Handwriting", 0, 11)); // NOI18N
+        lCafe3.setForeground(new java.awt.Color(255, 255, 255));
+        lCafe3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lCafe3.setText("jLabel3");
+        lCafe3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(lCafe3);
+        lCafe3.setBounds(50, 440, 340, 60);
+
+        lCafe1.setFont(new java.awt.Font("Lucida Handwriting", 0, 11)); // NOI18N
+        lCafe1.setForeground(new java.awt.Color(255, 255, 255));
+        lCafe1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lCafe1.setText("jLabel1");
+        lCafe1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(lCafe1);
+        lCafe1.setBounds(40, 440, 350, 60);
         add(labelCafeDescrip);
         labelCafeDescrip.setBounds(20, 90, 280, 210);
 
@@ -123,18 +148,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
         Machiatto1.setText("*Machiatto");
         add(Machiatto1);
         Machiatto1.setBounds(70, 260, 130, 30);
-
-        lCafe2.setText("jLabel2");
-        add(lCafe2);
-        lCafe2.setBounds(170, 430, 80, 30);
-
-        lCafe3.setText("jLabel3");
-        add(lCafe3);
-        lCafe3.setBounds(260, 430, 80, 30);
-
-        lCafe1.setText("jLabel1");
-        add(lCafe1);
-        lCafe1.setBounds(80, 430, 80, 30);
         add(jSeparator1);
         jSeparator1.setBounds(70, 213, 270, 10);
         add(jSeparator2);
@@ -466,29 +479,29 @@ public class MenuDeCafes extends javax.swing.JPanel {
                      break;*/
                  case 1:
                      System.out.println("caso 1 "+num);
-                     cafe1="Flat white";
-                     cafe2="Espresso";
-                     cafe3="Latte";
+                     cafe1="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
+                     cafe2="Espresso: un sabor y textura más concentrados.";
+                     cafe3="Latte: mayor proporción de leche que de café.";
                      break;
                  case 2:
                      System.out.println("caso 2 "+num);
-                     cafe1="Espresso";
-                     cafe2="Latte";
-                     cafe3="Macciatto";
+                     cafe1="Espresso: un sabor y textura más concentrados.";
+                     cafe2="Latte: mayor proporción de leche que de café.";
+                     cafe3="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
                      break;
                  case 3:
                      System.out.println("caso 3 "+num);
-                     cafe1="Latte";
-                     cafe2="Macciatto";
-                     cafe3="Mocha";
+                     cafe1="Latte: mayor proporción de leche que de café.";
+                     cafe2="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
+                     cafe3="<html>Mocha: chocolate negro o con leche,se sirve con<p> crema de leche en su lugar.<html>";
                      break;
                  case 4:
                      System.out.println("caso 4 "+num);
                       //se desactiva el boton siguiente para evitar errores xd
                      btnSiguiente.setEnabled(false);
-                     cafe1="Macciatto";
-                     cafe2="Mocha";
-                     cafe3="Americano";
+                     cafe1="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
+                     cafe2="<html>Mocha: chocolate negro o con leche,se sirve con<p> crema de leche en su lugar.<html>";
+                     cafe3="Americano: un espresso añadiendo agua caliente";
                      break;                     
              }            
              num++;
@@ -509,31 +522,31 @@ public class MenuDeCafes extends javax.swing.JPanel {
                  
                  case 1:           
                       System.out.println("btn atras caso 0 "+num);
-                     cafe1="Capuccino";
-                     cafe2="Flat white";
-                     cafe3="Espresso";
+                     cafe1="<html>Capuccino: preparada con café expreso y<p> leche montada con vapor para otorgarle cremosidad.<html>";
+                     cafe2="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
+                     cafe3="Espresso: un sabor y textura más concentrados.";
                      btnAtras.setEnabled(false);
                      
                      break;
                  case 2:  
                      System.out.println("caso 1 "+num);
-                     cafe1="Flat white";
-                     cafe2="Espresso";
-                     cafe3="Latte";                    
+                     cafe1="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
+                     cafe2="Espresso: un sabor y textura más concentrados.";
+                     cafe3="Latte: mayor proporción de leche que de café.";                    
                      
                      break;
                  case 3:
                      System.out.println("caso 2 "+num);
-                     cafe1="Espresso";
-                     cafe2="Latte";
-                     cafe3="Macciatto";
+                     cafe1="Espresso: un sabor y textura más concentrados.";
+                     cafe2="Latte: mayor proporción de leche que de café.";
+                     cafe3="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
                      
                      break;
                  case 4:
                      System.out.println("caso 3 "+num);
-                     cafe1="Latte";
-                     cafe2="Macciatto";
-                     cafe3="Mocha";
+                     cafe1="Latte: mayor proporción de leche que de café.";
+                     cafe2="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
+                     cafe3="<html>Mocha: chocolate negro o con leche,se sirve con<p> crema de leche en su lugar.<html>";
                      
                      break;
                  /*case 5:
@@ -564,7 +577,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
 
     private void pasarPorPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel1
         // TODO add your handling code here:
-      
+   //  lCafe1.setFont(st.MyFont(0, 20));
          lCafe1.setText(cafe1);
         lCafe1.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel1
@@ -576,7 +589,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
 
     private void pasarPorPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel2
         // TODO add your handling code here:
-     
+    // lCafe2.setFont(st.MyFont(0, 20));
         lCafe2.setText(cafe2);
         lCafe2.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel2
@@ -588,7 +601,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
 
     private void pasarPorPanel3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel3
         // TODO add your handling code here:
-     
+     //lCafe3.setFont(st.MyFont(0, 20));
         lCafe3.setText(cafe3);
         lCafe3.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel3
@@ -646,7 +659,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         labelCafeDescrip.setIcon(null);
     }//GEN-LAST:event_jCheckBox2MouseExited
 
-
+//ClaseYellow st;
 private String cafe1;
 private String cafe2;
 private String cafe3;
