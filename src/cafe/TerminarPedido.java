@@ -58,8 +58,18 @@ public class TerminarPedido extends javax.swing.JPanel {
         labelNumShot.setText("Num Shots: ...");
 
         jButton1.setText("Comprar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Seguir comprando");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -111,6 +121,15 @@ public class TerminarPedido extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Cafeteria.getCuenta().getListaCafe().add(Cafeteria.getCuenta().getCafe());
+        Cafeteria.getCuenta().setCafeAux(new Cafe());  
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -134,8 +153,6 @@ private void cambiarMetodo() {
         labelNumShot.setFont(st.MyFont(1, 30));
         labelTamanio.setFont(st.MyFont(1, 30));
         
-//        Latte.setFont(cf.MyFont(0, 30));
-//        precioAmericano.setFont(yt.MyFont(1, 20));
         
     }
 }

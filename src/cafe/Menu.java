@@ -1,5 +1,6 @@
 package cafe;
 import AppPackage.AnimationClass;
+import javax.swing.SwingConstants;
 /**
  * @author serpi
  */
@@ -200,7 +201,7 @@ public class Menu extends javax.swing.JPanel {
 
     private void btnCafesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCafesActionPerformed
         menuDeCafes = new MenuDeCafes();
-        menuDeCafes.setBounds(0,0,base.getWidth(),base.getHeight());
+        menuDeCafes.setBounds(0,0,428, 500);
         base.removeAll();
         base.add(menuDeCafes);
         base.updateUI();

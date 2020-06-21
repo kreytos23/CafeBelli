@@ -10,16 +10,16 @@ import java.util.ArrayList;
  */
 public class Cafeteria extends javax.swing.JFrame {
 
-    private Menu panelDeMenu;
-    private ArrayList<Cuenta> cuentasDeLaCafeteria;
+   
     private Audio audio;
     private static Cuenta cuentaAuxiliar;
+    private FrameDeMenu frameDelMenu;
+    private static ArrayList<Cuenta> cuentasDelRestaurante;
     
     public Cafeteria() {
         
         audio = new Audio();
-        //audio.sonido("Jazz");
-        cuentasDeLaCafeteria = new ArrayList<>();
+        cuentasDelRestaurante = new ArrayList<>();
         initComponents();
         letrerosBotones();
     }
@@ -169,19 +169,19 @@ public class Cafeteria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void btnMesa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa2ActionPerformed
-        asignacionDeMesa(2);
+        asignacionDeMesa();
     }//GEN-LAST:event_btnMesa2ActionPerformed
 
     private void btnMesa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa4ActionPerformed
-        asignacionDeMesa(4);
+        asignacionDeMesa();
     }//GEN-LAST:event_btnMesa4ActionPerformed
 
     private void btnMesa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa3ActionPerformed
-        asignacionDeMesa(3);
+        asignacionDeMesa();
     }//GEN-LAST:event_btnMesa3ActionPerformed
 
     private void btnMesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa1ActionPerformed
-        asignacionDeMesa(1);
+        asignacionDeMesa();
     }//GEN-LAST:event_btnMesa1ActionPerformed
 
     private void btnMesa1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa1MouseEntered
@@ -216,6 +216,14 @@ public class Cafeteria extends javax.swing.JFrame {
         LbMesa4.setVisible(false);
     }//GEN-LAST:event_btnMesa3MouseExited
 
+    public static ArrayList<Cuenta> getCuentasDelRestaurante() {
+        return cuentasDelRestaurante;
+    }
+
+    public static void setCuentaAuxiliar(Cuenta cuentaAuxiliar) {
+        Cafeteria.cuentaAuxiliar = cuentaAuxiliar;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -249,16 +257,11 @@ public class Cafeteria extends javax.swing.JFrame {
         });
     }
     
-    void asignacionDeMesa(int mesa){
-//       Cuenta cuentaDeMesa = new Cuenta(mesa);
-//       cuentasDeLaCafeteria.add(cuentaDeMesa);
-       cuentaAuxiliar = new Cuenta(mesa);
-       panelDeMenu = new Menu();
-       this.setBounds(0, 0, 588, 709);
-       panelDeMenu.setBounds(this.getBounds());
-       PanelMenu.removeAll();
-       PanelMenu.add(panelDeMenu);
-       PanelMenu.updateUI();
+    void asignacionDeMesa(){
+      cuentaAuxiliar = new Cuenta(1);
+      frameDelMenu = new FrameDeMenu();
+      frameDelMenu.setVisible(true);
+      frameDelMenu.setBounds(0,0,588, 709);
     }
     
     public static Cuenta getCuenta(){
