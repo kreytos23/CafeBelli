@@ -42,7 +42,7 @@ public class Menu extends javax.swing.JPanel {
         base.setPreferredSize(new java.awt.Dimension(200, 200));
         base.setLayout(null);
         add(base);
-        base.setBounds(140, 90, 428, 460);
+        base.setBounds(140, 90, 428, 500);
 
         btnJarabes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/jarabe.png"))); // NOI18N
         btnJarabes.setBorderPainted(false);

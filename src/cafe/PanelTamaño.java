@@ -91,9 +91,9 @@ public class PanelTamaño extends javax.swing.JPanel {
 
     private void comboTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTamanioActionPerformed
 
-        if(comboTamanio.getSelectedItem().toString().equals("CHICO")){
+        if(comboTamanio.getSelectedItem().toString().equals("Chico")){
             tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/Chico.png")));
-        }else if(comboTamanio.getSelectedItem().toString().equals("MEDIANO")){
+        }else if(comboTamanio.getSelectedItem().toString().equals("Mediano")){
             tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/Mediano.png")));
         }else{
             tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/Grande.png")));
