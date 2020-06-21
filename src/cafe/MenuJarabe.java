@@ -354,7 +354,9 @@ public class MenuJarabe extends javax.swing.JPanel {
     }
 
     private void mantenerShots() {
-
         
+        if(Cafeteria.getCuenta().getCafe().getNumShots() != 0){
+            jComboBox1.setSelectedIndex(Cafeteria.getCuenta().getCafe().getNumShots()-1);
+        }
     }
 }

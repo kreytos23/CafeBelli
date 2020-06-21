@@ -14,6 +14,10 @@ public class Cafe extends Producto{
     private TipoDeLeche leche;
     private Tamaño vaso;
 
+    
+    public Cafe(){
+        numShots=0;
+    }
     public TipoDeLeche getLeche() {
         return leche;
     }
