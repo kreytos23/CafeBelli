@@ -17,7 +17,7 @@ public class Cafeteria extends javax.swing.JFrame {
     public Cafeteria() {
         
         audio = new Audio();
-        audio.sonido("Jazz");
+        //audio.sonido("Jazz");
         cuentasDeLaCafeteria = new ArrayList<>();
         initComponents();
     }

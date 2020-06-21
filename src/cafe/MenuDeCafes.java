@@ -9,6 +9,15 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private int num;
     public MenuDeCafes() {
         initComponents();
+        cafe1="Capuccino";
+        cafe2="Flat white";
+        cafe3="Espresso";
+        lCafe1.setText(cafe1);
+        lCafe2.setText(cafe2);
+        lCafe3.setText(cafe3);
+        lCafe1.setVisible(false);
+        lCafe2.setVisible(false);
+        lCafe3.setVisible(false);
         descripcionCafe.setVisible(false);
         cambiarMetodo();
        imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+0+".PNG")));
@@ -32,6 +41,9 @@ public class MenuDeCafes extends javax.swing.JPanel {
         Espresso = new javax.swing.JLabel();
         Mocha = new javax.swing.JLabel();
         Machiatto1 = new javax.swing.JLabel();
+        lCafe2 = new javax.swing.JLabel();
+        lCafe3 = new javax.swing.JLabel();
+        lCafe1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -81,7 +93,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         Latte.setBounds(70, 110, 200, 30);
 
         Machiatto.setForeground(new java.awt.Color(255, 255, 255));
-        Machiatto.setText("*Caramel Machiatto");
+        Machiatto.setText("*Flat white");
         add(Machiatto);
         Machiatto.setBounds(70, 295, 170, 30);
 
@@ -109,6 +121,18 @@ public class MenuDeCafes extends javax.swing.JPanel {
         Machiatto1.setText("*Machiatto");
         add(Machiatto1);
         Machiatto1.setBounds(70, 260, 130, 30);
+
+        lCafe2.setText("jLabel2");
+        add(lCafe2);
+        lCafe2.setBounds(170, 430, 80, 30);
+
+        lCafe3.setText("jLabel3");
+        add(lCafe3);
+        lCafe3.setBounds(260, 430, 80, 30);
+
+        lCafe1.setText("jLabel1");
+        add(lCafe1);
+        lCafe1.setBounds(80, 430, 80, 30);
         add(jSeparator1);
         jSeparator1.setBounds(70, 213, 270, 10);
         add(jSeparator2);
@@ -271,10 +295,37 @@ public class MenuDeCafes extends javax.swing.JPanel {
         });
         add(jCheckBox7);
         jCheckBox7.setBounds(300, 252, 40, 40);
+
+        imagen3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pasarPorPanel3(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                dejarPanel3(evt);
+            }
+        });
         add(imagen3);
         imagen3.setBounds(260, 360, 90, 80);
+
+        imagen1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pasarPorPanel1(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                dejarPanel1(evt);
+            }
+        });
         add(imagen1);
         imagen1.setBounds(80, 360, 90, 80);
+
+        imagen2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pasarPorPanel2(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                dejarPanel2(evt);
+            }
+        });
         add(imagen2);
         imagen2.setBounds(170, 360, 90, 80);
 
@@ -343,11 +394,36 @@ public class MenuDeCafes extends javax.swing.JPanel {
              imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
              imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
              imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
-             if(num==4){
-                 //se desactiva el boton siguiente para evitar errores xd
-                btnSiguiente.setEnabled(false);
-             //   System.out.println("se deshabilito el boton +");
-             }
+             switch(num){
+                 case 0:
+                     
+                     lCafe1.setText("Capiccino");
+                     lCafe2.setText("Flat white");
+                     lCafe3.setText("Espresso");
+                     break;
+                 case 1:
+                     cafe1="Flat white";
+                     cafe2="Espresso";
+                     cafe3="Latte";
+                     break;
+                 case 2:
+                     cafe1="Espresso";
+                     cafe2="Latte";
+                     cafe3="Macciatto";
+                     break;
+                 case 3:
+                     cafe1="Latte";
+                     cafe2="Macciatto";
+                     cafe3="Mocha";
+                     break;
+                 case 4:
+                      //se desactiva el boton siguiente para evitar errores xd
+                     btnSiguiente.setEnabled(false);
+                     cafe1="Macciatto";
+                     cafe2="Mocha";
+                     cafe3="Americano";
+                     break;                     
+             }            
              num++;
             
              } catch (Exception e) {
@@ -363,10 +439,39 @@ public class MenuDeCafes extends javax.swing.JPanel {
              imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux+1)+".PNG")));
              imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
              imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux-1)+".PNG")));
-             if(num==1){
-                btnAtras.setEnabled(false);
+             switch(num){
+                 case 0:
+                     
+                     lCafe1.setText("Capiccino");
+                     lCafe2.setText("Flat white");
+                     lCafe3.setText("Espresso");
+                     break;
+                 case 1:
+                     btnAtras.setEnabled(false);
+                     cafe1="Flat white";
+                     cafe2="Espresso";
+                     cafe3="Latte";
+                     break;
+                 case 2:
+                     cafe1="Espresso";
+                     cafe2="Latte";
+                     cafe3="Macciatto";
+                     break;
+                 case 3:
+                     cafe1="Latte";
+                     cafe2="Macciatto";
+                     cafe3="Mocha";
+                     break;
+                 case 4:
+                     cafe1="Macciatto";
+                     cafe2="Mocha";
+                     cafe3="Americano";
+                     break;                     
+             } 
+             /*if(num==1){
+             
                 System.out.println("se deshabilito el boton -");
-             }     
+             }*/     
              num--;
                    
             }
@@ -382,7 +487,45 @@ public class MenuDeCafes extends javax.swing.JPanel {
         descripcionCafe.setVisible(false);
     }//GEN-LAST:event_jCheckBox8MouseExited
 
+    private void pasarPorPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel1
+        // TODO add your handling code here:
+      
+         lCafe1.setText(cafe1);
+        lCafe1.setVisible(true);
+    }//GEN-LAST:event_pasarPorPanel1
 
+    private void dejarPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel1
+        // TODO add your handling code here:
+        lCafe1.setVisible(false);
+    }//GEN-LAST:event_dejarPanel1
+
+    private void pasarPorPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel2
+        // TODO add your handling code here:
+     
+        lCafe2.setText(cafe2);
+        lCafe2.setVisible(true);
+    }//GEN-LAST:event_pasarPorPanel2
+
+    private void dejarPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel2
+        // TODO add your handling code here:
+        lCafe2.setVisible(false);
+    }//GEN-LAST:event_dejarPanel2
+
+    private void pasarPorPanel3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel3
+        // TODO add your handling code here:
+     
+        lCafe3.setText(cafe3);
+        lCafe3.setVisible(true);
+    }//GEN-LAST:event_pasarPorPanel3
+
+    private void dejarPanel3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel3
+        // TODO add your handling code here:
+        lCafe3.setVisible(false);
+    }//GEN-LAST:event_dejarPanel3
+
+private String cafe1;
+private String cafe2;
+private String cafe3;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Espresso;
     private javax.swing.JLabel Frapuccino;
@@ -413,6 +556,9 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JLabel lCafe1;
+    private javax.swing.JLabel lCafe2;
+    private javax.swing.JLabel lCafe3;
     private javax.swing.JLabel precioAmericano;
     private javax.swing.JLabel precioCaramel;
     private javax.swing.JLabel precioEspresso;
