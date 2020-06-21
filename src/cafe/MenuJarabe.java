@@ -20,6 +20,7 @@ public class MenuJarabe extends javax.swing.JPanel {
         initComponents();
         cambiarLetra();
         comprobarJarabeInicial();
+        mantenerShots();
     }
 
     /**
@@ -349,6 +350,13 @@ public class MenuJarabe extends javax.swing.JPanel {
                 jCheckBox2.setSelected(true);
                 jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeKiwi.png")));
             }
+        }
+    }
+
+    private void mantenerShots() {
+        
+        if(Cafeteria.getCuenta().getCafe().getNumShots() != 0){
+            jComboBox1.setSelectedIndex(Cafeteria.getCuenta().getCafe().getNumShots()-1);
         }
     }
 }

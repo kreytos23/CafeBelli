@@ -37,6 +37,7 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamañoDelCafeJL = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
+        setOpaque(false);
         setLayout(null);
 
         tipoDeLecheTex.setForeground(new java.awt.Color(255, 255, 255));
