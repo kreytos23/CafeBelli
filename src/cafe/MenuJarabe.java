@@ -19,6 +19,7 @@ public class MenuJarabe extends javax.swing.JPanel {
     public MenuJarabe() {
         initComponents();
         cambiarLetra();
+        comprobarJarabeInicial();
     }
 
     /**
@@ -225,42 +226,56 @@ public class MenuJarabe extends javax.swing.JPanel {
         jarabe.setBounds(250, 80, 160, 220);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         add(jComboBox1);
         jComboBox1.setBounds(140, 390, 40, 26);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeAlmandra.png")));
+        Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de almendra");
    
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeKiwi.png")));
+        Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de kiwi");
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeBanana.png")));
+        Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de banana");
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
-
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeCereza.png")));
+        Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de cereza");
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
-
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeChocolate.png")));
+        Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de chocolate");
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
-
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeFresa.png")));
+        Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de fresa");
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeMora.png")));
+        Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de mora azul");
     }//GEN-LAST:event_jCheckBox7ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+
+        Cafeteria.getCuenta().getCafe().setNumShots(jComboBox1.getSelectedIndex()+1);
+        System.out.println(Cafeteria.getCuenta().getCafe().getNumShots());
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -310,5 +325,32 @@ public class MenuJarabe extends javax.swing.JPanel {
         numDeShots.setFont(st.MyFont(0, 30));
         shots.setFont(cf.MyFont(0, 30));
         
+    }
+
+    private void comprobarJarabeInicial() {
+        if(Cafeteria.getCuenta().getCafe().getNombreJarabe()!=null){
+            if(Cafeteria.getCuenta().getCafe().getNombreJarabe().equals("Esencia de almendra")){
+                jCheckBox1.setSelected(true);
+                jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeAlmandra.png")));
+            }else if(Cafeteria.getCuenta().getCafe().getNombreJarabe().equals("Esencia de banana")){
+                jCheckBox3.setSelected(true);
+                jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeBanana.png")));
+            }else if(Cafeteria.getCuenta().getCafe().getNombreJarabe().equals("Esencia de cereza")){
+                jCheckBox4.setSelected(true);
+                jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeCereza.png")));
+            }else if(Cafeteria.getCuenta().getCafe().getNombreJarabe().equals("Esencia de chocolate")){
+                jCheckBox5.setSelected(true);
+                jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeChocolate.png")));
+            }else if(Cafeteria.getCuenta().getCafe().getNombreJarabe().equals("Esencia de fresa")){
+                jCheckBox6.setSelected(true);
+                jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeFresa.png")));
+            }else if(Cafeteria.getCuenta().getCafe().getNombreJarabe().equals("Esencia de mora azul")){
+                jCheckBox7.setSelected(true);
+                jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeMora.png")));
+            }else{
+                jCheckBox2.setSelected(true);
+                jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeKiwi.png")));
+            }
+        }
     }
 }

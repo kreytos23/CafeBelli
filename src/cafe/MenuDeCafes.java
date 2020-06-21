@@ -18,12 +18,16 @@ public class MenuDeCafes extends javax.swing.JPanel {
         lCafe1.setVisible(false);
         lCafe2.setVisible(false);
         lCafe3.setVisible(false);
-        descripcionCafe.setVisible(false);
         cambiarMetodo();
        imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+0+".PNG")));
        imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+1+".PNG")));
        imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+2+".PNG")));
+//<<<<<<< HEAD
        num=1;
+//=======
+       num=0;
+       comprobarCafeInicial();
+//>>>>>>> 0ab5dd238d8482245fea9f2c3b00dd9b86fd0f56
        
     }
 
@@ -32,7 +36,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        descripcionCafe = new javax.swing.JLabel();
+        labelCafeDescrip = new javax.swing.JLabel();
         bebidas = new javax.swing.JLabel();
         Latte = new javax.swing.JLabel();
         Machiatto = new javax.swing.JLabel();
@@ -74,10 +78,8 @@ public class MenuDeCafes extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 0, 0));
         setOpaque(false);
         setLayout(null);
-
-        descripcionCafe.setText("jLabel1");
-        add(descripcionCafe);
-        descripcionCafe.setBounds(30, 120, 260, 192);
+        add(labelCafeDescrip);
+        labelCafeDescrip.setBounds(20, 90, 280, 210);
 
         bebidas.setFont(new Font("DK Lemon Yellow Sun.otf",Font.PLAIN,14)
         );
@@ -191,6 +193,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox2.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
         jCheckBox2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jCheckBox2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jCheckBox2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox2MouseExited(evt);
+            }
+        });
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox2ActionPerformed(evt);
@@ -231,6 +241,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox3.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
         jCheckBox3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jCheckBox3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jCheckBox3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox3MouseExited(evt);
+            }
+        });
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox3ActionPerformed(evt);
@@ -247,6 +265,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
         jCheckBox4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jCheckBox4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jCheckBox4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox4MouseExited(evt);
+            }
+        });
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox4ActionPerformed(evt);
@@ -263,6 +289,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox5.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
         jCheckBox5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jCheckBox5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jCheckBox5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox5MouseExited(evt);
+            }
+        });
         jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox5ActionPerformed(evt);
@@ -279,6 +313,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox6.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
         jCheckBox6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jCheckBox6.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jCheckBox6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox6MouseExited(evt);
+            }
+        });
         jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox6ActionPerformed(evt);
@@ -295,6 +337,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox7.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
         jCheckBox7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jCheckBox7.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jCheckBox7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox7MouseExited(evt);
+            }
+        });
         jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox7ActionPerformed(evt);
@@ -364,32 +414,37 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+//<<<<<<< HEAD
         // TODO add your handling code here:
         
+//=======
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Flat White");
+//>>>>>>> 0ab5dd238d8482245fea9f2c3b00dd9b86fd0f56
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Capuccino");
     }//GEN-LAST:event_jCheckBox8ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
+
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Latte");
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Espresso");
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Americano");
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Mocha");
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Macchiato");
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
@@ -500,12 +555,11 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void jCheckBox8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseEntered
-        descripcionCafe.setIcon(new ImageIcon(getClass().getResource("/Cafes/espressoDescripcion.png")));
-        descripcionCafe.setVisible(true);
+        labelCafeDescrip.setIcon(new ImageIcon(getClass().getResource("/Cafes/Capuccino.PNG")));
     }//GEN-LAST:event_jCheckBox8MouseEntered
 
     private void jCheckBox8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseExited
-        descripcionCafe.setVisible(false);
+       labelCafeDescrip.setIcon(null);
     }//GEN-LAST:event_jCheckBox8MouseExited
 
     private void pasarPorPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel1
@@ -544,6 +598,55 @@ public class MenuDeCafes extends javax.swing.JPanel {
         lCafe3.setVisible(false);
     }//GEN-LAST:event_dejarPanel3
 
+    private void jCheckBox3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox3MouseEntered
+        labelCafeDescrip.setIcon(new ImageIcon(getClass().getResource("/Cafes/Latte.PNG")));
+    }//GEN-LAST:event_jCheckBox3MouseEntered
+
+    private void jCheckBox3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox3MouseExited
+        labelCafeDescrip.setIcon(null);
+    }//GEN-LAST:event_jCheckBox3MouseExited
+
+    private void jCheckBox5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox5MouseEntered
+        labelCafeDescrip.setIcon(new ImageIcon(getClass().getResource("/Cafes/Americano.PNG")));
+    }//GEN-LAST:event_jCheckBox5MouseEntered
+
+    private void jCheckBox5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox5MouseExited
+        labelCafeDescrip.setIcon(null);
+    }//GEN-LAST:event_jCheckBox5MouseExited
+
+    private void jCheckBox4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseEntered
+        labelCafeDescrip.setIcon(new ImageIcon(getClass().getResource("/Cafes/Espresso.PNG")));
+    }//GEN-LAST:event_jCheckBox4MouseEntered
+
+    private void jCheckBox4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseExited
+        labelCafeDescrip.setIcon(null);
+    }//GEN-LAST:event_jCheckBox4MouseExited
+
+    private void jCheckBox6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox6MouseEntered
+        labelCafeDescrip.setIcon(new ImageIcon(getClass().getResource("/Cafes/Mocha.PNG")));
+    }//GEN-LAST:event_jCheckBox6MouseEntered
+
+    private void jCheckBox6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox6MouseExited
+        labelCafeDescrip.setIcon(null);
+    }//GEN-LAST:event_jCheckBox6MouseExited
+
+    private void jCheckBox7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox7MouseEntered
+        labelCafeDescrip.setIcon(new ImageIcon(getClass().getResource("/Cafes/Macchiato.PNG")));
+    }//GEN-LAST:event_jCheckBox7MouseEntered
+
+    private void jCheckBox7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox7MouseExited
+        labelCafeDescrip.setIcon(null);
+    }//GEN-LAST:event_jCheckBox7MouseExited
+
+    private void jCheckBox2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox2MouseEntered
+        labelCafeDescrip.setIcon(new ImageIcon(getClass().getResource("/Cafes/FlatWhite.PNG")));
+    }//GEN-LAST:event_jCheckBox2MouseEntered
+
+    private void jCheckBox2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox2MouseExited
+        labelCafeDescrip.setIcon(null);
+    }//GEN-LAST:event_jCheckBox2MouseExited
+
+
 private String cafe1;
 private String cafe2;
 private String cafe3;
@@ -559,7 +662,6 @@ private String cafe3;
     private javax.swing.JToggleButton btnAtras;
     private javax.swing.JToggleButton btnSiguiente;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel descripcionCafe;
     private javax.swing.JLabel imagen1;
     private javax.swing.JLabel imagen2;
     private javax.swing.JLabel imagen3;
@@ -580,6 +682,7 @@ private String cafe3;
     private javax.swing.JLabel lCafe1;
     private javax.swing.JLabel lCafe2;
     private javax.swing.JLabel lCafe3;
+    private javax.swing.JLabel labelCafeDescrip;
     private javax.swing.JLabel precioAmericano;
     private javax.swing.JLabel precioCaramel;
     private javax.swing.JLabel precioEspresso;
@@ -611,6 +714,26 @@ private void cambiarMetodo() {
         precioMocha.setFont(yt.MyFont(1, 20));
         precioAmericano.setFont(yt.MyFont(1, 20));
         
+    }
+
+    private void comprobarCafeInicial() {
+        if(Cafeteria.getCuenta().getCafe().getNombreCafe()!=null){
+           if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Capuccino")){
+               jCheckBox8.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Latte")){
+               jCheckBox3.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Americano")){
+               jCheckBox5.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Espresso")){
+               jCheckBox4.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Mocha")){
+               jCheckBox6.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Macchiato")){
+               jCheckBox7.setSelected(true);
+           }else{
+               jCheckBox2.setSelected(true);
+           }
+       }
     }
 
 }
