@@ -37,7 +37,6 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamañoDelCafeJL = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setOpaque(false);
         setLayout(null);
 
         tipoDeLecheTex.setForeground(new java.awt.Color(255, 255, 255));
@@ -54,7 +53,7 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamañoDelCafeTex.setFocusable(false);
         tamañoDelCafeTex.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         add(tamañoDelCafeTex);
-        tamañoDelCafeTex.setBounds(40, 260, 160, 50);
+        tamañoDelCafeTex.setBounds(40, 270, 180, 30);
 
         comboTipoDeLeche.setModel(tipoDeLeche);
         comboTipoDeLeche.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +62,7 @@ public class PanelTamaño extends javax.swing.JPanel {
             }
         });
         add(comboTipoDeLeche);
-        comboTipoDeLeche.setBounds(60, 170, 130, 26);
+        comboTipoDeLeche.setBounds(50, 170, 130, 26);
 
         comboTamanio.setModel(tamanios);
         comboTamanio.addActionListener(new java.awt.event.ActionListener() {
@@ -72,13 +71,13 @@ public class PanelTamaño extends javax.swing.JPanel {
             }
         });
         add(comboTamanio);
-        comboTamanio.setBounds(210, 270, 100, 26);
+        comboTamanio.setBounds(240, 270, 100, 26);
 
         letreroTitulo.setForeground(new java.awt.Color(255, 255, 255));
         letreroTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         letreroTitulo.setText("Tamaño y Tipo De Leche");
         add(letreroTitulo);
-        letreroTitulo.setBounds(80, 0, 230, 50);
+        letreroTitulo.setBounds(140, 0, 230, 50);
         add(tipoDeLecheJL);
         tipoDeLecheJL.setBounds(210, 90, 170, 160);
 
