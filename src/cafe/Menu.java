@@ -17,6 +17,7 @@ public class Menu extends javax.swing.JPanel {
         base.removeAll();
         base.add(menuDeCafes);
         base.updateUI();
+        letrerosBotones();
     }
 
     @SuppressWarnings("unchecked")
@@ -29,6 +30,10 @@ public class Menu extends javax.swing.JPanel {
         btnCafes = new javax.swing.JButton();
         btnTerminar = new javax.swing.JButton();
         mover = new javax.swing.JToggleButton();
+        jlTerminarPedido = new javax.swing.JLabel();
+        jlTamaño = new javax.swing.JLabel();
+        jlJarabes = new javax.swing.JLabel();
+        jlCafe = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setLayout(null);
@@ -37,13 +42,21 @@ public class Menu extends javax.swing.JPanel {
         base.setPreferredSize(new java.awt.Dimension(200, 200));
         base.setLayout(null);
         add(base);
-        base.setBounds(120, 90, 428, 460);
+        base.setBounds(140, 90, 428, 460);
 
         btnJarabes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/jarabe.png"))); // NOI18N
         btnJarabes.setBorderPainted(false);
         btnJarabes.setContentAreaFilled(false);
         btnJarabes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnJarabes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnJarabes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnJarabesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnJarabesMouseExited(evt);
+            }
+        });
         btnJarabes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnJarabesActionPerformed(evt);
@@ -56,6 +69,14 @@ public class Menu extends javax.swing.JPanel {
         btnTamanioLeche.setBorderPainted(false);
         btnTamanioLeche.setContentAreaFilled(false);
         btnTamanioLeche.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTamanioLeche.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnTamanioLecheMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnTamanioLecheMouseExited(evt);
+            }
+        });
         btnTamanioLeche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTamanioLecheActionPerformed(evt);
@@ -69,6 +90,14 @@ public class Menu extends javax.swing.JPanel {
         btnCafes.setContentAreaFilled(false);
         btnCafes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCafes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCafes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCafesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCafesMouseExited(evt);
+            }
+        });
         btnCafes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCafesActionPerformed(evt);
@@ -82,6 +111,19 @@ public class Menu extends javax.swing.JPanel {
         btnTerminar.setContentAreaFilled(false);
         btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTerminar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnTerminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnTerminarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnTerminarMouseExited(evt);
+            }
+        });
+        btnTerminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTerminarActionPerformed(evt);
+            }
+        });
         add(btnTerminar);
         btnTerminar.setBounds(440, 680, 50, 45);
 
@@ -96,6 +138,26 @@ public class Menu extends javax.swing.JPanel {
         });
         add(mover);
         mover.setBounds(520, 610, 50, 45);
+
+        jlTerminarPedido.setForeground(new java.awt.Color(255, 255, 255));
+        jlTerminarPedido.setText("Terminar Pedido");
+        add(jlTerminarPedido);
+        jlTerminarPedido.setBounds(420, 581, 100, 30);
+
+        jlTamaño.setForeground(new java.awt.Color(255, 255, 255));
+        jlTamaño.setText("Tamaño");
+        add(jlTamaño);
+        jlTamaño.setBounds(380, 580, 100, 30);
+
+        jlJarabes.setForeground(new java.awt.Color(255, 255, 255));
+        jlJarabes.setText("Jarabes");
+        add(jlJarabes);
+        jlJarabes.setBounds(320, 581, 100, 30);
+
+        jlCafe.setForeground(new java.awt.Color(255, 255, 255));
+        jlCafe.setText("Escoger Café");
+        add(jlCafe);
+        jlCafe.setBounds(242, 581, 100, 30);
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menuW.jpg"))); // NOI18N
         add(Fondo);
@@ -144,6 +206,42 @@ public class Menu extends javax.swing.JPanel {
         base.updateUI();
     }//GEN-LAST:event_btnCafesActionPerformed
 
+    private void btnTerminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTerminarActionPerformed
+
+    private void btnTerminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseEntered
+        jlTerminarPedido.setVisible(true);
+    }//GEN-LAST:event_btnTerminarMouseEntered
+
+    private void btnTerminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseExited
+        jlTerminarPedido.setVisible(false);
+    }//GEN-LAST:event_btnTerminarMouseExited
+
+    private void btnTamanioLecheMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamanioLecheMouseEntered
+        jlTamaño.setVisible(true);
+    }//GEN-LAST:event_btnTamanioLecheMouseEntered
+
+    private void btnTamanioLecheMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamanioLecheMouseExited
+        jlTamaño.setVisible(false);
+    }//GEN-LAST:event_btnTamanioLecheMouseExited
+
+    private void btnJarabesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnJarabesMouseEntered
+        jlJarabes.setVisible(true);
+    }//GEN-LAST:event_btnJarabesMouseEntered
+
+    private void btnJarabesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnJarabesMouseExited
+        jlJarabes.setVisible(false);
+    }//GEN-LAST:event_btnJarabesMouseExited
+
+    private void btnCafesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCafesMouseEntered
+        jlCafe.setVisible(true);
+    }//GEN-LAST:event_btnCafesMouseEntered
+
+    private void btnCafesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCafesMouseExited
+        jlCafe.setVisible(false);
+    }//GEN-LAST:event_btnCafesMouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
@@ -152,8 +250,28 @@ public class Menu extends javax.swing.JPanel {
     private javax.swing.JButton btnJarabes;
     private javax.swing.JButton btnTamanioLeche;
     private javax.swing.JButton btnTerminar;
+    private javax.swing.JLabel jlCafe;
+    private javax.swing.JLabel jlJarabes;
+    private javax.swing.JLabel jlTamaño;
+    private javax.swing.JLabel jlTerminarPedido;
     private javax.swing.JToggleButton mover;
     // End of variables declaration//GEN-END:variables
+
+    private void letrerosBotones() {
+
+        ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
+        jlTerminarPedido.setVisible(false);
+        jlTerminarPedido.setFont(st.MyFont(0, 20));
+        
+        jlCafe.setVisible(false);
+        jlCafe.setFont(st.MyFont(0, 20));
+        
+        jlJarabes.setVisible(false);
+        jlJarabes.setFont(st.MyFont(0, 20));
+        
+        jlTamaño.setVisible(false);
+        jlTamaño.setFont(st.MyFont(0, 20));
+    }
 
     
 }

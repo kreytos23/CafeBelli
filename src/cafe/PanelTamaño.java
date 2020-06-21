@@ -19,6 +19,7 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamanios = new DefaultComboBoxModel(Tamaño.values());
         initComponents();
         cambiarLetra();
+         tipoDeLecheJL.setIcon(new ImageIcon(getClass().getResource("/TiposLeches/Entera.png")));
        
     }
 
@@ -36,7 +37,6 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamañoDelCafeJL = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setOpaque(false);
         setLayout(null);
 
         tipoDeLecheTex.setForeground(new java.awt.Color(255, 255, 255));
@@ -53,7 +53,7 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamañoDelCafeTex.setFocusable(false);
         tamañoDelCafeTex.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         add(tamañoDelCafeTex);
-        tamañoDelCafeTex.setBounds(40, 260, 160, 50);
+        tamañoDelCafeTex.setBounds(40, 270, 180, 30);
 
         comboTipoDeLeche.setModel(tipoDeLeche);
         comboTipoDeLeche.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +62,7 @@ public class PanelTamaño extends javax.swing.JPanel {
             }
         });
         add(comboTipoDeLeche);
-        comboTipoDeLeche.setBounds(60, 170, 130, 26);
+        comboTipoDeLeche.setBounds(50, 170, 130, 26);
 
         comboTamanio.setModel(tamanios);
         comboTamanio.addActionListener(new java.awt.event.ActionListener() {
@@ -71,23 +71,30 @@ public class PanelTamaño extends javax.swing.JPanel {
             }
         });
         add(comboTamanio);
-        comboTamanio.setBounds(210, 270, 100, 26);
+        comboTamanio.setBounds(240, 270, 100, 26);
 
         letreroTitulo.setForeground(new java.awt.Color(255, 255, 255));
         letreroTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         letreroTitulo.setText("Tamaño y Tipo De Leche");
         add(letreroTitulo);
-        letreroTitulo.setBounds(80, 0, 230, 50);
+        letreroTitulo.setBounds(140, 0, 230, 50);
         add(tipoDeLecheJL);
         tipoDeLecheJL.setBounds(210, 90, 170, 160);
 
-        tamañoDelCafeJL.setText("jLabel5");
+        tamañoDelCafeJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/CafeTamaño1.png"))); // NOI18N
         add(tamañoDelCafeJL);
-        tamañoDelCafeJL.setBounds(80, 320, 290, 140);
+        tamañoDelCafeJL.setBounds(40, 310, 290, 150);
     }// </editor-fold>//GEN-END:initComponents
 
     private void comboTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTamanioActionPerformed
-        // TODO add your handling code here:
+
+        if(comboTamanio.getSelectedItem().toString().equals("CHICO")){
+            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/CafeTamaño1.png")));
+        }else if(comboTamanio.getSelectedItem().toString().equals("MEDIANO")){
+            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/CafeTamaño2.png")));
+        }else{
+            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/CafeTamaño3.png")));
+        }
     }//GEN-LAST:event_comboTamanioActionPerformed
 
     private void comboTipoDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTipoDeLecheActionPerformed
