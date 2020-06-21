@@ -10,20 +10,14 @@ import java.util.ArrayList;
  */
 public class Cafeteria extends javax.swing.JFrame {
 
-<<<<<<< HEAD
-   
-=======
-    private Menu panelDeMenu1;
-    private ArrayList<Cuenta> cuentasDeLaCafeteria;
->>>>>>> c11f7200682f9055a5a98a88b991b6cd05cc07ca
     private Audio audio;
     private static Cuenta cuentaAuxiliar;
     private FrameDeMenu frameDelMenu;
     private static ArrayList<Cuenta> cuentasDelRestaurante;
     
     public Cafeteria() {
-        
         audio = new Audio();
+        audio.sonido("Jazz");
         cuentasDelRestaurante = new ArrayList<>();
         initComponents();
         letrerosBotones();
@@ -35,7 +29,6 @@ public class Cafeteria extends javax.swing.JFrame {
 
         PanelMenu = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         btnMesa3 = new javax.swing.JButton();
         btnMesa2 = new javax.swing.JButton();
         btnMesa4 = new javax.swing.JButton();
@@ -44,6 +37,7 @@ public class Cafeteria extends javax.swing.JFrame {
         LbMesa1 = new javax.swing.JLabel();
         LbMesa4 = new javax.swing.JLabel();
         LbMesa2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(648, 448));
@@ -53,11 +47,7 @@ public class Cafeteria extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
         PanelMenu.add(jLabel2);
-        jLabel2.setBounds(170, 70, 34, 14);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen cafeteria reducida.jpg"))); // NOI18N
-        PanelMenu.add(jLabel1);
-        jLabel1.setBounds(0, 0, 650, 410);
+        jLabel2.setBounds(170, 70, 41, 16);
 
         btnMesa3.setToolTipText("");
         btnMesa3.setContentAreaFilled(false);
@@ -164,6 +154,10 @@ public class Cafeteria extends javax.swing.JFrame {
         PanelMenu.add(LbMesa2);
         LbMesa2.setBounds(190, 180, 120, 60);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen cafeteria reducida.jpg"))); // NOI18N
+        PanelMenu.add(jLabel1);
+        jLabel1.setBounds(0, 0, 650, 410);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -269,24 +263,11 @@ public class Cafeteria extends javax.swing.JFrame {
         });
     }
     
-<<<<<<< HEAD
     void asignacionDeMesa(){
       cuentaAuxiliar = new Cuenta(1);
       frameDelMenu = new FrameDeMenu();
       frameDelMenu.setVisible(true);
       frameDelMenu.setBounds(0,0,588, 709);
-=======
-    void asignacionDeMesa(int mesa){
-//       Cuenta cuentaDeMesa = new Cuenta(mesa);
-//       cuentasDeLaCafeteria.add(cuentaDeMesa);
-       cuentaAuxiliar = new Cuenta(mesa);
-       panelDeMenu1 = new Menu();
-       this.setBounds(0, 0, 588, 709);
-       panelDeMenu1.setBounds(this.getBounds());
-       PanelMenu.removeAll();
-       PanelMenu.add(panelDeMenu1);
-       PanelMenu.updateUI();
->>>>>>> c11f7200682f9055a5a98a88b991b6cd05cc07ca
     }
     
     public static Cuenta getCuenta(){

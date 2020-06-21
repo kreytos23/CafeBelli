@@ -7,12 +7,8 @@ import javax.swing.ImageIcon;
 public  class MenuDeCafes extends javax.swing.JPanel {
     
     private int num;
-<<<<<<< HEAD
-    public MenuDeCafes() {
-        
-=======
+
     public  MenuDeCafes() {
->>>>>>> c11f7200682f9055a5a98a88b991b6cd05cc07ca
         initComponents();
         comprobarCafeInicial();
         
