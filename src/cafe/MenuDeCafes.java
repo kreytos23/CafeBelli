@@ -153,6 +153,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         precioMachiatto.setBounds(270, 255, 30, 30);
 
         buttonGroup1.add(jCheckBox2);
+        jCheckBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jCheckBox2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
@@ -168,6 +169,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox2.setBounds(300, 288, 40, 40);
 
         buttonGroup1.add(jCheckBox8);
+        jCheckBox8.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jCheckBox8.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
@@ -183,6 +185,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox8.setBounds(300, 65, 40, 40);
 
         buttonGroup1.add(jCheckBox3);
+        jCheckBox3.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jCheckBox3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
@@ -198,6 +201,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox3.setBounds(300, 105, 40, 40);
 
         buttonGroup1.add(jCheckBox4);
+        jCheckBox4.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jCheckBox4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
@@ -213,6 +217,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox4.setBounds(300, 180, 40, 40);
 
         buttonGroup1.add(jCheckBox5);
+        jCheckBox5.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jCheckBox5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
@@ -228,6 +233,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox5.setBounds(300, 145, 40, 40);
 
         buttonGroup1.add(jCheckBox6);
+        jCheckBox6.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jCheckBox6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
@@ -243,6 +249,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox6.setBounds(300, 216, 40, 40);
 
         buttonGroup1.add(jCheckBox7);
+        jCheckBox7.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         jCheckBox7.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jCheckBox7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
         jCheckBox7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox blanco.png"))); // NOI18N
