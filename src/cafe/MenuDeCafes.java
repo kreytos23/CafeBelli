@@ -18,7 +18,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
         lCafe1.setVisible(false);
         lCafe2.setVisible(false);
         lCafe3.setVisible(false);
-        descripcionCafe.setVisible(false);
         cambiarMetodo();
        imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+0+".PNG")));
        imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+1+".PNG")));
@@ -33,7 +32,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        descripcionCafe = new javax.swing.JLabel();
         bebidas = new javax.swing.JLabel();
         Latte = new javax.swing.JLabel();
         Machiatto = new javax.swing.JLabel();
@@ -75,10 +73,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 0, 0));
         setOpaque(false);
         setLayout(null);
-
-        descripcionCafe.setText("jLabel1");
-        add(descripcionCafe);
-        descripcionCafe.setBounds(0, 90, 240, 210);
 
         bebidas.setFont(new Font("DK Lemon Yellow Sun.otf",Font.PLAIN,14)
         );
@@ -503,17 +497,12 @@ public class MenuDeCafes extends javax.swing.JPanel {
        
     }//GEN-LAST:event_jCheckBox8MouseExited
 
-<<<<<<< HEAD
     private void jCheckBox4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseEntered
-        descripcionCafe.setIcon(new ImageIcon(getClass().getResource("/Cafes/espressoDescripcion.png")));
-        descripcionCafe.setVisible(true);
     }//GEN-LAST:event_jCheckBox4MouseEntered
 
     private void jCheckBox4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseExited
-         descripcionCafe.setVisible(false);
     }//GEN-LAST:event_jCheckBox4MouseExited
 
-=======
     private void pasarPorPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel1
         // TODO add your handling code here:
       
@@ -549,7 +538,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
         // TODO add your handling code here:
         lCafe3.setVisible(false);
     }//GEN-LAST:event_dejarPanel3
->>>>>>> 2ec0880b9f1c5b7ad509ee445be7a4298773874c
+
 
 private String cafe1;
 private String cafe2;
@@ -566,7 +555,6 @@ private String cafe3;
     private javax.swing.JToggleButton btnAtras;
     private javax.swing.JToggleButton btnSiguiente;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel descripcionCafe;
     private javax.swing.JLabel imagen1;
     private javax.swing.JLabel imagen2;
     private javax.swing.JLabel imagen3;
