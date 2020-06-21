@@ -23,14 +23,11 @@ public class MenuDeCafes extends javax.swing.JPanel {
        imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+0+".PNG")));
        imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+1+".PNG")));
        imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+2+".PNG")));
-//<<<<<<< HEAD
+
        num=1;
-//=======
-     //  num=0;
-       comprobarCafeInicial();
-//>>>>>>> 0ab5dd238d8482245fea9f2c3b00dd9b86fd0f56
-       
-    }
+
+      comprobarCafeInicial();
+       }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -77,7 +74,6 @@ public class MenuDeCafes extends javax.swing.JPanel {
         btnSiguiente = new javax.swing.JToggleButton();
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setOpaque(false);
         setLayout(null);
 
         lCafe2.setFont(new java.awt.Font("Lucida Handwriting", 0, 11)); // NOI18N
@@ -427,37 +423,38 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-//<<<<<<< HEAD
-        // TODO add your handling code here:
-        
-//=======
         Cafeteria.getCuenta().getCafe().setNombreCafe("Flat White");
-//>>>>>>> 0ab5dd238d8482245fea9f2c3b00dd9b86fd0f56
+         Cafeteria.getCuenta().getCafe().setCostoBase(35);
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Capuccino");
+        Cafeteria.getCuenta().getCafe().setCostoBase(20);
     }//GEN-LAST:event_jCheckBox8ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-
+        Cafeteria.getCuenta().getCafe().setCostoBase(25);     
         Cafeteria.getCuenta().getCafe().setNombreCafe("Latte");
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Espresso");
+        Cafeteria.getCuenta().getCafe().setCostoBase(20);
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Americano");
+        Cafeteria.getCuenta().getCafe().setCostoBase(20);
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Mocha");
+        Cafeteria.getCuenta().getCafe().setCostoBase(30);
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Macchiato");
+        Cafeteria.getCuenta().getCafe().setCostoBase(30);
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
@@ -504,9 +501,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
                      cafe3="Americano: un espresso añadiendo agua caliente";
                      break;                     
              }            
-             num++;
-            
-            
+             num++;      
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
@@ -548,23 +543,9 @@ public class MenuDeCafes extends javax.swing.JPanel {
                      cafe2="<html>Macciatto: un tiro de leche normalmente <p>caliente, siendo la «mancha» del café añadido.<html>";
                      cafe3="<html>Mocha: chocolate negro o con leche,se sirve con<p> crema de leche en su lugar.<html>";
                      
-                     break;
-                 /*case 5:
-                     System.out.println("caso 4 "+num);
-                     cafe1="Macciatto";
-                     cafe2="Mocha";
-                     cafe3="Americano";
-                     
-                     break;  */               
+                     break;             
              } 
-             num--;
-             /*if(num==1){
-             
-                System.out.println("se deshabilito el boton -");
-             }*/     
-             
-                   
-            
+             num--;            
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void jCheckBox8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseEntered
@@ -576,38 +557,30 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }//GEN-LAST:event_jCheckBox8MouseExited
 
     private void pasarPorPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel1
-        // TODO add your handling code here:
-   //  lCafe1.setFont(st.MyFont(0, 20));
          lCafe1.setText(cafe1);
         lCafe1.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel1
 
     private void dejarPanel1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel1
-        // TODO add your handling code here:
         lCafe1.setVisible(false);
     }//GEN-LAST:event_dejarPanel1
 
     private void pasarPorPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel2
-        // TODO add your handling code here:
-    // lCafe2.setFont(st.MyFont(0, 20));
         lCafe2.setText(cafe2);
         lCafe2.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel2
 
     private void dejarPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel2
-        // TODO add your handling code here:
         lCafe2.setVisible(false);
     }//GEN-LAST:event_dejarPanel2
 
     private void pasarPorPanel3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pasarPorPanel3
-        // TODO add your handling code here:
-     //lCafe3.setFont(st.MyFont(0, 20));
+
         lCafe3.setText(cafe3);
         lCafe3.setVisible(true);
     }//GEN-LAST:event_pasarPorPanel3
 
     private void dejarPanel3(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dejarPanel3
-        // TODO add your handling code here:
         lCafe3.setVisible(false);
     }//GEN-LAST:event_dejarPanel3
 

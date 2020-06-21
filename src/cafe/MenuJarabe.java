@@ -272,9 +272,7 @@ public class MenuJarabe extends javax.swing.JPanel {
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-
         Cafeteria.getCuenta().getCafe().setNumShots(jComboBox1.getSelectedIndex()+1);
-        System.out.println(Cafeteria.getCuenta().getCafe().getNumShots());
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
