@@ -22,12 +22,8 @@ public class MenuDeCafes extends javax.swing.JPanel {
        imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+0+".PNG")));
        imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+1+".PNG")));
        imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+2+".PNG")));
-//<<<<<<< HEAD
        num=1;
-//=======
-       num=0;
        comprobarCafeInicial();
-//>>>>>>> 0ab5dd238d8482245fea9f2c3b00dd9b86fd0f56
        
     }
 
