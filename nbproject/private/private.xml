@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/C:/Users/super/OneDrive/Documentos/bella/src/cafe/Cafeteria.java</file>
             <file>file:/C:/Users/super/OneDrive/Documentos/bella/src/cafe/Ticket.java</file>
             <file>file:/C:/Users/super/OneDrive/Documentos/bella/src/cafe/MenuDeCafes.java</file>
@@ -16,6 +17,12 @@
             <file>file:/D:/Programaciion/Cafe/src/cafe/Cafeteria.java</file>
 >>>>>>> 75636cc8fdb53b585752e0f8e643cedd3d78aa3e
 >>>>>>> f9963d874c0eeb04710172ae87716ad646d2bc5f
+=======
+            <file>file:/C:/Users/victo/Documents/Cafet/src/cafe/Tamaño.java</file>
+            <file>file:/C:/Users/victo/Documents/Cafet/src/cafe/PanelTamaño.java</file>
+            <file>file:/C:/Users/victo/Documents/Cafet/src/cafe/Menu.java</file>
+            <file>file:/C:/Users/victo/Documents/Cafet/src/cafe/MenuDeCafes.java</file>
+>>>>>>> 6c29ec914688149b76b441c53762951035b32ad7
         </group>
     </open-files>
 </project-private>
