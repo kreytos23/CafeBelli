@@ -7,17 +7,27 @@ import java.awt.Image;
 public class Cafe extends Producto{
     
     private Image imagen;
-    private String nombre;
+    private String nombreCafe;
+    private String nombreJarabe;
     private boolean costoBase;
     private double costoTotal;
     private int numShots;
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreJarabe() {
+        return nombreJarabe;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreJarabe(String nombreJarabe) {
+        this.nombreJarabe = nombreJarabe;
+    }
+
+    
+    public String getNombreCafe() {
+        return nombreCafe;
+    }
+
+    public void setNombreCafe(String nombreCafe) {
+        this.nombreCafe = nombreCafe;
     }
 
     
