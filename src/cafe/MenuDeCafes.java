@@ -22,8 +22,12 @@ public class MenuDeCafes extends javax.swing.JPanel {
        imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+0+".PNG")));
        imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+1+".PNG")));
        imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+2+".PNG")));
+//<<<<<<< HEAD
+       num=1;
+//=======
        num=0;
        comprobarCafeInicial();
+//>>>>>>> 0ab5dd238d8482245fea9f2c3b00dd9b86fd0f56
        
     }
 
@@ -410,7 +414,12 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+//<<<<<<< HEAD
+        // TODO add your handling code here:
+        
+//=======
         Cafeteria.getCuenta().getCafe().setNombreCafe("Flat White");
+//>>>>>>> 0ab5dd238d8482245fea9f2c3b00dd9b86fd0f56
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
@@ -441,7 +450,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
 
         int aux = num;
-         try{
+         System.out.println(num);
              //activa el boton para retroceder
              btnAtras.setEnabled(true);         
              
@@ -449,28 +458,32 @@ public class MenuDeCafes extends javax.swing.JPanel {
              imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
              imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
              switch(num){
-                 case 0:
-                     
-                     lCafe1.setText("Capiccino");
-                     lCafe2.setText("Flat white");
-                     lCafe3.setText("Espresso");
-                     break;
+                /* case 0:
+                     System.out.println("caso 0 "+num);
+                     cafe1="Capuccino";
+                     cafe2="Flat white";
+                     cafe3="Espresso";
+                     break;*/
                  case 1:
+                     System.out.println("caso 1 "+num);
                      cafe1="Flat white";
                      cafe2="Espresso";
                      cafe3="Latte";
                      break;
                  case 2:
+                     System.out.println("caso 2 "+num);
                      cafe1="Espresso";
                      cafe2="Latte";
                      cafe3="Macciatto";
                      break;
                  case 3:
+                     System.out.println("caso 3 "+num);
                      cafe1="Latte";
                      cafe2="Macciatto";
                      cafe3="Mocha";
                      break;
                  case 4:
+                     System.out.println("caso 4 "+num);
                       //se desactiva el boton siguiente para evitar errores xd
                      btnSiguiente.setEnabled(false);
                      cafe1="Macciatto";
@@ -480,56 +493,65 @@ public class MenuDeCafes extends javax.swing.JPanel {
              }            
              num++;
             
-             } catch (Exception e) {
-              // System.out.println(e);   
-             }
+            
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         
         int aux = num;
-         try{
+         System.out.println(num);
              btnSiguiente.setEnabled(true);      
-             imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux+1)+".PNG")));
-             imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
-             imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux-1)+".PNG")));
-             switch(num){
-                 case 0:
-                     
-                     lCafe1.setText("Capiccino");
-                     lCafe2.setText("Flat white");
-                     lCafe3.setText("Espresso");
-                     break;
-                 case 1:
+             imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
+             imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux-1)+".PNG")));
+             imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux-2)+".PNG")));
+           // System.out.println("aux= "+aux);
+             switch(num-1){
+                 
+                 case 1:           
+                      System.out.println("btn atras caso 0 "+num);
+                     cafe1="Capuccino";
+                     cafe2="Flat white";
+                     cafe3="Espresso";
                      btnAtras.setEnabled(false);
+                     
+                     break;
+                 case 2:  
+                     System.out.println("caso 1 "+num);
                      cafe1="Flat white";
                      cafe2="Espresso";
-                     cafe3="Latte";
+                     cafe3="Latte";                    
+                     
                      break;
-                 case 2:
+                 case 3:
+                     System.out.println("caso 2 "+num);
                      cafe1="Espresso";
                      cafe2="Latte";
                      cafe3="Macciatto";
+                     
                      break;
-                 case 3:
+                 case 4:
+                     System.out.println("caso 3 "+num);
                      cafe1="Latte";
                      cafe2="Macciatto";
                      cafe3="Mocha";
+                     
                      break;
-                 case 4:
+                 /*case 5:
+                     System.out.println("caso 4 "+num);
                      cafe1="Macciatto";
                      cafe2="Mocha";
                      cafe3="Americano";
-                     break;                     
+                     
+                     break;  */               
              } 
+             num--;
              /*if(num==1){
              
                 System.out.println("se deshabilito el boton -");
              }*/     
-             num--;
+             
                    
-            }
-         catch (Exception e) {}
+            
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void jCheckBox8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseEntered
