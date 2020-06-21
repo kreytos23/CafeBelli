@@ -4,10 +4,10 @@ import javax.swing.ImageIcon;
 /**
  * @author serpi
  */
-public class MenuDeCafes extends javax.swing.JPanel {
+public  class MenuDeCafes extends javax.swing.JPanel {
     
     private int num;
-    public MenuDeCafes() {
+    public  MenuDeCafes() {
         initComponents();
         
         cafe1="<html>Capuccino: preparada con café expreso y<p> leche montada con vapor para otorgarle cremosidad.<html>";

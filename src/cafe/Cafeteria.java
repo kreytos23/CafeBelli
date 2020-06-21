@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Cafeteria extends javax.swing.JFrame {
 
-    private Menu panelDeMenu;
+    private Menu panelDeMenu1;
     private ArrayList<Cuenta> cuentasDeLaCafeteria;
     private Audio audio;
     private static Cuenta cuentaAuxiliar;
@@ -29,6 +29,8 @@ public class Cafeteria extends javax.swing.JFrame {
     private void initComponents() {
 
         PanelMenu = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         btnMesa3 = new javax.swing.JButton();
         btnMesa2 = new javax.swing.JButton();
         btnMesa4 = new javax.swing.JButton();
@@ -37,13 +39,20 @@ public class Cafeteria extends javax.swing.JFrame {
         LbMesa1 = new javax.swing.JLabel();
         LbMesa4 = new javax.swing.JLabel();
         LbMesa2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(648, 448));
         setPreferredSize(new java.awt.Dimension(648, 448));
 
         PanelMenu.setLayout(null);
+
+        jLabel2.setText("jLabel2");
+        PanelMenu.add(jLabel2);
+        jLabel2.setBounds(170, 70, 34, 14);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen cafeteria reducida.jpg"))); // NOI18N
+        PanelMenu.add(jLabel1);
+        jLabel1.setBounds(0, 0, 650, 410);
 
         btnMesa3.setToolTipText("");
         btnMesa3.setContentAreaFilled(false);
@@ -150,10 +159,6 @@ public class Cafeteria extends javax.swing.JFrame {
         PanelMenu.add(LbMesa2);
         LbMesa2.setBounds(190, 180, 120, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen cafeteria reducida.jpg"))); // NOI18N
-        PanelMenu.add(jLabel1);
-        jLabel1.setBounds(0, 0, 650, 410);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -245,7 +250,9 @@ public class Cafeteria extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
+            
             new Cafeteria().setVisible(true);
+            
         });
     }
     
@@ -253,11 +260,11 @@ public class Cafeteria extends javax.swing.JFrame {
 //       Cuenta cuentaDeMesa = new Cuenta(mesa);
 //       cuentasDeLaCafeteria.add(cuentaDeMesa);
        cuentaAuxiliar = new Cuenta(mesa);
-       panelDeMenu = new Menu();
+       panelDeMenu1 = new Menu();
        this.setBounds(0, 0, 588, 709);
-       panelDeMenu.setBounds(this.getBounds());
+       panelDeMenu1.setBounds(this.getBounds());
        PanelMenu.removeAll();
-       PanelMenu.add(panelDeMenu);
+       PanelMenu.add(panelDeMenu1);
        PanelMenu.updateUI();
     }
     
@@ -276,6 +283,7 @@ public class Cafeteria extends javax.swing.JFrame {
     private javax.swing.JButton btnMesa3;
     private javax.swing.JButton btnMesa4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
 private void letrerosBotones() {
