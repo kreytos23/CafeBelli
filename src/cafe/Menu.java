@@ -8,8 +8,8 @@ public class Menu extends javax.swing.JPanel {
     private MenuDeCafes menuDeCafes;
     private PanelTamaño panelTamaño;
     private MenuJarabe panelJarabe;
+    private TerminarPedido terminarPedido;
    
-    
     public Menu() {
         initComponents();
         menuDeCafes = new MenuDeCafes();
@@ -207,7 +207,11 @@ public class Menu extends javax.swing.JPanel {
     }//GEN-LAST:event_btnCafesActionPerformed
 
     private void btnTerminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarActionPerformed
-        // TODO add your handling code here:
+        terminarPedido = new TerminarPedido();
+        terminarPedido.setBounds(0,0,base.getWidth(),base.getHeight());
+        base.removeAll();
+        base.add(terminarPedido);
+        base.updateUI();
     }//GEN-LAST:event_btnTerminarActionPerformed
 
     private void btnTerminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseEntered
