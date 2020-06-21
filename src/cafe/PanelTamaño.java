@@ -2,7 +2,6 @@ package cafe;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
-
 /**
  *
  * @author serpi
@@ -19,9 +18,9 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamanios = new DefaultComboBoxModel(Tamaño.values());
         initComponents();
         cambiarLetra();
-         tipoDeLecheJL.setIcon(new ImageIcon(getClass().getResource("/TiposLeches/Entera.png")));
-         
-       
+        mantenerComboLeche();
+        mantenerComboTam();
+        
     }
 
    
@@ -80,10 +79,12 @@ public class PanelTamaño extends javax.swing.JPanel {
         letreroTitulo.setText("Tamaño y Tipo De Leche");
         add(letreroTitulo);
         letreroTitulo.setBounds(140, 0, 230, 50);
+
+        tipoDeLecheJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TiposLeches/Entera.png"))); // NOI18N
         add(tipoDeLecheJL);
         tipoDeLecheJL.setBounds(210, 90, 170, 160);
 
-        tamañoDelCafeJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/CafeTamaño1.png"))); // NOI18N
+        tamañoDelCafeJL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/Chico.png"))); // NOI18N
         add(tamañoDelCafeJL);
         tamañoDelCafeJL.setBounds(40, 310, 290, 150);
     }// </editor-fold>//GEN-END:initComponents
@@ -91,20 +92,26 @@ public class PanelTamaño extends javax.swing.JPanel {
     private void comboTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTamanioActionPerformed
 
         if(comboTamanio.getSelectedItem().toString().equals("CHICO")){
-            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/CafeTamaño1.png")));
+            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/Chico.png")));
         }else if(comboTamanio.getSelectedItem().toString().equals("MEDIANO")){
-            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/CafeTamaño2.png")));
+            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/Mediano.png")));
         }else{
-            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/CafeTamaño3.png")));
+            tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/Grande.png")));
+        }  
+        for(Tamaño z : Tamaño.values()){
+            if(comboTamanio.getSelectedItem().equals(z)){
+                Cafeteria.getCuenta().getCafe().setVaso(z);    
+            }
         }
+        
     }//GEN-LAST:event_comboTamanioActionPerformed
 
     private void comboTipoDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTipoDeLecheActionPerformed
         tipoDeLecheJL.setIcon(new ImageIcon(getClass().getResource("/TiposLeches/"+comboTipoDeLeche.getSelectedItem().toString()+".png")));
+       
         for(TipoDeLeche z : tiposDeLeche.values()){
             if(comboTipoDeLeche.getSelectedItem().equals(z)){
                 Cafeteria.getCuenta().getCafe().setLeche(z);
-                System.out.println(Cafeteria.getCuenta().getCafe().getLeche());
             }
         }
     }//GEN-LAST:event_comboTipoDeLecheActionPerformed
@@ -128,5 +135,27 @@ public class PanelTamaño extends javax.swing.JPanel {
         letreroTitulo.setFont(st.MyFont(0, 30));
         tipoDeLecheTex.setFont(cf.MyFont(0, 30));
         tamañoDelCafeTex.setFont(cf.MyFont(0, 30));
+    }
+    
+    private void mantenerComboLeche(){
+        if(Cafeteria.getCuenta().getCafe().getLeche() != null){
+            for(int x = 0; x < comboTipoDeLeche.getItemCount();x++){
+                if(String.valueOf(comboTipoDeLeche.getItemAt(x)) == Cafeteria.getCuenta().getCafe().getLeche().toString()){
+                    comboTipoDeLeche.setSelectedIndex(x);
+                    tipoDeLecheJL.setIcon(new ImageIcon(getClass().getResource("/TiposLeches/"+comboTipoDeLeche.getSelectedItem().toString()+".png")));
+                }
+            }
+        }
+    }
+    
+    private void mantenerComboTam(){
+        if(Cafeteria.getCuenta().getCafe().getVaso() != null){
+            for(int x = 0; x < comboTamanio.getItemCount();x++){
+                if(String.valueOf(comboTamanio.getItemAt(x)) == Cafeteria.getCuenta().getCafe().getVaso().toString()){
+                    comboTamanio.setSelectedIndex(x);
+                    tamañoDelCafeJL.setIcon(new ImageIcon(getClass().getResource("/Jarabes/"+comboTamanio.getSelectedItem().toString()+".png")));
+                }
+            }
+        }
     }
 }

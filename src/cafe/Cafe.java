@@ -9,7 +9,6 @@ public class Cafe extends Producto{
     private Image imagen;
     private String nombreCafe;
     private String nombreJarabe;
-    private boolean costoBase;
     private double costoTotal;
     private int numShots;
     private TipoDeLeche leche;
@@ -56,14 +55,6 @@ public class Cafe extends Producto{
 
     public void setImagen(Image imagen) {
         this.imagen = imagen;
-    }
-
-    public boolean isCostoBase() {
-        return costoBase;
-    }
-
-    public void setCostoBase(boolean costoBase) {
-        this.costoBase = costoBase;
     }
 
     public double getCostoTotal() {

@@ -4,9 +4,9 @@ package cafe;
  */
 public enum Tamaño {
     //En el parametro se encuentra el costo adicional
-    CHICO(0),
-    MEDIANO(4),
-    GRANDE(8);
+    Chico(0),
+    Mediano(4),
+    Grande(8);
     //campos de instancia
     public final double precioPorTamanio;
     
