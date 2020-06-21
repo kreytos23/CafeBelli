@@ -121,6 +121,7 @@ public class TerminarPedido extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Cafeteria.getCuenta().getListaCafe().add(Cafeteria.getCuenta().getCafe());
         Cafeteria.getCuenta().setCafeAux(new Cafe());  
@@ -130,7 +131,14 @@ public class TerminarPedido extends javax.swing.JPanel {
       
     }//GEN-LAST:event_jButton1ActionPerformed
 
+=======
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+>>>>>>> c11f7200682f9055a5a98a88b991b6cd05cc07ca
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
