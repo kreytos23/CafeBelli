@@ -15,6 +15,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
        imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+1+".PNG")));
        imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+2+".PNG")));
        num=0;
+       comprobarCafeInicial();
        
     }
 
@@ -65,7 +66,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
 
         descripcionCafe.setText("jLabel1");
         add(descripcionCafe);
-        descripcionCafe.setBounds(30, 120, 260, 192);
+        descripcionCafe.setBounds(0, 90, 240, 210);
 
         bebidas.setFont(new Font("DK Lemon Yellow Sun.otf",Font.PLAIN,14)
         );
@@ -219,6 +220,14 @@ public class MenuDeCafes extends javax.swing.JPanel {
         jCheckBox4.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/checkbox seleccionado.png"))); // NOI18N
         jCheckBox4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jCheckBox4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jCheckBox4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jCheckBox4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox4MouseExited(evt);
+            }
+        });
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox4ActionPerformed(evt);
@@ -306,31 +315,32 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombre("Flat White");
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombre("Capuccino");
     }//GEN-LAST:event_jCheckBox8ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
+
+        Cafeteria.getCuenta().getCafe().setNombre("Latte");
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombre("Espresso");
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombre("Americano");
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombre("Mocha");
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
-        // TODO add your handling code here:
+        Cafeteria.getCuenta().getCafe().setNombre("Macchiato");
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
@@ -374,13 +384,21 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void jCheckBox8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseEntered
-        descripcionCafe.setIcon(new ImageIcon(getClass().getResource("/Cafes/espressoDescripcion.png")));
-        descripcionCafe.setVisible(true);
+        
     }//GEN-LAST:event_jCheckBox8MouseEntered
 
     private void jCheckBox8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseExited
-        descripcionCafe.setVisible(false);
+       
     }//GEN-LAST:event_jCheckBox8MouseExited
+
+    private void jCheckBox4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseEntered
+        descripcionCafe.setIcon(new ImageIcon(getClass().getResource("/Cafes/espressoDescripcion.png")));
+        descripcionCafe.setVisible(true);
+    }//GEN-LAST:event_jCheckBox4MouseEntered
+
+    private void jCheckBox4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseExited
+         descripcionCafe.setVisible(false);
+    }//GEN-LAST:event_jCheckBox4MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -444,6 +462,26 @@ private void cambiarMetodo() {
         precioMocha.setFont(yt.MyFont(1, 20));
         precioAmericano.setFont(yt.MyFont(1, 20));
         
+    }
+
+    private void comprobarCafeInicial() {
+        if(Cafeteria.getCuenta().getCafe().getNombre()!=null){
+           if(Cafeteria.getCuenta().getCafe().getNombre().equals("Capuccino")){
+               jCheckBox8.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Latte")){
+               jCheckBox3.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Americano")){
+               jCheckBox5.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Espresso")){
+               jCheckBox4.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Mocha")){
+               jCheckBox6.setSelected(true);
+           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Macchiato")){
+               jCheckBox7.setSelected(true);
+           }else{
+               jCheckBox2.setSelected(true);
+           }
+       }
     }
 
 }

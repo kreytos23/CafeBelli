@@ -13,6 +13,7 @@ public class Cafeteria extends javax.swing.JFrame {
     private Menu panelDeMenu;
     private ArrayList<Cuenta> cuentasDeLaCafeteria;
     private Audio audio;
+    private static Cuenta cuentaAuxiliar;
     
     public Cafeteria() {
         
@@ -148,14 +149,19 @@ public class Cafeteria extends javax.swing.JFrame {
     }
     
     void asignacionDeMesa(int mesa){
-       Cuenta cuentaDeMesa = new Cuenta(mesa);
-       cuentasDeLaCafeteria.add(cuentaDeMesa);
+//       Cuenta cuentaDeMesa = new Cuenta(mesa);
+//       cuentasDeLaCafeteria.add(cuentaDeMesa);
+       cuentaAuxiliar = new Cuenta(mesa);
        panelDeMenu = new Menu();
        this.setBounds(0, 0, 588, 709);
        panelDeMenu.setBounds(this.getBounds());
        PanelMenu.removeAll();
        PanelMenu.add(panelDeMenu);
        PanelMenu.updateUI();
+    }
+    
+    public static Cuenta getCuenta(){
+        return cuentaAuxiliar;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
