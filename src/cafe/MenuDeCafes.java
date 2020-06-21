@@ -410,32 +410,32 @@ public class MenuDeCafes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        Cafeteria.getCuenta().getCafe().setNombre("Flat White");
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Flat White");
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
-        Cafeteria.getCuenta().getCafe().setNombre("Capuccino");
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Capuccino");
     }//GEN-LAST:event_jCheckBox8ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
 
-        Cafeteria.getCuenta().getCafe().setNombre("Latte");
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Latte");
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
-        Cafeteria.getCuenta().getCafe().setNombre("Espresso");
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Espresso");
     }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
-        Cafeteria.getCuenta().getCafe().setNombre("Americano");
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Americano");
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
-        Cafeteria.getCuenta().getCafe().setNombre("Mocha");
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Mocha");
     }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
-        Cafeteria.getCuenta().getCafe().setNombre("Macchiato");
+        Cafeteria.getCuenta().getCafe().setNombreCafe("Macchiato");
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
@@ -695,18 +695,18 @@ private void cambiarMetodo() {
     }
 
     private void comprobarCafeInicial() {
-        if(Cafeteria.getCuenta().getCafe().getNombre()!=null){
-           if(Cafeteria.getCuenta().getCafe().getNombre().equals("Capuccino")){
+        if(Cafeteria.getCuenta().getCafe().getNombreCafe()!=null){
+           if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Capuccino")){
                jCheckBox8.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Latte")){
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Latte")){
                jCheckBox3.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Americano")){
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Americano")){
                jCheckBox5.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Espresso")){
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Espresso")){
                jCheckBox4.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Mocha")){
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Mocha")){
                jCheckBox6.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombre().equals("Macchiato")){
+           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Macchiato")){
                jCheckBox7.setSelected(true);
            }else{
                jCheckBox2.setSelected(true);
