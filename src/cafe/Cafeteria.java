@@ -10,16 +10,15 @@ import java.util.ArrayList;
  */
 public class Cafeteria extends javax.swing.JFrame {
 
-    private Menu panelDeMenu;
-    private ArrayList<Cuenta> cuentasDeLaCafeteria;
     private Audio audio;
     private static Cuenta cuentaAuxiliar;
+    private FrameDeMenu frameDelMenu;
+    private static ArrayList<Cuenta> cuentasDelRestaurante;
     
     public Cafeteria() {
-        
         audio = new Audio();
-        //audio.sonido("Jazz");
-        cuentasDeLaCafeteria = new ArrayList<>();
+        audio.sonido("Jazz");
+        cuentasDelRestaurante = new ArrayList<>();
         initComponents();
         letrerosBotones();
     }
@@ -29,6 +28,7 @@ public class Cafeteria extends javax.swing.JFrame {
     private void initComponents() {
 
         PanelMenu = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         btnMesa3 = new javax.swing.JButton();
         btnMesa2 = new javax.swing.JButton();
         btnMesa4 = new javax.swing.JButton();
@@ -44,6 +44,10 @@ public class Cafeteria extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(648, 448));
 
         PanelMenu.setLayout(null);
+
+        jLabel2.setText("jLabel2");
+        PanelMenu.add(jLabel2);
+        jLabel2.setBounds(170, 70, 41, 16);
 
         btnMesa3.setToolTipText("");
         btnMesa3.setContentAreaFilled(false);
@@ -169,19 +173,19 @@ public class Cafeteria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void btnMesa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa2ActionPerformed
-        asignacionDeMesa(2);
+        asignacionDeMesa();
     }//GEN-LAST:event_btnMesa2ActionPerformed
 
     private void btnMesa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa4ActionPerformed
-        asignacionDeMesa(4);
+        asignacionDeMesa();
     }//GEN-LAST:event_btnMesa4ActionPerformed
 
     private void btnMesa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa3ActionPerformed
-        asignacionDeMesa(3);
+        asignacionDeMesa();
     }//GEN-LAST:event_btnMesa3ActionPerformed
 
     private void btnMesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa1ActionPerformed
-        asignacionDeMesa(1);
+        asignacionDeMesa();
     }//GEN-LAST:event_btnMesa1ActionPerformed
 
     private void btnMesa1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa1MouseEntered
@@ -216,6 +220,14 @@ public class Cafeteria extends javax.swing.JFrame {
         LbMesa4.setVisible(false);
     }//GEN-LAST:event_btnMesa3MouseExited
 
+    public static ArrayList<Cuenta> getCuentasDelRestaurante() {
+        return cuentasDelRestaurante;
+    }
+
+    public static void setCuentaAuxiliar(Cuenta cuentaAuxiliar) {
+        Cafeteria.cuentaAuxiliar = cuentaAuxiliar;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -245,20 +257,17 @@ public class Cafeteria extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
+            
             new Cafeteria().setVisible(true);
+            
         });
     }
     
-    void asignacionDeMesa(int mesa){
-//       Cuenta cuentaDeMesa = new Cuenta(mesa);
-//       cuentasDeLaCafeteria.add(cuentaDeMesa);
-       cuentaAuxiliar = new Cuenta(mesa);
-       panelDeMenu = new Menu();
-       this.setBounds(0, 0, 588, 709);
-       panelDeMenu.setBounds(this.getBounds());
-       PanelMenu.removeAll();
-       PanelMenu.add(panelDeMenu);
-       PanelMenu.updateUI();
+    void asignacionDeMesa(){
+      cuentaAuxiliar = new Cuenta(1);
+      frameDelMenu = new FrameDeMenu();
+      frameDelMenu.setVisible(true);
+      frameDelMenu.setBounds(0,0,588, 709);
     }
     
     public static Cuenta getCuenta(){
@@ -276,6 +285,7 @@ public class Cafeteria extends javax.swing.JFrame {
     private javax.swing.JButton btnMesa3;
     private javax.swing.JButton btnMesa4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
 private void letrerosBotones() {

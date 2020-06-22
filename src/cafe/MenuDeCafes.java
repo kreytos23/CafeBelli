@@ -4,11 +4,13 @@ import javax.swing.ImageIcon;
 /**
  * @author serpi
  */
-public class MenuDeCafes extends javax.swing.JPanel {
+public  class MenuDeCafes extends javax.swing.JPanel {
     
     private int num;
-    public MenuDeCafes() {
+
+    public  MenuDeCafes() {
         initComponents();
+        comprobarCafeInicial();
         
         cafe1="<html>Capuccino: preparada con café expreso y<p> leche montada con vapor para otorgarle cremosidad.<html>";
         cafe2="<html>Flat white: una pequeña cantidad de leche y solo<p> la capa más delgada de microespuma<html>";
@@ -26,7 +28,7 @@ public class MenuDeCafes extends javax.swing.JPanel {
 
        num=1;
 
-      comprobarCafeInicial();
+      
        }
 
     @SuppressWarnings("unchecked")
@@ -704,21 +706,29 @@ private void cambiarMetodo() {
 
     private void comprobarCafeInicial() {
         if(Cafeteria.getCuenta().getCafe().getNombreCafe()!=null){
-           if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Capuccino")){
-               jCheckBox8.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Latte")){
-               jCheckBox3.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Americano")){
-               jCheckBox5.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Espresso")){
-               jCheckBox4.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Mocha")){
-               jCheckBox6.setSelected(true);
-           }else if(Cafeteria.getCuenta().getCafe().getNombreCafe().equals("Macchiato")){
-               jCheckBox7.setSelected(true);
-           }else{
-               jCheckBox2.setSelected(true);
-           }
+            switch (Cafeteria.getCuenta().getCafe().getNombreCafe()) {
+                case "Capuccino":
+                    jCheckBox8.setSelected(true);
+                    break;
+                case "Latte":
+                    jCheckBox3.setSelected(true);
+                    break;
+                case "Americano":
+                    jCheckBox5.setSelected(true);
+                    break;
+                case "Espresso":
+                    jCheckBox4.setSelected(true);
+                    break;
+                case "Mocha":
+                    jCheckBox6.setSelected(true);
+                    break;
+                case "Macchiato":
+                    jCheckBox7.setSelected(true);
+                    break;
+                default:
+                    jCheckBox2.setSelected(true);
+                    break;
+            }
        }
     }
 
