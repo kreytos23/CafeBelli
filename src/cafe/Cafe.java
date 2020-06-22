@@ -16,7 +16,7 @@ public class Cafe extends Producto{
 
     
     public Cafe(){
-        numShots=0;
+        numShots=1;
     }
     public TipoDeLeche getLeche() {
         return leche;

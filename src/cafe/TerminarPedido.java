@@ -20,6 +20,7 @@ public class TerminarPedido extends javax.swing.JPanel {
         initComponents();
         cambiarMetodo();
         fechas();
+        datosIniciales();
     }
 
     private void fechas(){
@@ -42,22 +43,50 @@ public class TerminarPedido extends javax.swing.JPanel {
         labelTamanio = new javax.swing.JLabel();
         labelJarabe = new javax.swing.JLabel();
         labelNumShot = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnFinalizarCompra = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        labelLeche = new javax.swing.JLabel();
 
+        setOpaque(false);
+        setLayout(null);
+
+        labelTerminar.setForeground(new java.awt.Color(255, 255, 255));
         labelTerminar.setText("Concluir Pedido");
+        add(labelTerminar);
+        labelTerminar.setBounds(150, 20, 150, 50);
 
         vasitoCafe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Cafe_Vaso.png"))); // NOI18N
+        add(vasitoCafe);
+        vasitoCafe.setBounds(10, 100, 202, 258);
 
-        labelCafe.setText("Cafe: ...");
+        labelCafe.setForeground(new java.awt.Color(255, 255, 255));
+        labelCafe.setText("Cafe: ");
+        add(labelCafe);
+        labelCafe.setBounds(230, 80, 160, 40);
 
-        labelTamanio.setText("Tamaño: ...");
+        labelTamanio.setForeground(new java.awt.Color(255, 255, 255));
+        labelTamanio.setText("Tamaño: ");
+        add(labelTamanio);
+        labelTamanio.setBounds(230, 200, 170, 50);
 
-        labelJarabe.setText("Jarabe: ...");
+        labelJarabe.setForeground(new java.awt.Color(255, 255, 255));
+        labelJarabe.setText("Jarabe: ");
+        add(labelJarabe);
+        labelJarabe.setBounds(200, 270, 210, 60);
 
-        labelNumShot.setText("Num Shots: ...");
+        labelNumShot.setForeground(new java.awt.Color(255, 255, 255));
+        labelNumShot.setText("Num Shots: ");
+        add(labelNumShot);
+        labelNumShot.setBounds(230, 330, 160, 60);
 
-        jButton1.setText("Comprar");
+        btnFinalizarCompra.setText("Comprar");
+        btnFinalizarCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinalizarCompraActionPerformed(evt);
+            }
+        });
+        add(btnFinalizarCompra);
+        btnFinalizarCompra.setBounds(325, 440, 80, 32);
 
         jButton2.setText("Seguir comprando");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -65,55 +94,13 @@ public class TerminarPedido extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
+        add(jButton2);
+        jButton2.setBounds(172, 440, 135, 32);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(labelTerminar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(vasitoCafe)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelCafe, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelTamanio)
-                    .addComponent(labelJarabe)
-                    .addComponent(labelNumShot))
-                .addGap(0, 113, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(23, 23, 23))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(labelTerminar)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(vasitoCafe))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(labelCafe, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(labelTamanio)
-                        .addGap(18, 18, 18)
-                        .addComponent(labelJarabe)
-                        .addGap(18, 18, 18)
-                        .addComponent(labelNumShot)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(27, 27, 27))
-        );
+        labelLeche.setForeground(new java.awt.Color(255, 255, 255));
+        labelLeche.setText("Leche:");
+        add(labelLeche);
+        labelLeche.setBounds(230, 130, 160, 50);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -122,16 +109,33 @@ public class TerminarPedido extends javax.swing.JPanel {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-      
-    }                                        
+    private void btnFinalizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarCompraActionPerformed
+        Cafeteria.getCuenta().getListaCafe().add(Cafeteria.getCuenta().getCafe());
+        Cafeteria.getCuentasDelRestaurante().add(Cafeteria.getCuenta());
+        for(int x=0; x<Cafeteria.getCuenta().getListaCafe().size();x++){
+            
+            System.out.println(Cafeteria.getCuenta().getListaCafe().get(x).getNombreCafe()+ "   " +
+            Cafeteria.getCuenta().getListaCafe().get(x).getNumShots()+ "   " +
+            Cafeteria.getCuenta().getListaCafe().get(x).getVaso().toString()+ "   " +
+            Cafeteria.getCuenta().getListaCafe().get(x).getNombreJarabe()+ "   " +
+            Cafeteria.getCuenta().getListaCafe().get(x).getLeche().toString());
+            
+//            Cafeteria.getCuenta().getListaCafe().get(x).getNombreCafe();
+//            Cafeteria.getCuenta().getListaCafe().get(x).getNumShots();
+//            Cafeteria.getCuenta().getListaCafe().get(x).getVaso().toString();
+//            Cafeteria.getCuenta().getListaCafe().get(x).getNombreJarabe();
+//            Cafeteria.getCuenta().getListaCafe().get(x).getLeche().toString();
+        }
+    }//GEN-LAST:event_btnFinalizarCompraActionPerformed
+                               
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnFinalizarCompra;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel labelCafe;
     private javax.swing.JLabel labelJarabe;
+    private javax.swing.JLabel labelLeche;
     private javax.swing.JLabel labelNumShot;
     private javax.swing.JLabel labelTamanio;
     private javax.swing.JLabel labelTerminar;
@@ -143,12 +147,33 @@ private void cambiarMetodo() {
         ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
         ClaseYellow yt  = new ClaseYellow("DK Lemon Yellow Sun.otf");
         
-        labelTerminar.setFont(st.MyFont(1, 30));
-        labelCafe.setFont(st.MyFont(1, 30));
-        labelJarabe.setFont(st.MyFont(1, 30));
-        labelNumShot.setFont(st.MyFont(1, 30));
-        labelTamanio.setFont(st.MyFont(1, 30));
+        labelTerminar.setFont(st.MyFont(1, 20));
+        labelCafe.setFont(st.MyFont(0, 20));
+        labelJarabe.setFont(st.MyFont(0, 20));
+        labelNumShot.setFont(st.MyFont(0, 20));
+        labelTamanio.setFont(st.MyFont(0, 20));
+        labelLeche.setFont(st.MyFont(0, 20));
         
-        
+    }
+
+    private void datosIniciales() {
+
+        if(Cafeteria.getCuenta().getCafe() != null){
+            if(Cafeteria.getCuenta().getCafe().getNombreCafe()!=null){
+                labelCafe.setText("Cafe: " + Cafeteria.getCuenta().getCafe().getNombreCafe());
+                labelNumShot.setText("Num Shots: " + Cafeteria.getCuenta().getCafe().getNumShots());
+        }
+                 else{labelCafe.setText("Cafe:");}
+            if(Cafeteria.getCuenta().getCafe().getVaso() != null){
+                labelTamanio.setText("Tamaño: " + Cafeteria.getCuenta().getCafe().getVaso().toString() );
+            }
+            if(Cafeteria.getCuenta().getCafe().getNombreJarabe()!= null){
+                labelJarabe.setText("Jarabe: "+ Cafeteria.getCuenta().getCafe().getNombreJarabe());
+            }else{labelJarabe.setText("Jarabe: Ninguno");}
+            
+           if(Cafeteria.getCuenta().getCafe().getLeche()!=null){
+                labelLeche.setText("Leche: " + Cafeteria.getCuenta().getCafe().getLeche().toString());
+            }
+    }
     }
 }

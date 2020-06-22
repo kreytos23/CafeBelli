@@ -76,6 +76,7 @@ public  class MenuDeCafes extends javax.swing.JPanel {
         btnSiguiente = new javax.swing.JToggleButton();
 
         setBackground(new java.awt.Color(0, 0, 0));
+        setOpaque(false);
         setLayout(null);
 
         lCafe2.setFont(new java.awt.Font("Lucida Handwriting", 0, 11)); // NOI18N
