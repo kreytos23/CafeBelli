@@ -10,6 +10,7 @@ public class Menu extends javax.swing.JPanel {
     private PanelTamaño panelTamaño;
     private MenuJarabe panelJarabe;
     private TerminarPedido terminarPedido;
+    private DatosDeCuentas panelCuentas;
    
     public Menu() {
         initComponents();
@@ -35,6 +36,7 @@ public class Menu extends javax.swing.JPanel {
         jlTamaño = new javax.swing.JLabel();
         jlJarabes = new javax.swing.JLabel();
         jlCafe = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setLayout(null);
@@ -160,6 +162,15 @@ public class Menu extends javax.swing.JPanel {
         add(jlCafe);
         jlCafe.setBounds(242, 581, 100, 30);
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1);
+        jButton1.setBounds(90, 590, 77, 32);
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menuW.jpg"))); // NOI18N
         add(Fondo);
         Fondo.setBounds(0, 0, 590, 670);
@@ -247,6 +258,14 @@ public class Menu extends javax.swing.JPanel {
         jlCafe.setVisible(false);
     }//GEN-LAST:event_btnCafesMouseExited
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        panelCuentas = new DatosDeCuentas();
+        panelCuentas.setBounds(0,0,base.getWidth(),base.getHeight());
+        base.removeAll();
+        base.add(panelCuentas);
+        base.updateUI();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
@@ -255,6 +274,7 @@ public class Menu extends javax.swing.JPanel {
     private javax.swing.JButton btnJarabes;
     private javax.swing.JButton btnTamanioLeche;
     private javax.swing.JButton btnTerminar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jlCafe;
     private javax.swing.JLabel jlJarabes;
     private javax.swing.JLabel jlTamaño;
