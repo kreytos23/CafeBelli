@@ -5,6 +5,7 @@
         <group>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/C:/Users/emili/Desktop/Cafeteria%20Github/src/cafe/Cafeteria.java</file>
             <file>file:/C:/Users/emili/Desktop/Cafeteria%20Github/src/cafe/PanelTamaño.java</file>
             <file>file:/C:/Users/emili/Desktop/Cafeteria%20Github/src/cafe/Menu.java</file>
@@ -15,6 +16,10 @@
             <file>file:/C:/Users/emili/Desktop/Cafeteria%20Github/src/cafe/TerminarPedido.java</file>
 =======
             <file>file:/D:/Programaciion/Cafe/src/cafe/TerminarPedido.java</file>
+=======
+            <file>file:/D:/Programaciion/Cafe/src/cafe/TerminarPedido.java</file>
+            <file>file:/D:/Programaciion/Cafe/src/cafe/MenuJarabe.java</file>
+>>>>>>> 99450845b559b0c02b6faa8f454155c1e4312443
             <file>file:/D:/Programaciion/Cafe/src/cafe/PanelTamaño.java</file>
             <file>file:/D:/Programaciion/Cafe/src/cafe/Menu.java</file>
             <file>file:/D:/Programaciion/Cafe/src/cafe/Cuenta.java</file>
@@ -22,6 +27,7 @@
             <file>file:/D:/Programaciion/Cafe/src/cafe/Cafeteria.java</file>
             <file>file:/D:/Programaciion/Cafe/src/cafe/DatosDeCuentas.java</file>
             <file>file:/D:/Programaciion/Cafe/src/cafe/FrameDeMenu.java</file>
+<<<<<<< HEAD
 >>>>>>> a988d21a8918faeec3751cf2f6e598868cd9c82b
 =======
             <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/Ticket.java</file>
@@ -31,6 +37,8 @@
             <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/Cafeteria.java</file>
             <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/Cuenta.java</file>
 >>>>>>> 61752b8874f18c5d93ceae9cfc44d2175c153281
+=======
+>>>>>>> 99450845b559b0c02b6faa8f454155c1e4312443
         </group>
     </open-files>
 </project-private>

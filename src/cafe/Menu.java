@@ -3,8 +3,11 @@ package cafe;
  * import AppPackage.AnimationClass; es la línea que nos agregara a la clase AnimationClass, pero esto es otra librería que ya esta incluida en el proyecto
  */
 import AppPackage.AnimationClass;
+<<<<<<< HEAD
 import javax.swing.SwingConstants;
 
+=======
+>>>>>>> 99450845b559b0c02b6faa8f454155c1e4312443
 
 /**
  * @author Aguilar Ceja Luis Angel (2020640029)
@@ -41,11 +44,12 @@ public class Menu extends javax.swing.JPanel {
         btnCafes = new javax.swing.JButton();
         btnTerminar = new javax.swing.JButton();
         mover = new javax.swing.JToggleButton();
-        jlTerminarPedido = new javax.swing.JLabel();
+        J = new javax.swing.JLabel();
         jlTamaño = new javax.swing.JLabel();
         jlJarabes = new javax.swing.JLabel();
         jlCafe = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnDatos = new javax.swing.JButton();
+        jlTerminarPedido1 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setLayout(null);
@@ -75,7 +79,7 @@ public class Menu extends javax.swing.JPanel {
             }
         });
         add(btnJarabes);
-        btnJarabes.setBounds(320, 680, 50, 45);
+        btnJarabes.setBounds(260, 680, 50, 45);
 
         btnTamanioLeche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/tam.png"))); // NOI18N
         btnTamanioLeche.setBorderPainted(false);
@@ -95,7 +99,7 @@ public class Menu extends javax.swing.JPanel {
             }
         });
         add(btnTamanioLeche);
-        btnTamanioLeche.setBounds(380, 680, 50, 45);
+        btnTamanioLeche.setBounds(320, 680, 50, 45);
 
         btnCafes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/cafe.png"))); // NOI18N
         btnCafes.setBorderPainted(false);
@@ -116,7 +120,7 @@ public class Menu extends javax.swing.JPanel {
             }
         });
         add(btnCafes);
-        btnCafes.setBounds(260, 680, 50, 45);
+        btnCafes.setBounds(200, 680, 50, 45);
 
         btnTerminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/terminar.png"))); // NOI18N
         btnTerminar.setBorderPainted(false);
@@ -137,7 +141,7 @@ public class Menu extends javax.swing.JPanel {
             }
         });
         add(btnTerminar);
-        btnTerminar.setBounds(440, 680, 50, 45);
+        btnTerminar.setBounds(380, 680, 50, 45);
 
         mover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/menu.png"))); // NOI18N
         mover.setBorderPainted(false);
@@ -151,34 +155,51 @@ public class Menu extends javax.swing.JPanel {
         add(mover);
         mover.setBounds(520, 610, 50, 45);
 
-        jlTerminarPedido.setForeground(new java.awt.Color(255, 255, 255));
-        jlTerminarPedido.setText("Terminar Pedido");
-        add(jlTerminarPedido);
-        jlTerminarPedido.setBounds(420, 581, 100, 30);
+        J.setForeground(new java.awt.Color(255, 255, 255));
+        J.setText("Ver Pedido");
+        add(J);
+        J.setBounds(370, 580, 100, 30);
 
         jlTamaño.setForeground(new java.awt.Color(255, 255, 255));
         jlTamaño.setText("Tamaño");
         add(jlTamaño);
-        jlTamaño.setBounds(380, 580, 100, 30);
+        jlTamaño.setBounds(320, 580, 100, 30);
 
         jlJarabes.setForeground(new java.awt.Color(255, 255, 255));
         jlJarabes.setText("Jarabes");
         add(jlJarabes);
-        jlJarabes.setBounds(320, 581, 100, 30);
+        jlJarabes.setBounds(260, 580, 100, 30);
 
         jlCafe.setForeground(new java.awt.Color(255, 255, 255));
         jlCafe.setText("Escoger Café");
         add(jlCafe);
-        jlCafe.setBounds(242, 581, 100, 30);
+        jlCafe.setBounds(180, 580, 100, 30);
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        btnDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/escribir.png"))); // NOI18N
+        btnDatos.setBorderPainted(false);
+        btnDatos.setContentAreaFilled(false);
+        btnDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDatos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDatosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDatosMouseExited(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(90, 590, 77, 32);
+        btnDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDatosActionPerformed(evt);
+            }
+        });
+        add(btnDatos);
+        btnDatos.setBounds(440, 680, 50, 45);
+
+        jlTerminarPedido1.setForeground(new java.awt.Color(255, 255, 255));
+        jlTerminarPedido1.setText("Ver Cuentas");
+        add(jlTerminarPedido1);
+        jlTerminarPedido1.setBounds(420, 580, 100, 30);
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menuW.jpg"))); // NOI18N
         add(Fondo);
@@ -216,16 +237,20 @@ public class Menu extends javax.swing.JPanel {
           AnimationClass leche = new AnimationClass();
           AnimationClass terminar = new AnimationClass();
           AnimationClass jarabe = new AnimationClass();
+          AnimationClass datos = new AnimationClass();
+          
         if(mover.isSelected()){
           cafe.jButtonYUp(680, 610, 20, 5, btnCafes);
           leche.jButtonYUp(680, 610, 20, 5, btnTamanioLeche);
           terminar.jButtonYUp(680, 610, 20, 5, btnTerminar);
           jarabe.jButtonYUp(680, 610, 20, 5, btnJarabes);
+          datos.jButtonYUp(680, 610, 20, 5, btnDatos);
        }else{
            cafe.jButtonYDown(610, 680, 20, 5, btnCafes);
            leche.jButtonYDown(610, 680, 20, 5, btnTamanioLeche);
            terminar.jButtonYDown(610, 680, 20, 5, btnTerminar);
            jarabe.jButtonYDown(610, 680, 20, 5, btnJarabes);
+           datos.jButtonYDown(610, 680, 20, 5, btnDatos);
        }
     }//GEN-LAST:event_moverActionPerformed
 
@@ -236,22 +261,6 @@ public class Menu extends javax.swing.JPanel {
         base.add(menuDeCafes);
         base.updateUI();
     }//GEN-LAST:event_btnCafesActionPerformed
-
-    private void btnTerminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarActionPerformed
-        terminarPedido = new TerminarPedido();
-        terminarPedido.setBounds(0,0,base.getWidth(),base.getHeight());
-        base.removeAll();
-        base.add(terminarPedido);
-        base.updateUI();
-    }//GEN-LAST:event_btnTerminarActionPerformed
-
-    private void btnTerminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseEntered
-        jlTerminarPedido.setVisible(true);
-    }//GEN-LAST:event_btnTerminarMouseEntered
-
-    private void btnTerminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseExited
-        jlTerminarPedido.setVisible(false);
-    }//GEN-LAST:event_btnTerminarMouseExited
 
     private void btnTamanioLecheMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTamanioLecheMouseEntered
         jlTamaño.setVisible(true);
@@ -277,27 +286,52 @@ public class Menu extends javax.swing.JPanel {
         jlCafe.setVisible(false);
     }//GEN-LAST:event_btnCafesMouseExited
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDatosActionPerformed
         panelCuentas = new DatosDeCuentas();
         panelCuentas.setBounds(0,0,base.getWidth(),base.getHeight());
         base.removeAll();
         base.add(panelCuentas);
         base.updateUI();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnDatosActionPerformed
+
+    private void btnTerminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseExited
+        J.setVisible(false);
+    }//GEN-LAST:event_btnTerminarMouseExited
+
+    private void btnTerminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTerminarMouseEntered
+        J.setVisible(true);
+    }//GEN-LAST:event_btnTerminarMouseEntered
+
+    private void btnTerminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTerminarActionPerformed
+        terminarPedido = new TerminarPedido();
+        terminarPedido.setBounds(0,0,base.getWidth(),base.getHeight());
+        base.removeAll();
+        base.add(terminarPedido);
+        base.updateUI();
+    }//GEN-LAST:event_btnTerminarActionPerformed
+
+    private void btnDatosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDatosMouseEntered
+        jlTerminarPedido1.setVisible(true);
+    }//GEN-LAST:event_btnDatosMouseEntered
+
+    private void btnDatosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDatosMouseExited
+        jlTerminarPedido1.setVisible(false);
+    }//GEN-LAST:event_btnDatosMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
+    private javax.swing.JLabel J;
     private javax.swing.JPanel base;
     private javax.swing.JButton btnCafes;
+    private javax.swing.JButton btnDatos;
     private javax.swing.JButton btnJarabes;
     private javax.swing.JButton btnTamanioLeche;
     private javax.swing.JButton btnTerminar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jlCafe;
     private javax.swing.JLabel jlJarabes;
     private javax.swing.JLabel jlTamaño;
-    private javax.swing.JLabel jlTerminarPedido;
+    private javax.swing.JLabel jlTerminarPedido1;
     private javax.swing.JToggleButton mover;
     // End of variables declaration//GEN-END:variables
 
@@ -307,8 +341,8 @@ public class Menu extends javax.swing.JPanel {
     private void letrerosBotones() {
 
         ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
-        jlTerminarPedido.setVisible(false);
-        jlTerminarPedido.setFont(st.MyFont(0, 20));
+        J.setVisible(false);
+        J.setFont(st.MyFont(0, 20));
         
         jlCafe.setVisible(false);
         jlCafe.setFont(st.MyFont(0, 20));
@@ -318,6 +352,9 @@ public class Menu extends javax.swing.JPanel {
         
         jlTamaño.setVisible(false);
         jlTamaño.setFont(st.MyFont(0, 20));
+        
+        jlTerminarPedido1.setVisible(false);
+        jlTerminarPedido1.setFont(st.MyFont(0, 20));
     }
 
     

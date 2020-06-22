@@ -27,7 +27,7 @@ public class Ticket {
      * @throws MalformedURLException 
      */
     public static void crearPdf() throws IOException, FileNotFoundException, MalformedURLException{
-        PdfWriter writer= new PdfWriter("Prueba.pdf");
+        PdfWriter writer= new PdfWriter("Ticket.pdf");
         PdfDocument pdf = new PdfDocument(writer);
         //creamos un documento,aqui se da el formato
         Document document=new Document(pdf);
