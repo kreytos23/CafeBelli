@@ -9,6 +9,7 @@
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="0" green="0" red="0" type="rgb"/>
     </Property>
+    <Property name="opaque" type="boolean" value="false"/>
   </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -344,7 +345,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Movimiento"/>
+          <Color id="Cursor de Mano"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -376,7 +377,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Movimiento"/>
+          <Color id="Cursor de Mano"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -408,7 +409,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Movimiento"/>
+          <Color id="Cursor de Mano"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -440,7 +441,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Movimiento"/>
+          <Color id="Cursor de Mano"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -472,7 +473,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Movimiento"/>
+          <Color id="Cursor de Mano"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -504,7 +505,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Movimiento"/>
+          <Color id="Cursor de Mano"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -536,7 +537,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Movimiento"/>
+          <Color id="Cursor de Mano"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="4"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">

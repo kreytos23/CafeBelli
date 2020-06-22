@@ -22,6 +22,7 @@ public class DatosDeCuentas extends javax.swing.JPanel {
     public DatosDeCuentas() {
         modeloDeProductos = new DefaultListModel();
         initComponents();
+        letrerosBotones();
         iniciarLista();
     }
 
@@ -38,10 +39,16 @@ public class DatosDeCuentas extends javax.swing.JPanel {
         jList1 = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
 
+        setOpaque(false);
+
+        jList1.setBackground(new java.awt.Color(21, 38, 46));
+        jList1.setForeground(new java.awt.Color(255, 255, 255));
         jList1.setModel(modeloDeProductos);
+        jList1.setSelectionBackground(new java.awt.Color(255, 153, 153));
         jScrollPane1.setViewportView(jList1);
 
-        jButton1.setText("jButton1");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/actualizar.png"))); // NOI18N
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -52,23 +59,23 @@ public class DatosDeCuentas extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(187, 187, 187))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(205, 205, 205))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jButton1)
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -136,5 +143,11 @@ public void iniciarLista(){
         }catch(IOException err){
            // JOptionPane.showMessageDialog(rootPane, "Error Al Leer Documento", "Error", JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+private void letrerosBotones() {
+
+        ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
+         jList1.setFont(st.MyFont(0, 20));
     }
 }

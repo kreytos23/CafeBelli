@@ -1,5 +1,8 @@
 package cafe;
 
+import AppPackage.AnimationClass;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +17,7 @@ public class Cafeteria extends javax.swing.JFrame {
     private static Cuenta cuentaAuxiliar;
     private FrameDeMenu frameDelMenu;
     private static ArrayList<Cuenta> cuentasDelRestaurante;
+    
     
     public Cafeteria() {
         audio = new Audio();
@@ -37,6 +41,10 @@ public class Cafeteria extends javax.swing.JFrame {
         LbMesa1 = new javax.swing.JLabel();
         LbMesa4 = new javax.swing.JLabel();
         LbMesa2 = new javax.swing.JLabel();
+        mover = new javax.swing.JToggleButton();
+        whats = new javax.swing.JButton();
+        facebook = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -154,6 +162,49 @@ public class Cafeteria extends javax.swing.JFrame {
         PanelMenu.add(LbMesa2);
         LbMesa2.setBounds(190, 180, 120, 60);
 
+        mover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Jarabes/menu.png"))); // NOI18N
+        mover.setBorderPainted(false);
+        mover.setContentAreaFilled(false);
+        mover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mover.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moverActionPerformed(evt);
+            }
+        });
+        PanelMenu.add(mover);
+        mover.setBounds(570, 10, 50, 45);
+
+        whats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/whats.png"))); // NOI18N
+        whats.setBorderPainted(false);
+        whats.setContentAreaFilled(false);
+        whats.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        whats.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                whatsActionPerformed(evt);
+            }
+        });
+        PanelMenu.add(whats);
+        whats.setBounds(660, 70, 50, 45);
+
+        facebook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/facebook.png"))); // NOI18N
+        facebook.setBorderPainted(false);
+        facebook.setContentAreaFilled(false);
+        facebook.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        facebook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                facebookActionPerformed(evt);
+            }
+        });
+        PanelMenu.add(facebook);
+        facebook.setBounds(660, 120, 50, 45);
+
+        jLabel3.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Siguenos En Nuestras Redes");
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        PanelMenu.add(jLabel3);
+        jLabel3.setBounds(330, 10, 250, 60);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/imagen cafeteria reducida.jpg"))); // NOI18N
         PanelMenu.add(jLabel1);
         jLabel1.setBounds(0, 0, 650, 410);
@@ -162,7 +213,9 @@ public class Cafeteria extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PanelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,6 +272,48 @@ public class Cafeteria extends javax.swing.JFrame {
     private void btnMesa4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa4MouseExited
         LbMesa4.setVisible(false);
     }//GEN-LAST:event_btnMesa4MouseExited
+
+    private void moverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverActionPerformed
+        AnimationClass face = new AnimationClass();
+        AnimationClass wha = new AnimationClass();
+        if(mover.isSelected()){
+            face.jButtonXLeft(660, 570, 20, 5, facebook);
+            wha.jButtonXLeft(660, 570, 20, 5, whats);
+        }else{
+            face.jButtonXRight(570, 660, 20, 5, facebook);
+            wha.jButtonXRight(570, 660, 20, 5, whats);
+        }
+    }//GEN-LAST:event_moverActionPerformed
+
+    private void whatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_whatsActionPerformed
+       if(java.awt.Desktop.isDesktopSupported()){
+           java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+           
+           if(desktop.isSupported(java.awt.Desktop.Action.BROWSE)){
+               try{
+                   java.net.URI uri = new java.net.URI("https://api.whatsapp.com/send?phone=525525419918");
+                   desktop.browse(uri);
+               } catch(URISyntaxException | IOException ex){
+                   
+               }
+           }
+       }
+    }//GEN-LAST:event_whatsActionPerformed
+
+    private void facebookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facebookActionPerformed
+       if(java.awt.Desktop.isDesktopSupported()){
+           java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
+           
+           if(desktop.isSupported(java.awt.Desktop.Action.BROWSE)){
+               try{
+                   java.net.URI uri = new java.net.URI("https://www.facebook.com/Cafe-Java-110684760689198/");
+                   desktop.browse(uri);
+               } catch(URISyntaxException | IOException ex){
+                   
+               }
+           }
+       }
+    }//GEN-LAST:event_facebookActionPerformed
 
     public static ArrayList<Cuenta> getCuentasDelRestaurante() {
         return cuentasDelRestaurante;
@@ -284,8 +379,12 @@ public class Cafeteria extends javax.swing.JFrame {
     private javax.swing.JButton btnMesa2;
     private javax.swing.JButton btnMesa3;
     private javax.swing.JButton btnMesa4;
+    private javax.swing.JButton facebook;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JToggleButton mover;
+    private javax.swing.JButton whats;
     // End of variables declaration//GEN-END:variables
 
 private void letrerosBotones() {
@@ -299,6 +398,7 @@ private void letrerosBotones() {
         LbMesa3.setFont(st.MyFont(1, 30));
         LbMesa4.setVisible(false);
         LbMesa4.setFont(st.MyFont(1, 30));
+        jLabel3.setFont(st.MyFont(0,24 ));
     }
 
 }
