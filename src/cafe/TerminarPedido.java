@@ -61,6 +61,8 @@ public class TerminarPedido extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         labelLeche = new javax.swing.JLabel();
         labelPrecio = new javax.swing.JLabel();
+        terminar = new javax.swing.JLabel();
+        otroCafe = new javax.swing.JLabel();
 
         setOpaque(false);
         setLayout(null);
@@ -94,23 +96,45 @@ public class TerminarPedido extends javax.swing.JPanel {
         add(labelNumShot);
         labelNumShot.setBounds(230, 290, 160, 60);
 
-        btnFinalizarCompra.setText("Comprar");
+        btnFinalizarCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vender.png"))); // NOI18N
+        btnFinalizarCompra.setBorderPainted(false);
+        btnFinalizarCompra.setContentAreaFilled(false);
+        btnFinalizarCompra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnFinalizarCompra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnFinalizarCompraMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnFinalizarCompraMouseExited(evt);
+            }
+        });
         btnFinalizarCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFinalizarCompraActionPerformed(evt);
             }
         });
         add(btnFinalizarCompra);
-        btnFinalizarCompra.setBounds(325, 440, 80, 32);
+        btnFinalizarCompra.setBounds(290, 440, 50, 45);
 
-        jButton2.setText("Seguir comprando");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/jarra.png"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton2MouseExited(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         add(jButton2);
-        jButton2.setBounds(172, 440, 135, 32);
+        jButton2.setBounds(200, 440, 50, 45);
 
         labelLeche.setForeground(new java.awt.Color(255, 255, 255));
         labelLeche.setText("Leche:");
@@ -121,6 +145,16 @@ public class TerminarPedido extends javax.swing.JPanel {
         labelPrecio.setText("Precio:$");
         add(labelPrecio);
         labelPrecio.setBounds(230, 350, 170, 70);
+
+        terminar.setForeground(new java.awt.Color(255, 255, 255));
+        terminar.setText("Terminar Orden");
+        add(terminar);
+        terminar.setBounds(250, 410, 150, 40);
+
+        otroCafe.setForeground(new java.awt.Color(255, 255, 255));
+        otroCafe.setText("Comprar Otro Cafe");
+        add(otroCafe);
+        otroCafe.setBounds(140, 410, 150, 40);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -165,6 +199,22 @@ public class TerminarPedido extends javax.swing.JPanel {
         Cafeteria.getCuentasDelRestaurante().add(Cafeteria.getCuenta());
         guardarElementos();
     }//GEN-LAST:event_btnFinalizarCompraActionPerformed
+
+    private void btnFinalizarCompraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFinalizarCompraMouseEntered
+        terminar.setVisible(true);
+    }//GEN-LAST:event_btnFinalizarCompraMouseEntered
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        otroCafe.setVisible(true);
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void btnFinalizarCompraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFinalizarCompraMouseExited
+        terminar.setVisible(false);
+    }//GEN-LAST:event_btnFinalizarCompraMouseExited
+
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        otroCafe.setVisible(false);
+    }//GEN-LAST:event_jButton2MouseExited
                                
 
     
@@ -178,6 +228,8 @@ public class TerminarPedido extends javax.swing.JPanel {
     private javax.swing.JLabel labelPrecio;
     private javax.swing.JLabel labelTamanio;
     private javax.swing.JLabel labelTerminar;
+    private javax.swing.JLabel otroCafe;
+    private javax.swing.JLabel terminar;
     private javax.swing.JLabel vasitoCafe;
     // End of variables declaration//GEN-END:variables
 
@@ -193,6 +245,10 @@ private void cambiarMetodo() {
         labelTamanio.setFont(st.MyFont(0, 20));
         labelLeche.setFont(st.MyFont(0, 20));
         labelPrecio.setFont(st.MyFont(0, 30));
+        terminar.setFont(st.MyFont(0, 20));
+        terminar.setVisible(false);
+        otroCafe.setFont(st.MyFont(0, 20));
+        otroCafe.setVisible(false);
         
     }
 
