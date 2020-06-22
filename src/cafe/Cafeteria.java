@@ -29,9 +29,9 @@ public class Cafeteria extends javax.swing.JFrame {
 
         PanelMenu = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        btnMesa3 = new javax.swing.JButton();
-        btnMesa2 = new javax.swing.JButton();
         btnMesa4 = new javax.swing.JButton();
+        btnMesa2 = new javax.swing.JButton();
+        btnMesa3 = new javax.swing.JButton();
         btnMesa1 = new javax.swing.JButton();
         LbMesa3 = new javax.swing.JLabel();
         LbMesa1 = new javax.swing.JLabel();
@@ -49,25 +49,25 @@ public class Cafeteria extends javax.swing.JFrame {
         PanelMenu.add(jLabel2);
         jLabel2.setBounds(170, 70, 41, 16);
 
-        btnMesa3.setToolTipText("");
-        btnMesa3.setContentAreaFilled(false);
-        btnMesa3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnMesa3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa4.png"))); // NOI18N
-        btnMesa3.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnMesa4.setToolTipText("");
+        btnMesa4.setContentAreaFilled(false);
+        btnMesa4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMesa4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa4.png"))); // NOI18N
+        btnMesa4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnMesa3MouseEntered(evt);
+                btnMesa4MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnMesa3MouseExited(evt);
+                btnMesa4MouseExited(evt);
             }
         });
-        btnMesa3.addActionListener(new java.awt.event.ActionListener() {
+        btnMesa4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMesa3ActionPerformed(evt);
+                btnMesa4ActionPerformed(evt);
             }
         });
-        PanelMenu.add(btnMesa3);
-        btnMesa3.setBounds(488, 250, 163, 165);
+        PanelMenu.add(btnMesa4);
+        btnMesa4.setBounds(488, 250, 163, 165);
 
         btnMesa2.setContentAreaFilled(false);
         btnMesa2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -88,24 +88,24 @@ public class Cafeteria extends javax.swing.JFrame {
         PanelMenu.add(btnMesa2);
         btnMesa2.setBounds(147, 250, 190, 160);
 
-        btnMesa4.setContentAreaFilled(false);
-        btnMesa4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnMesa4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa3.png"))); // NOI18N
-        btnMesa4.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnMesa3.setContentAreaFilled(false);
+        btnMesa3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMesa3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/mesa3.png"))); // NOI18N
+        btnMesa3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnMesa4MouseEntered(evt);
+                btnMesa3MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnMesa4MouseExited(evt);
+                btnMesa3MouseExited(evt);
             }
         });
-        btnMesa4.addActionListener(new java.awt.event.ActionListener() {
+        btnMesa3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMesa4ActionPerformed(evt);
+                btnMesa3ActionPerformed(evt);
             }
         });
-        PanelMenu.add(btnMesa4);
-        btnMesa4.setBounds(330, 250, 165, 160);
+        PanelMenu.add(btnMesa3);
+        btnMesa3.setBounds(330, 250, 165, 160);
 
         btnMesa1.setContentAreaFilled(false);
         btnMesa1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -173,19 +173,19 @@ public class Cafeteria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void btnMesa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa2ActionPerformed
-        asignacionDeMesa();
+        asignacionDeMesa(2);
     }//GEN-LAST:event_btnMesa2ActionPerformed
 
-    private void btnMesa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa4ActionPerformed
-        asignacionDeMesa();
-    }//GEN-LAST:event_btnMesa4ActionPerformed
-
     private void btnMesa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa3ActionPerformed
-        asignacionDeMesa();
+        asignacionDeMesa(3);
     }//GEN-LAST:event_btnMesa3ActionPerformed
 
+    private void btnMesa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa4ActionPerformed
+        asignacionDeMesa(4);
+    }//GEN-LAST:event_btnMesa4ActionPerformed
+
     private void btnMesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMesa1ActionPerformed
-        asignacionDeMesa();
+        asignacionDeMesa(1);
     }//GEN-LAST:event_btnMesa1ActionPerformed
 
     private void btnMesa1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa1MouseEntered
@@ -204,21 +204,21 @@ public class Cafeteria extends javax.swing.JFrame {
         LbMesa2.setVisible(false);
     }//GEN-LAST:event_btnMesa2MouseExited
 
-    private void btnMesa4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa4MouseEntered
-        LbMesa3.setVisible(true);
-    }//GEN-LAST:event_btnMesa4MouseEntered
-
-    private void btnMesa4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa4MouseExited
-        LbMesa3.setVisible(false);
-    }//GEN-LAST:event_btnMesa4MouseExited
-
     private void btnMesa3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa3MouseEntered
-        LbMesa4.setVisible(true);
+        LbMesa3.setVisible(true);
     }//GEN-LAST:event_btnMesa3MouseEntered
 
     private void btnMesa3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa3MouseExited
-        LbMesa4.setVisible(false);
+        LbMesa3.setVisible(false);
     }//GEN-LAST:event_btnMesa3MouseExited
+
+    private void btnMesa4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa4MouseEntered
+        LbMesa4.setVisible(true);
+    }//GEN-LAST:event_btnMesa4MouseEntered
+
+    private void btnMesa4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMesa4MouseExited
+        LbMesa4.setVisible(false);
+    }//GEN-LAST:event_btnMesa4MouseExited
 
     public static ArrayList<Cuenta> getCuentasDelRestaurante() {
         return cuentasDelRestaurante;
@@ -263,8 +263,8 @@ public class Cafeteria extends javax.swing.JFrame {
         });
     }
     
-    void asignacionDeMesa(){
-      cuentaAuxiliar = new Cuenta(1);
+    void asignacionDeMesa(int mesa){
+      cuentaAuxiliar = new Cuenta(mesa);
       frameDelMenu = new FrameDeMenu();
       frameDelMenu.setVisible(true);
       frameDelMenu.setBounds(0,0,588, 709);
