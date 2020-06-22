@@ -13,6 +13,7 @@ public class Cuenta {
     private Date fecha;
     private static ArrayList<Cafe> cafeDeLaCuenta;
     private Cafe cafeAux;
+    private double pagoDeLaCuenta;
     
     SimpleDateFormat format = new SimpleDateFormat("dd/mm/aaaa");
     
@@ -20,8 +21,18 @@ public class Cuenta {
       this.mesa = mesa;
       cafeAux = new Cafe();
       cafeDeLaCuenta = new ArrayList<>();
+      pagoDeLaCuenta =0;
     }
 
+    public double getPagoDeLaCuenta() {
+        return pagoDeLaCuenta;
+    }
+
+    public void setPagoDeLaCuenta(double pagoDeLaCuenta) {
+        this.pagoDeLaCuenta += pagoDeLaCuenta;
+    }
+
+    
     public int getMesa() {
         return mesa;
     }
