@@ -3,6 +3,7 @@ package cafe;
 import java.awt.Font;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
 /**
  *
  * @author emili
@@ -46,6 +47,7 @@ public class TerminarPedido extends javax.swing.JPanel {
         btnFinalizarCompra = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         labelLeche = new javax.swing.JLabel();
+        labelPrecio = new javax.swing.JLabel();
 
         setOpaque(false);
         setLayout(null);
@@ -67,17 +69,17 @@ public class TerminarPedido extends javax.swing.JPanel {
         labelTamanio.setForeground(new java.awt.Color(255, 255, 255));
         labelTamanio.setText("Tamaño: ");
         add(labelTamanio);
-        labelTamanio.setBounds(230, 200, 170, 50);
+        labelTamanio.setBounds(230, 180, 170, 50);
 
         labelJarabe.setForeground(new java.awt.Color(255, 255, 255));
         labelJarabe.setText("Jarabe: ");
         add(labelJarabe);
-        labelJarabe.setBounds(200, 270, 210, 60);
+        labelJarabe.setBounds(200, 230, 210, 60);
 
         labelNumShot.setForeground(new java.awt.Color(255, 255, 255));
         labelNumShot.setText("Num Shots: ");
         add(labelNumShot);
-        labelNumShot.setBounds(230, 330, 160, 60);
+        labelNumShot.setBounds(230, 290, 160, 60);
 
         btnFinalizarCompra.setText("Comprar");
         btnFinalizarCompra.addActionListener(new java.awt.event.ActionListener() {
@@ -100,16 +102,33 @@ public class TerminarPedido extends javax.swing.JPanel {
         labelLeche.setForeground(new java.awt.Color(255, 255, 255));
         labelLeche.setText("Leche:");
         add(labelLeche);
-        labelLeche.setBounds(230, 130, 160, 50);
+        labelLeche.setBounds(230, 120, 160, 50);
+
+        labelPrecio.setForeground(new java.awt.Color(255, 255, 255));
+        labelPrecio.setText("Precio:$");
+        add(labelPrecio);
+        labelPrecio.setBounds(230, 350, 170, 70);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try {
+        Cafeteria.getCuenta().getCafe().calcularPrecio();
         Cafeteria.getCuenta().getListaCafe().add(Cafeteria.getCuenta().getCafe());
         Cafeteria.getCuenta().setCafeAux(new Cafe()); 
+        JOptionPane.showMessageDialog(null, "Compra exitosa");
+            
+        } catch (Exception e) {
+            
+            JOptionPane.showMessageDialog(null, "Falto informacion");
+            
+        }
+        
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnFinalizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarCompraActionPerformed
+        Cafeteria.getCuenta().getCafe().calcularPrecio();
         Cafeteria.getCuenta().getListaCafe().add(Cafeteria.getCuenta().getCafe());
         Cafeteria.getCuentasDelRestaurante().add(Cafeteria.getCuenta());
         for(int x=0; x<Cafeteria.getCuenta().getListaCafe().size();x++){
@@ -118,7 +137,8 @@ public class TerminarPedido extends javax.swing.JPanel {
             Cafeteria.getCuenta().getListaCafe().get(x).getNumShots()+ "   " +
             Cafeteria.getCuenta().getListaCafe().get(x).getVaso().toString()+ "   " +
             Cafeteria.getCuenta().getListaCafe().get(x).getNombreJarabe()+ "   " +
-            Cafeteria.getCuenta().getListaCafe().get(x).getLeche().toString());
+            Cafeteria.getCuenta().getListaCafe().get(x).getLeche().toString() + "      " +
+            Cafeteria.getCuenta().getListaCafe().get(x).getCostoTotal()  );
             
 //            Cafeteria.getCuenta().getListaCafe().get(x).getNombreCafe();
 //            Cafeteria.getCuenta().getListaCafe().get(x).getNumShots();
@@ -137,6 +157,7 @@ public class TerminarPedido extends javax.swing.JPanel {
     private javax.swing.JLabel labelJarabe;
     private javax.swing.JLabel labelLeche;
     private javax.swing.JLabel labelNumShot;
+    private javax.swing.JLabel labelPrecio;
     private javax.swing.JLabel labelTamanio;
     private javax.swing.JLabel labelTerminar;
     private javax.swing.JLabel vasitoCafe;
@@ -153,6 +174,7 @@ private void cambiarMetodo() {
         labelNumShot.setFont(st.MyFont(0, 20));
         labelTamanio.setFont(st.MyFont(0, 20));
         labelLeche.setFont(st.MyFont(0, 20));
+        labelPrecio.setFont(st.MyFont(0, 30));
         
     }
 
@@ -175,5 +197,12 @@ private void cambiarMetodo() {
                 labelLeche.setText("Leche: " + Cafeteria.getCuenta().getCafe().getLeche().toString());
             }
     }
+        try {
+            Cafeteria.getCuenta().getCafe().calcularPrecio();
+        labelPrecio.setText("Precio: $" + String.valueOf(Cafeteria.getCuenta().getCafe().getCostoTotal()));
+        } catch (Exception e) {
+            labelPrecio.setText("Precio: $");
+        }
+        
     }
 }

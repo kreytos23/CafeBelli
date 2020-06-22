@@ -17,6 +17,8 @@ public class Cafe extends Producto{
     
     public Cafe(){
         numShots=1;
+        leche= leche.Entera;
+        vaso = vaso.Chico;
     }
     public TipoDeLeche getLeche() {
         return leche;
@@ -77,5 +79,23 @@ public class Cafe extends Producto{
         this.numShots = numShots;
     }
     
+    public void calcularPrecio(){
+        
+        double precioTotal = 0;
+        //Se agrega el precio base del cafe
+        precioTotal += this.getCostoBase();
+        if(nombreJarabe != null){
+            //Se agrega el extra del jarabe
+            precioTotal += 5;
+        }
+        //Se suman los shots
+        if(numShots>1)
+        precioTotal += 7*(numShots-1);
+        
+        precioTotal +=  vaso.getPrecioPorTamanio();
+        
+        costoTotal = precioTotal;
+        
+    }
     
 }
