@@ -1,19 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cafe;
 import java.awt.Font;
 import java.io.InputStream;
 
 /**
- *
- * @author victor
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  */
 public class ClaseYellow {
-     private Font font = null;
+    /*Atributos*/
+    private Font font = null;
      
+    /*Constructor*/
     public ClaseYellow(String fontName) {
         try {
             //Se carga la fuente
@@ -25,6 +24,8 @@ public class ClaseYellow {
             font = new Font("Arial", Font.PLAIN, 14);            
         }
 }
+    
+    /*Métodos*/
     public Font MyFont( int estilo, float tamanio)
     {
         Font tfont = font.deriveFont(estilo, tamanio);

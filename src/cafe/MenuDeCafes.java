@@ -2,7 +2,10 @@ package cafe;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 /**
- * @author serpi
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  */
 public  class MenuDeCafes extends javax.swing.JPanel {
     
@@ -468,20 +471,20 @@ public  class MenuDeCafes extends javax.swing.JPanel {
      */
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
 
-        /**
+        /*
          * La variable num empezara en 1, la variable aux se iguala a num, la variable aux se va a convertir en String el cual nos servirá para acceder a la ruta de la imagen según se incrementara aux
          */
         int aux = num;
          System.out.println(num);
              //activa el boton para retroceder
              btnAtras.setEnabled(true);         
-             /**
+             /*
               * El label que se le cambie la imagen lo hara con el siguiente comando .setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG"))); como se muestran tres imágenes al mismo tiempo este en algunos comandos tendrá la ruta de ("/Cafes/"+(aux-1)+".PNG") o ("/Cafes/"+(aux-2)+".PNG")
               */
              imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
              imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
              imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
-             /**
+             /*
               * Utilizando la misma variable de aux se asignará el texto de los Strings para cambiar el Labels de la descripción del café
               */
              switch(num){

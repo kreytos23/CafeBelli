@@ -8,8 +8,11 @@ package cafe;
 import javax.swing.ImageIcon;
 
 /**
- *
- * @author serpi
+ * Este panel forma parte del proceso de selección de un producto u orden. Se especifica el jarabe y el numero extra de shots.
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  */
 public class MenuJarabe extends javax.swing.JPanel {
 
@@ -235,7 +238,12 @@ public class MenuJarabe extends javax.swing.JPanel {
         add(jComboBox1);
         jComboBox1.setBounds(140, 390, 40, 26);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Los métodos “jCheckBoxActionPerformed()” va a cambiar el icono del jLabel “jarabe” con una imagen PNG.
+     * Tambien cambiara el jarabe de nuestro objeto Cafeteria, por ejemplo “Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de almendra");” 
+     * @param evt 
+     */
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         jarabe.setIcon(new ImageIcon(getClass().getResource("/Jarabes/JarabeDeAlmandra.png")));
         Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de almendra");
@@ -272,6 +280,10 @@ public class MenuJarabe extends javax.swing.JPanel {
         Cafeteria.getCuenta().getCafe().setNombreJarabe("Esencia de mora azul");
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
+    /**
+     * El método jComboBox1ActionPerformed es el que asignara el número de shot al producto que está haciendo el cliente “Cafeteria.getCuenta().getCafe().setNumShots(jComboBox1.getSelectedIndex()+1);”
+     * @param evt 
+     */
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         Cafeteria.getCuenta().getCafe().setNumShots(jComboBox1.getSelectedIndex()+1);
     }//GEN-LAST:event_jComboBox1ActionPerformed
@@ -307,6 +319,9 @@ public class MenuJarabe extends javax.swing.JPanel {
     private javax.swing.JLabel shots;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * El método “cambiarLetra” es el que en este panel cambiara la fuente de los Label
+     */
     private void cambiarLetra() {
         
         ClaseYellow cf = new ClaseYellow("Cream Cake.ttf");
@@ -326,6 +341,10 @@ public class MenuJarabe extends javax.swing.JPanel {
         
     }
 
+    /**
+     * El método “comprobarJarabeInicial” es el que de manera similar a “comprobarCafeInicial” será el que guardará la opción seleccionada de jarabe aun cuando se cambie de panel.
+     * También se tiene que volver a cambiar el icono del label “jarabe”, ya que esta imagen al regresar de panel también se borrara
+     */
     private void comprobarJarabeInicial() {
         if(Cafeteria.getCuenta().getCafe().getNombreJarabe()!=null){
             if(Cafeteria.getCuenta().getCafe().getNombreJarabe().equals("Esencia de almendra")){
@@ -353,6 +372,9 @@ public class MenuJarabe extends javax.swing.JPanel {
         }
     }
 
+    /**
+     * El método “mantenerShots” es el que una vez seleccionado algún extra de Shots cambiara el atributo de numero de shots extras, ya que este valor puede o no ser modificación según el cliente
+     */
     private void mantenerShots() {
         
         if(Cafeteria.getCuenta().getCafe().getNumShots() != 0){

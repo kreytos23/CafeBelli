@@ -3,16 +3,18 @@ package cafe;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 /**
- *
- * @author serpi
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  */
 public class PanelTamaño extends javax.swing.JPanel {
-
+    /*Atributos*/
     private DefaultComboBoxModel tipoDeLeche;
     private DefaultComboBoxModel tamanios;
     private TipoDeLeche tiposDeLeche;
     
-    
+    /*Constructor*/
     public PanelTamaño() {
         tipoDeLeche = new DefaultComboBoxModel(TipoDeLeche.values());
         tamanios = new DefaultComboBoxModel(Tamaño.values());
@@ -89,6 +91,11 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamañoDelCafeJL.setBounds(40, 310, 290, 150);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * El ComboBox de tamaño empezara a comparar la opción seleccionada para identificar que imagen proyectar con el Label, esta imagen solo resaltara el tamanio del café a comprar.
+     * Posteriormente tendrá un for each el cual recorrerá el enum Tamaño comparando los elementos con la selección del comboBox para asignar el tamaño al objeto Cafeteria
+     * @param evt 
+     */
     private void comboTamanioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTamanioActionPerformed
 
         if(comboTamanio.getSelectedItem().toString().equals("Chico")){
@@ -106,6 +113,10 @@ public class PanelTamaño extends javax.swing.JPanel {
         
     }//GEN-LAST:event_comboTamanioActionPerformed
 
+    /**
+     * De manera similar al combo box de tamaño el evento de “comboTipoDeLecheActionPerformed” asignara una imagen PNG sobre la leche que selecciono el usuario y comparara el enum de TipoDeLeche con la selección para poder asignarlo al objeto Cafetería
+     * @param evt 
+     */
     private void comboTipoDeLecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboTipoDeLecheActionPerformed
         tipoDeLecheJL.setIcon(new ImageIcon(getClass().getResource("/TiposLeches/"+comboTipoDeLeche.getSelectedItem().toString()+".png")));
        
@@ -137,6 +148,9 @@ public class PanelTamaño extends javax.swing.JPanel {
         tamañoDelCafeTex.setFont(cf.MyFont(0, 30));
     }
     
+    /**
+     * Los métodos “mantenerComboLeche” y “mantenerComboTam” mantendrán los cambios hechos por el usuario para los comboBoxs de Tamaño y Leche al igual que las imágenes, sin importar el que cambie de panel y posteriormente regrese
+     */
     private void mantenerComboLeche(){
         if(Cafeteria.getCuenta().getCafe().getLeche() != null){
             for(int x = 0; x < comboTipoDeLeche.getItemCount();x++){

@@ -7,7 +7,10 @@ import javax.swing.SwingConstants;
 
 
 /**
- * @author serpi
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  * En esta clase se moverá el usuario a través de los diferentes paneles que conforman la selección de un producto (podrá cambiar por los paneles MenuDeCafe, MenuJarabe, PanelTamaño y TerminarPedido). Pero ofrecerá una mejor experiencia de usuario ya que este panel desliza los botones que realizan estas tareas
  */
 public class Menu extends javax.swing.JPanel {

@@ -3,7 +3,10 @@ package cafe;
 import java.util.ArrayList;
 
 /**
- * @author Cesar Martin 
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  * Para añadir los cafes de una cuenta se usa un array auxiliar aparte
  * del  final para que se use para escribir los cafes nuevos en el pdf
  * y una vez que se escribe se resetea todo ese array auxiliar 
@@ -17,9 +20,9 @@ public class Cafeteria extends javax.swing.JFrame {
     
     public Cafeteria() {
         audio = new Audio();
-        /**
-         * En el método .sonido() tenemos las líneas de código necesarias para reproducir la música de fondo del Proyecto, este método debe ser llamado desde el constructor del Frame principal para poder reproducirse en los otros Paneles.
-         * Los comentarios de este metodo se encuentran en su Clase Audio
+        /*
+         En el método .sonido() tenemos las líneas de código necesarias para reproducir la música de fondo del Proyecto, este método debe ser llamado desde el constructor del Frame principal para poder reproducirse en los otros Paneles.
+         Los comentarios de este metodo se encuentran en su Clase Audio
          */
         audio.sonido("Jazz");
         cuentasDelRestaurante = new ArrayList<>();

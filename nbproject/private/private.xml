@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/C:/Users/emili/Desktop/Cafeteria%20Github/src/cafe/Cafeteria.java</file>
             <file>file:/C:/Users/emili/Desktop/Cafeteria%20Github/src/cafe/PanelTamaño.java</file>
             <file>file:/C:/Users/emili/Desktop/Cafeteria%20Github/src/cafe/Menu.java</file>
@@ -22,6 +23,14 @@
             <file>file:/D:/Programaciion/Cafe/src/cafe/DatosDeCuentas.java</file>
             <file>file:/D:/Programaciion/Cafe/src/cafe/FrameDeMenu.java</file>
 >>>>>>> a988d21a8918faeec3751cf2f6e598868cd9c82b
+=======
+            <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/Ticket.java</file>
+            <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/Menu.java</file>
+            <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/TerminarPedido.java</file>
+            <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/FrameDeMenu.java</file>
+            <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/Cafeteria.java</file>
+            <file>file:/C:/Users/victo/Documents/Cafe/src/cafe/Cuenta.java</file>
+>>>>>>> 61752b8874f18c5d93ceae9cfc44d2175c153281
         </group>
     </open-files>
 </project-private>

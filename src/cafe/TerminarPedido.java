@@ -5,16 +5,22 @@ import java.awt.HeadlessException;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 /**
- *
- * @author emili
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  */
 public class TerminarPedido extends javax.swing.JPanel {
 
@@ -125,39 +131,38 @@ public class TerminarPedido extends javax.swing.JPanel {
         Cafeteria.getCuenta().getListaCafe().add(Cafeteria.getCuenta().getCafe());
         Cafeteria.getCuenta().setCafeAux(new Cafe()); 
         JOptionPane.showMessageDialog(null, "Compra exitosa");
-            
         } catch (Exception e) {
-            
             JOptionPane.showMessageDialog(null, "Falto informacion");
-            
         }
-        
-        
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    /**
+     * Este evento crea un PDF con todos los productos adquiridos por el cliente
+     * @param evt 
+     */
     private void btnFinalizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarCompraActionPerformed
         Cafeteria.getCuenta().getCafe().calcularPrecio();
         Cafeteria.getCuenta().getListaCafe().add(Cafeteria.getCuenta().getCafe());
-        Cafeteria.getCuentasDelRestaurante().add(Cafeteria.getCuenta());
-        for(int x=0; x<Cafeteria.getCuenta().getListaCafe().size();x++){
-            
-            System.out.println(Cafeteria.getCuenta().getListaCafe().get(x).getNombreCafe()+ "   " +
-            Cafeteria.getCuenta().getListaCafe().get(x).getNumShots()+ "   " +
-            Cafeteria.getCuenta().getListaCafe().get(x).getVaso().toString()+ "   " +
-            Cafeteria.getCuenta().getListaCafe().get(x).getNombreJarabe()+ "   " +
-
-            Cafeteria.getCuenta().getListaCafe().get(x).getLeche().toString() + "      " +
-            Cafeteria.getCuenta().getListaCafe().get(x).getCostoTotal()  );
-            
-//            Cafeteria.getCuenta().getListaCafe().get(x).getNombreCafe();
-//            Cafeteria.getCuenta().getListaCafe().get(x).getNumShots();
-//            Cafeteria.getCuenta().getListaCafe().get(x).getVaso().toString();
-//            Cafeteria.getCuenta().getListaCafe().get(x).getNombreJarabe();
-//            Cafeteria.getCuenta().getListaCafe().get(x).getLeche().toString();
-
+        
+        for(int x=0; x<Cafeteria.getCuenta().getListaCafe().size();x++){ 
+            Cafeteria.getCuenta().setPagoDeLaCuenta(Cafeteria.getCuenta().getListaCafe().get(x).getCostoTotal());
         }
         
+        /* En este segmento Try-catch se genera el PDF */
+        try {
+            Ticket.crearPdf();
+            JOptionPane.showMessageDialog(null, "Se ha generado su PDF");
+            
+        } catch (com.itextpdf.io.IOException ex) {
+            Logger.getLogger(TerminarPedido.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TerminarPedido.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(TerminarPedido.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        Cafeteria.getCuentasDelRestaurante().add(Cafeteria.getCuenta());
         guardarElementos();
     }//GEN-LAST:event_btnFinalizarCompraActionPerformed
                                
@@ -191,6 +196,9 @@ private void cambiarMetodo() {
         
     }
 
+/**
+ * Este metodo cambia los Labels del panenl a la seleccion del usuario
+ */
     private void datosIniciales() {
 
         if(Cafeteria.getCuenta().getCafe() != null){
@@ -219,6 +227,9 @@ private void cambiarMetodo() {
         
     }
     
+    /**
+     * Este metodo crea un archivo bina y guarda en el el producto que creo el cliente
+     */
     public void guardarElementos(){
      int y = 0;
         try(DataOutputStream buffer = new DataOutputStream(new FileOutputStream("Cuentas.bin", true))){

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cafe;
 
 import com.itextpdf.io.IOException;
@@ -18,11 +13,20 @@ import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 
 /**
- *
- * @author super
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  */
 public class Ticket {
-    public void crearPdf() throws IOException, FileNotFoundException, MalformedURLException{
+       
+    /**
+     * Este metodo es el que se utiliza en "TerminarPedido" para crear el ticket en PDF de las compras del cliente
+     * @throws IOException
+     * @throws FileNotFoundException
+     * @throws MalformedURLException 
+     */
+    public static void crearPdf() throws IOException, FileNotFoundException, MalformedURLException{
         PdfWriter writer= new PdfWriter("Prueba.pdf");
         PdfDocument pdf = new PdfDocument(writer);
         //creamos un documento,aqui se da el formato
@@ -36,11 +40,16 @@ public class Ticket {
         List productos = new List();
         productos.setSymbolIndent(12);
         //agregamos a la lista los productos que consumio y su precio
-        /*for(Productos prod:productos){
-            productos.add(prod.nombre+"\t"+prod.precio);
-        }*/
-        productos.add("aqui van los productos.........."+"$precio");
-        productos.add("aqui van los productos 2.........."+"$precio");
+        for(int i=0; i<Cafeteria.getCuenta().getListaCafe().size();i++){
+            productos.add("Cafe : " + Cafeteria.getCuenta().getListaCafe().get(i).getNombreCafe());
+            productos.add("Jarabe : " + Cafeteria.getCuenta().getListaCafe().get(i).getNombreJarabe());
+            productos.add("Leche : " + Cafeteria.getCuenta().getListaCafe().get(i).getLeche().toString());
+            productos.add("Tamaño : " + Cafeteria.getCuenta().getListaCafe().get(i).getVaso().toString());
+            productos.add("Num shots : " + Cafeteria.getCuenta().getListaCafe().get(i).getNumShots());
+            productos.add("Precio: $ : " + Cafeteria.getCuenta().getListaCafe().get(i).getCostoTotal()+"\n\n\n");
+        }
+     
+        productos.add("\n\n\n Precio total de la cuenta: $ " + String.valueOf(Cafeteria.getCuenta().getPagoDeLaCuenta()));
         //creas un parrafo con la direccion
         Paragraph direccion=new Paragraph("Avenida Instituto Politécnico Nacional No. 2580, Col Barrio la Laguna Ticomán, Gustavo A. Madero, Ciudad de México, C.P. 07340.\n" +
 "Teléfono: 57296000, extensión 56806");
@@ -52,6 +61,7 @@ public class Ticket {
         document.add(titulo);
         document.add(direccion);
         document.add(productos);
+        
         //cerramos el documento
         document.close();
     }

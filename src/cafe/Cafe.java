@@ -2,10 +2,13 @@ package cafe;
 
 import java.awt.Image;
 /**
- * @author Cesar Martin
+ * @author Aguilar Ceja Luis Angel (2020640029)
+ * @author Cabello Vargas Victor Manuel(2020640111)
+ * @author Gallegos Salinas Emilio (2020640198)
+ * @author Martin Moreno Cesar Sadrack (2020640287)
  */
 public class Cafe extends Producto{
-    
+    /*Atributos*/
     private Image imagen;
     private String nombreCafe;
     private String nombreJarabe;
@@ -14,12 +17,13 @@ public class Cafe extends Producto{
     private TipoDeLeche leche;
     private Tamaño vaso;
 
-    
+    /*Constructor*/
     public Cafe(){
         numShots=1;
         leche= leche.Entera;
         vaso = vaso.Chico;
     }
+    
     public TipoDeLeche getLeche() {
         return leche;
     }
@@ -79,6 +83,9 @@ public class Cafe extends Producto{
         this.numShots = numShots;
     }
     
+    /**
+     * El metodo va realizando la suma del costo del cafe
+     */
     public void calcularPrecio(){
         
         double precioTotal = 0;
