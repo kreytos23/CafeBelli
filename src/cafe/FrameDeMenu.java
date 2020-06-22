@@ -4,11 +4,8 @@ import java.util.ArrayList;
 
 public class FrameDeMenu extends javax.swing.JFrame {
 
- 
     Menu panelMenu;
-    
-    
-    
+   
     public FrameDeMenu() {
         initComponents();
         this.setBounds(0, 0, 588, 709);
@@ -92,6 +89,9 @@ public class FrameDeMenu extends javax.swing.JFrame {
     private javax.swing.JPanel principal;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Creamos nuestro objeto “Menu” con nombre “panelDeMenu”, le cambiamos las medidas, lo agregamos y actualizamos
+     */
     void iniciar(){
         panelMenu = new Menu();
         panelMenu.setBounds(principal.getBounds());

@@ -27,8 +27,6 @@ public  class MenuDeCafes extends javax.swing.JPanel {
        imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+2+".PNG")));
 
        num=1;
-
-      
        }
 
     @SuppressWarnings("unchecked")
@@ -424,6 +422,11 @@ public  class MenuDeCafes extends javax.swing.JPanel {
         btnSiguiente.setBounds(350, 372, 50, 50);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Los métodos jCheckBoxActionPerfomed van a asignar la información del café que seleccione el cliente
+     * La información se va a asignar con lo Cafeteria.getCuenta().getCafe().setNombreCafe(“…”);
+     * @param evt 
+     */
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         Cafeteria.getCuenta().getCafe().setNombreCafe("Flat White");
          Cafeteria.getCuenta().getCafe().setCostoBase(35);
@@ -459,16 +462,28 @@ public  class MenuDeCafes extends javax.swing.JPanel {
         Cafeteria.getCuenta().getCafe().setCostoBase(30);
     }//GEN-LAST:event_jCheckBox7ActionPerformed
 
+    /**
+     * El método btnSiguienteActionPerformed() desplaza las imágenes utilizando el nombre de las imágenes como números los cuales al incrementar cierta variable cambiara la imagen a mostrar
+     * @param evt 
+     */
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
 
+        /**
+         * La variable num empezara en 1, la variable aux se iguala a num, la variable aux se va a convertir en String el cual nos servirá para acceder a la ruta de la imagen según se incrementara aux
+         */
         int aux = num;
          System.out.println(num);
              //activa el boton para retroceder
              btnAtras.setEnabled(true);         
-             
+             /**
+              * El label que se le cambie la imagen lo hara con el siguiente comando .setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG"))); como se muestran tres imágenes al mismo tiempo este en algunos comandos tendrá la ruta de ("/Cafes/"+(aux-1)+".PNG") o ("/Cafes/"+(aux-2)+".PNG")
+              */
              imagen1.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
              imagen2.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux++)+".PNG")));
              imagen3.setIcon(new ImageIcon(getClass().getResource("/Cafes/"+(aux)+".PNG")));
+             /**
+              * Utilizando la misma variable de aux se asignará el texto de los Strings para cambiar el Labels de la descripción del café
+              */
              switch(num){
                 /* case 0:
                      System.out.println("caso 0 "+num);
@@ -506,6 +521,10 @@ public  class MenuDeCafes extends javax.swing.JPanel {
              num++;      
     }//GEN-LAST:event_btnSiguienteActionPerformed
 
+    /**
+     * El método btnAtrasActionPerformed() Al igual que el método de btnSiguienteActionPerformed() utilizara la misma lógica para combiar los iconos de las imágenes solo que en lugar de incrementar aux le hara un decremento cada que se haga click en el boton
+     * @param evt 
+     */
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         
         int aux = num;
@@ -550,6 +569,12 @@ public  class MenuDeCafes extends javax.swing.JPanel {
              num--;            
     }//GEN-LAST:event_btnAtrasActionPerformed
 
+    /**
+     * Para los métodos jCheckBoxMouseEntered y jCheckBoxMouseExited hacemos que aparezca y desaparézcala imagen con las proporciones del café donde se esta colocando el mouse
+     * Para esto cuando el evento de “MouseEntered” se active cambiaremos el icono de un JLabel del panel que no contiene nada con el método .setIcon() que recibe de parámetro un objeto ImageIcon creado con el constructor que recibe la ruta de una imagen desde el package del proyecto
+     * De igual manera para quitar la imagen usamos el método .setIcon con el parámetro null con el evento “MouseExited”
+     * @param evt 
+     */
     private void jCheckBox8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox8MouseEntered
         labelCafeDescrip.setIcon(new ImageIcon(getClass().getResource("/Cafes/Capuccino.PNG")));
     }//GEN-LAST:event_jCheckBox8MouseEntered
@@ -680,11 +705,21 @@ private String cafe3;
     private javax.swing.JLabel precioMocha;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * En el método “cambiarMetodo” es el encargado de cambiar las funetes de los JLabels que estamos usando
+     */
 private void cambiarMetodo() {
+        /**
+         * Tenemos declarados nuestros objetos “ClaseYellow” que están hechos con el constructor que recibe un String con el nombre de la fuente que vamos a usar el cual usar para buscar dentro del package del proyecto con .getClass.getResourceAsStream la fuente (un archivo *.otf o *.ttf) asignándola como la “Font” de nuestro atributo fuente mediante el método .createFont()
+         */
         ClaseYellow cf = new ClaseYellow("Cream Cake.ttf");
         ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
         ClaseYellow yt  = new ClaseYellow("DK Lemon Yellow Sun.otf");
         
+        /**
+         * Esto lo usamos para cambiar la fuente de un label con .setFont y mandando de parámetro la fuente creada
+         * El método “MyFont” define el estilo (Negritas, cursiva, etc) y el tamaño de la fuente a usar
+         */
         bebidas.setFont(st.MyFont(1, 30));
         Latte.setFont(cf.MyFont(0, 30));
         Frapuccino.setFont(cf.MyFont(0, 30));
@@ -704,7 +739,13 @@ private void cambiarMetodo() {
         
     }
 
+/**
+ * El método “comprobarCafeInicial” será el que guardara la opción seleccionada de café aun cuando se cambie de panel y se regrese al mismo
+ */
     private void comprobarCafeInicial() {
+        /**
+         * Primero se comprobara que no este vacia la selección, por lo que ya habrá seleccionado algo “Cafeteria.getCuenta().getCafe().getNombreCafe()!=null” esto lo hace comparando el nombre que contenga el objeto Cafetería y un String con el nombre de un Café.
+         */
         if(Cafeteria.getCuenta().getCafe().getNombreCafe()!=null){
             switch (Cafeteria.getCuenta().getCafe().getNombreCafe()) {
                 case "Capuccino":

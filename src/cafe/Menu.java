@@ -1,8 +1,14 @@
 package cafe;
+/**
+ * import AppPackage.AnimationClass; es la línea que nos agregara a la clase AnimationClass, pero esto es otra librería que ya esta incluida en el proyecto
+ */
 import AppPackage.AnimationClass;
 import javax.swing.SwingConstants;
+
+
 /**
  * @author serpi
+ * En esta clase se moverá el usuario a través de los diferentes paneles que conforman la selección de un producto (podrá cambiar por los paneles MenuDeCafe, MenuJarabe, PanelTamaño y TerminarPedido). Pero ofrecerá una mejor experiencia de usuario ya que este panel desliza los botones que realizan estas tareas
  */
 public class Menu extends javax.swing.JPanel {
 
@@ -176,6 +182,10 @@ public class Menu extends javax.swing.JPanel {
         Fondo.setBounds(0, 0, 590, 670);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Los Eventos "btnActionPerformed" son los que cambian de panel por la seleccion del producto
+     * @param evt 
+     */
     private void btnJarabesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJarabesActionPerformed
         panelJarabe = new MenuJarabe();
         panelJarabe.setBounds(0, 0, base.getWidth(), base.getHeight());
@@ -192,6 +202,12 @@ public class Menu extends javax.swing.JPanel {
         base.updateUI();
     }//GEN-LAST:event_btnTamanioLecheActionPerformed
 
+    /**
+     * El método moverActionPerformed() es un evento del botón “Menu”
+     * Este evento va a crear un objeto de AnimationClass café, leche, jarabe y terminar, los cuales se usarán para mover los paneles de selección respectivamente
+     * Los botones se encontrara fuera de la visibilidad del panel, por ejemplo” cafe.jButtonYDown(610, 680, 20, 5, btnCafes);”. Para esto cuando “mover.isSelected()” los botones se moverán para arriba, por ejemplo “cafe.jButtonYUp(680, 610, 20, 5, btnCafes);”
+     * @param evt 
+     */
     private void moverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverActionPerformed
          AnimationClass cafe = new AnimationClass();
           AnimationClass leche = new AnimationClass();
@@ -282,6 +298,9 @@ public class Menu extends javax.swing.JPanel {
     private javax.swing.JToggleButton mover;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Al igual que los metodos anteriores de "letrerosBotones" este es el encargado de cambiar la fuente de los labels
+     */
     private void letrerosBotones() {
 
         ClaseYellow st  = new ClaseYellow("Sweety Strawberry.ttf");
