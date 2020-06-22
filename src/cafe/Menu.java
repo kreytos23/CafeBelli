@@ -3,11 +3,6 @@ package cafe;
  * import AppPackage.AnimationClass; es la línea que nos agregara a la clase AnimationClass, pero esto es otra librería que ya esta incluida en el proyecto
  */
 import AppPackage.AnimationClass;
-<<<<<<< HEAD
-import javax.swing.SwingConstants;
-
-=======
->>>>>>> 99450845b559b0c02b6faa8f454155c1e4312443
 
 /**
  * @author Aguilar Ceja Luis Angel (2020640029)
