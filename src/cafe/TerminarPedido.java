@@ -1,8 +1,16 @@
 package cafe;
 
 import java.awt.Font;
+import java.awt.HeadlessException;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 /**
  *
@@ -18,6 +26,7 @@ public class TerminarPedido extends javax.swing.JPanel {
      * Creates new form TerminarPedido
      */
     public TerminarPedido() {
+        
         initComponents();
         cambiarMetodo();
         fechas();
@@ -137,6 +146,7 @@ public class TerminarPedido extends javax.swing.JPanel {
             Cafeteria.getCuenta().getListaCafe().get(x).getNumShots()+ "   " +
             Cafeteria.getCuenta().getListaCafe().get(x).getVaso().toString()+ "   " +
             Cafeteria.getCuenta().getListaCafe().get(x).getNombreJarabe()+ "   " +
+
             Cafeteria.getCuenta().getListaCafe().get(x).getLeche().toString() + "      " +
             Cafeteria.getCuenta().getListaCafe().get(x).getCostoTotal()  );
             
@@ -145,7 +155,10 @@ public class TerminarPedido extends javax.swing.JPanel {
 //            Cafeteria.getCuenta().getListaCafe().get(x).getVaso().toString();
 //            Cafeteria.getCuenta().getListaCafe().get(x).getNombreJarabe();
 //            Cafeteria.getCuenta().getListaCafe().get(x).getLeche().toString();
+
         }
+        
+        guardarElementos();
     }//GEN-LAST:event_btnFinalizarCompraActionPerformed
                                
 
@@ -205,4 +218,30 @@ private void cambiarMetodo() {
         }
         
     }
+    
+    public void guardarElementos(){
+     int y = 0;
+        try(DataOutputStream buffer = new DataOutputStream(new FileOutputStream("Cuentas.bin", true))){
+            buffer.writeUTF("Mesa: " + String.valueOf(Cafeteria.getCuenta().getMesa()));
+             buffer.writeInt(Cafeteria.getCuenta().getListaCafe().size());
+           for(int x = 0; x < Cafeteria.getCuenta().getListaCafe().size();x++){
+                y++;
+            // buffer.writeUTF("Fecha: " + Cafeteria.getCuenta().getFecha());
+            buffer.writeUTF("Cafe: " + Cafeteria.getCuenta().getListaCafe().get(x).getNombreCafe());
+            buffer.writeUTF("Jarabe: " + Cafeteria.getCuenta().getListaCafe().get(x).getNombreJarabe());
+            buffer.writeUTF("Leche: " + Cafeteria.getCuenta().getListaCafe().get(x).getLeche().name());
+            buffer.writeUTF("Tamaño: " + Cafeteria.getCuenta().getListaCafe().get(x).getVaso().name());
+            buffer.writeUTF("Shots: " + String.valueOf(Cafeteria.getCuenta().getListaCafe().get(x).getNumShots()));
+            buffer.writeUTF("precio: " + String.valueOf(Cafeteria.getCuenta().getCafe().getCostoTotal()));
+
+           }
+          
+            buffer.close();
+            JOptionPane.showMessageDialog(null, "Guardado Exitosamente", "Listo", JOptionPane.INFORMATION_MESSAGE);
+        }catch (NullPointerException | NumberFormatException err){
+            JOptionPane.showMessageDialog(null, "Debe Llenar Todos Los Campos", "Incompleto",JOptionPane.ERROR_MESSAGE);
+        }catch(IOException | HeadlessException err){
+        }
+    }
+ 
 }
